@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/druewilding/druewilding.github.io/compare/v1.7.2...v1.8.0) (2025-11-11)
+
+
+### Features
+
+* Switch name to Drue Wilding in a few obvious places ([#37](https://github.com/druewilding/druewilding.github.io/issues/37)) ([7863279](https://github.com/druewilding/druewilding.github.io/commit/78632792918e57d90bb33161f23f05d229a21d97))
+
 ## [1.7.2](https://github.com/aimeerivers/aimeerivers.github.io/compare/v1.7.1...v1.7.2) (2025-10-20)
 
 
