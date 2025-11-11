@@ -1,8 +1,8 @@
-# aimeerivers.github.io
+# druewilding.github.io
 
-- [Portfolio](https://www.aimeerivers.com/)
-- [Blog](https://www.aimeerivers.com/blog/)
-- [CV](https://www.aimeerivers.com/cv/)
+- [Portfolio](https://www.druewilding.com/)
+- [Blog](https://www.druewilding.com/blog/)
+- [CV](https://www.druewilding.com/cv/)
 
 ## Running locally
 

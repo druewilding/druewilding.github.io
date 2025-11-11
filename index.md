@@ -1,7 +1,7 @@
 ---
 layout: default
 light_mode: true
-title: Aimee Rivers - Portfolio
+title: Drue Wilding - Portfolio
 image: https://www.aimeerivers.com/assets/images/og-image.png
 ---
 
