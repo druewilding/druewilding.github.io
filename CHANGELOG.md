@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/druewilding/druewilding.github.io/compare/v1.8.0...v1.8.1) (2025-11-11)
+
+
+### Chores
+
+* Update favicons to DW ([#39](https://github.com/druewilding/druewilding.github.io/issues/39)) ([3c312ee](https://github.com/druewilding/druewilding.github.io/commit/3c312ee420d87e4977afb4f292029ae5120dd866))
+
 ## [1.8.0](https://github.com/druewilding/druewilding.github.io/compare/v1.7.2...v1.8.0) (2025-11-11)
 
 
