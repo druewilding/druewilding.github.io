@@ -1,20 +1,20 @@
 ---
 layout: cv
-title: Aimee Rivers - CV
+title: Drue Wilding - CV
 description: Senior QA Engineer & Test Specialist
 permalink: /cv/
 ---
 
 <div class="cv-header">
   <div class="cv-header-left">
-    <h1>Aimee Rivers</h1>
+    <h1>Drue Wilding</h1>
     <div class="cv-subtitle">Test Specialist</div>
   </div>
   <ul class="cv-contact">
     <li>2100 Copenhagen, Denmark</li>
     <li><a href="tel:+4571454564">+45 71 45 45 64</a></li>
-    <li><a href="mailto:aimee@aimeerivers.com">aimee@aimeerivers.com</a></li>
-    <li><a href="https://linkedin.com/in/aimeerivers">linkedin.com/in/aimeerivers</a></li>
+    <li><a href="mailto:drue@wilding.dk">drue@wilding.dk</a></li>
+    <li><a href="https://linkedin.com/in/druewilding">linkedin.com/in/druewilding</a></li>
   </ul>
 </div>
 

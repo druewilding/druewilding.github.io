@@ -1,19 +1,19 @@
 {
-  "name": "aimeerivers.github.io",
+  "name": "druewilding.github.io",
   "version": "1.7.2",
-  "description": "Aimee Rivers portfolio and blog",
+  "description": "Drue Wilding portfolio and blog",
   "keywords": [
     "blog"
   ],
-  "homepage": "https://github.com/aimeerivers/aimeerivers.github.io#readme",
+  "homepage": "https://github.com/druewilding/druewilding.github.io#readme",
   "bugs": {
-    "url": "https://github.com/aimeerivers/aimeerivers.github.io/issues"
+    "url": "https://github.com/druewilding/druewilding.github.io/issues"
   },
   "license": "ISC",
-  "author": "aimee rivers",
+  "author": "Drue Wilding",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aimeerivers/aimeerivers.github.io.git"
+    "url": "git+https://github.com/druewilding/druewilding.github.io.git"
   },
   "type": "module",
   "scripts": {
