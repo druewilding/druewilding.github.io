@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/druewilding/druewilding.github.io/compare/v1.8.1...v1.8.2) (2025-11-20)
+
+
+### Chores
+
+* Update eslint-config-plus-prettier to 4.2.4 ([#41](https://github.com/druewilding/druewilding.github.io/issues/41)) ([ee23e1b](https://github.com/druewilding/druewilding.github.io/commit/ee23e1bc006144d227e506fdfcfaf7af4d4445c5))
+
 ## [1.8.1](https://github.com/druewilding/druewilding.github.io/compare/v1.8.0...v1.8.1) (2025-11-11)
 
 
