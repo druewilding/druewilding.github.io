@@ -2,7 +2,7 @@
 layout: default
 title: Playing with genetic algorithms
 description: Using genetic algorithms to make images out of triangles
-image: https://www.aimeerivers.com/assets/images/genetic-algorithms/og-image.jpg
+image: https://www.druewilding.com/assets/images/genetic-algorithms/og-image.jpg
 ---
 
 Genetic algorithms take inspiration from biology to solve difficult problems. A population undergoes selection, competition, cross-breeding and random mutation to produce the next generation. After iterating over many generations, the entire population becomes closer to optimum, however you define that.
@@ -117,8 +117,8 @@ I know the outcome is far from perfect, and i know other people have done simila
 
 ## Code
 
-You can run your own pictures on your own computer, using the code from my GitHub repo here: [github.com/aimeerivers/500triangles](https://github.com/aimeerivers/500triangles)
+You can run your own pictures on your own computer, using the code from my GitHub repo here: [github.com/druewilding/500triangles](https://github.com/druewilding/500triangles)
 
 Let me know if you make any cool pictures with it!
 
-Any questions? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers)
+Any questions? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)

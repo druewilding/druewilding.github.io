@@ -2,7 +2,7 @@
 layout: default
 title: An experiment in vibe coding
 description: I had a go at vibe coding a little app. Here are my thoughts.
-image: https://www.aimeerivers.com/assets/images/vibe-coding/og-image.png
+image: https://www.druewilding.com/assets/images/vibe-coding/og-image.png
 ---
 
 <img src="/assets/images/vibe-coding/music-quiz-app.png" style="float: right; margin: 0 0 1em 1em; width: 40%; max-width: 300px;">
@@ -15,9 +15,9 @@ I used GitHub Copilot to write HTML, CSS, and JavaScript for me. I barely looked
 
 ## The Finished App
 
-You can try out the finished app here: [www.aimeerivers.com/music-quiz](https://www.aimeerivers.com/music-quiz/)
+You can try out the finished app here: [www.druewilding.com/music-quiz](https://www.druewilding.com/music-quiz/)
 
-The source code is available on GitHub: [github.com/aimeerivers/music-quiz](https://github.com/aimeerivers/music-quiz)
+The source code is available on GitHub: [github.com/druewilding/music-quiz](https://github.com/druewilding/music-quiz)
 
 ## How We Got There
 
@@ -47,7 +47,7 @@ Here's how i began the session:
 >
 > you can link the rounds together in different pages or a single page app, whatever you think is best.
 
-If you're interested, you can read the full set of prompts used here: [PROMPT.md](https://github.com/aimeerivers/music-quiz/blob/main/PROMPT.md)
+If you're interested, you can read the full set of prompts used here: [PROMPT.md](https://github.com/druewilding/music-quiz/blob/main/PROMPT.md)
 
 ## Problems Along the Way
 

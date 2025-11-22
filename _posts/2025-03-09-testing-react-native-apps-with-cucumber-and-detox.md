@@ -2,7 +2,7 @@
 layout: default
 title: Testing React-Native apps with Cucumber and Detox
 description: A working guide as of March 2025
-image: https://www.aimeerivers.com/assets/images/react-native-cucumber-detox/og-image.png
+image: https://www.druewilding.com/assets/images/react-native-cucumber-detox/og-image.png
 ---
 
 ## Introduction
@@ -229,4 +229,4 @@ Thanks to the following people for their help:
 - [Chris Rosendorf](https://github.com/ExoMemphiz) for a lot of help figuring out the `tsx` things and wrangling the Detox internals. This would never have happened without all your help!
 - [ChatGPT, powered by OpenAI](https://openai.com/) for providing helpful suggestions, tips, and guidance throughout the process.
 
-Any questions? Feedback? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers)
+Any questions? Feedback? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)
