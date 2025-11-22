@@ -2,7 +2,7 @@
 layout: default
 light_mode: true
 title: Drue Wilding - Portfolio
-image: https://www.aimeerivers.com/assets/images/og-image.png
+image: https://www.druewilding.com/assets/images/og-image.png
 ---
 
 # Welcome to my portfolio
@@ -101,19 +101,11 @@ Looking for my CV? [Find it here](/cv/)
     </div>
   </a>
 
-  <a href="/aimeefont/">
+  <a href="/handwriting/">
     <div class="project">
-      <img src="/assets/images/portfolio/aimeefont.png" alt="aimee font Thumbnail">
-      <h2>aimee font</h2>
+      <img src="/assets/images/portfolio/handwriting.png" alt="Drue's handwriting Thumbnail">
+      <h2>Drue's handwriting</h2>
       <p>My handwriting as a font.</p>
-    </div>
-  </a>
-
-  <a href="/the-aimee-rivers-test/">
-    <div class="project">
-      <img src="/assets/images/portfolio/the-aimee-rivers-test.png" alt="The aimee rivers test Thumbnail">
-      <h2>The aimee rivers test</h2>
-      <p>The aimee rivers test is a divisibility rule for the number 25561.</p>
     </div>
   </a>
 
