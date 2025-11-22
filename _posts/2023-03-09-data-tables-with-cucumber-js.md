@@ -2,7 +2,7 @@
 layout: default
 title: Data tables with cucumber-js
 description: How to use Cucumber data tables with Javascript/Typescript
-image: https://www.aimeerivers.com/assets/images/data-tables/og-image.png
+image: https://www.druewilding.com/assets/images/data-tables/og-image.png
 ---
 
 For years i have been using Cucumber with Ruby, but i've recently changed job and now i am using Javascript/Typescript.
@@ -202,4 +202,4 @@ Creating Mallory Wisoky (mw@example.com) who lives in Boynton Beach and was born
 
 ---
 
-Any questions? Find me on Mastodon: [@aimeerivers@queer.party](https://queer.party/@aimeerivers)
+Any questions? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)

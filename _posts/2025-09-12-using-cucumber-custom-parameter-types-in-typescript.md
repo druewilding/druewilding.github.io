@@ -80,4 +80,4 @@ To find out how to implement Cucumber custom parameter types in other languages,
 
 Have you used custom parameter types in your Cucumber tests? I'd love to hear about other patterns you've found useful.
 
-_You can find me on [Mastodon](https://queer.party/@aimeerivers) or [LinkedIn](https://www.linkedin.com/in/aimeerivers/) if you'd like to continue the conversation._
+_You can find me on [Mastodon](https://tech.lgbt/@druewilding) or [LinkedIn](https://www.linkedin.com/in/druewilding/) if you'd like to continue the conversation._
