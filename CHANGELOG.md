@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/druewilding/druewilding.github.io/compare/v1.9.0...v1.9.1) (2025-11-22)
+
+
+### Chores
+
+* Make a few more updates for the druewilding changeover ([#45](https://github.com/druewilding/druewilding.github.io/issues/45)) ([09fe00b](https://github.com/druewilding/druewilding.github.io/commit/09fe00b8e1ff42b2ffdd17423599f90b8d1b6d4c))
+
 ## [1.9.0](https://github.com/druewilding/druewilding.github.io/compare/v1.8.2...v1.9.0) (2025-11-22)
 
 
