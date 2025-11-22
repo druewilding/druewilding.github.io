@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/druewilding/druewilding.github.io/compare/v1.8.2...v1.9.0) (2025-11-22)
+
+
+### Features
+
+* Update references to use Drue Wilding ([#43](https://github.com/druewilding/druewilding.github.io/issues/43)) ([24a4996](https://github.com/druewilding/druewilding.github.io/commit/24a49964a0a62c68ce6b6680c3844e7a504e1378))
+
 ## [1.8.2](https://github.com/druewilding/druewilding.github.io/compare/v1.8.1...v1.8.2) (2025-11-20)
 
 
