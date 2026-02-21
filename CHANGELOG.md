@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/druewilding/druewilding.github.io/compare/v1.10.0...v1.10.1) (2026-02-21)
+
+
+### Bug Fixes
+
+* Use full URLs for the OG images ([#51](https://github.com/druewilding/druewilding.github.io/issues/51)) ([c253030](https://github.com/druewilding/druewilding.github.io/commit/c253030d507f9e616768b950ae9e2e4eece063f2))
+
 ## [1.10.0](https://github.com/druewilding/druewilding.github.io/compare/v1.9.2...v1.10.0) (2026-02-21)
 
 
