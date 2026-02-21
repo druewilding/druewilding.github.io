@@ -2,12 +2,7 @@
 layout: default
 title: I Built an AI Assistant on a Budget
 description: Who needs a Mac Mini when you've got an old MacBook Air and some free API tokens?
-date: 2026-02-21
 image: /assets/images/openclaw-on-a-budget/og-image.png
-categories:
-  - OpenClaw
-  - AI
-  - self-hosting
 ---
 
 _This post assumes you have a Discord account and aren't afraid of the terminal._
