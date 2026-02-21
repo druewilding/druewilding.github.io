@@ -67,6 +67,19 @@ I get Clawby to commit config and memories and push to a GitHub repo, partly for
 
 What I didn't expect was that other people would want to join in. A few of my colleagues have popped into the Discord server, and now they chat with Clawby too. It's become a little shared space where we all play around with what an AI assistant can do.
 
+## Keeping It Secure
+
+Running an AI agent on your own machine means giving it access to _do things_. That's the great power, but it also means you need to think about security.
+
+Here's how I approached it:
+
+- **Dedicated machine** — I reformatted my MacBook Air and created a fresh account. Clawby doesn't have access to any of my personal data, passwords, or other machines.
+- **Permission prompts** — before downloading new software or running commands I haven't previously authorised, Clawby asks for my approval. I have to confirm on the MacBook Air itself.
+- **Minimal Skills** — I haven't enabled any Skills beyond the ones I know I need. Each Skill is another door, and I'd rather keep most of them closed.
+- **Scoped GitHub access** — I only gave Clawby access to a few specific repos to update, nothing else.
+
+The general principle: start with nothing and slowly add permissions as needed. It's much easier to grant access than to revoke it after something goes wrong.
+
 ## What Did I Learn?
 
 I learned that you don't need expensive hardware to have a useful AI assistant. The heavy lifting happens in the cloud, and your local machine just needs to be _on_ and _connected_. The free tiers of Ollama and Brave give you enough to build something genuinely useful.
