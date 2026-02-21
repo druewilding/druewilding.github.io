@@ -2,7 +2,7 @@
 layout: default
 title: Using Cucumber Custom Parameter Types in TypeScript
 description: Using what I call the "shouldOrNot" pattern as an example
-image: /assets/images/cucumber-custom-parameter-types/og-image.png
+image: https://www.druewilding.com/assets/images/cucumber-custom-parameter-types/og-image.png
 ---
 
 ## Writing Flexible Step Definitions in Cucumber with TypeScript
