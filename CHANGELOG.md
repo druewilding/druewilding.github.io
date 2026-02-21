@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/druewilding/druewilding.github.io/compare/v1.9.2...v1.10.0) (2026-02-21)
+
+
+### Features
+
+* New blog post: AI Assistant on a budget ([#49](https://github.com/druewilding/druewilding.github.io/issues/49)) ([da7fcf9](https://github.com/druewilding/druewilding.github.io/commit/da7fcf9121008b3e04b05c01440ca74ef1c2120d))
+
 ## [1.9.2](https://github.com/druewilding/druewilding.github.io/compare/v1.9.1...v1.9.2) (2025-11-22)
 
 
