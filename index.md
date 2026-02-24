@@ -21,6 +21,14 @@ Looking for my CV? [Find it here](/cv/)
     </div>
   </a>
 
+  <a href="/plural-pride-logo/">
+    <div class="project">
+      <img src="/assets/images/portfolio/plural-pride-logo.png" alt="Plural Pride Logo Thumbnail">
+      <h2>Plural Pride Logo</h2>
+      <p>A scalable version of the plural pride logo.</p>
+    </div>
+  </a>
+
   <a href="/fancy-gradients/">
     <div class="project">
       <img src="/assets/images/portfolio/fancy-gradients.png" alt="Fancy Gradients Thumbnail">
