@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/druewilding/druewilding.github.io/compare/v1.10.1...v1.11.0) (2026-02-24)
+
+
+### Features
+
+* Add Plural Pride Logo to the portfolio ([#53](https://github.com/druewilding/druewilding.github.io/issues/53)) ([5d0c6cc](https://github.com/druewilding/druewilding.github.io/commit/5d0c6ccbf95782c37b1ded8e3b5afdbdf0ce1b27))
+
 ## [1.10.1](https://github.com/druewilding/druewilding.github.io/compare/v1.10.0...v1.10.1) (2026-02-21)
 
 
