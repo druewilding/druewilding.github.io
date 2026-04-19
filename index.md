@@ -21,6 +21,14 @@ Looking for my CV? [Find it here](/cv/)
     </div>
   </a>
 
+  <a href="/chess/">
+    <div class="project">
+      <img src="/assets/images/portfolio/chess.png" alt="Chess Variants Thumbnail">
+      <h2>Chess Variants</h2>
+      <p>Alternative versions of chess, playable against opponent or bot.</p>
+    </div>
+  </a>
+
   <a href="/plural-pride-logo/">
     <div class="project">
       <img src="/assets/images/portfolio/plural-pride-logo.png" alt="Plural Pride Logo Thumbnail">
