@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/druewilding/druewilding.github.io/compare/v1.11.0...v1.12.0) (2026-04-19)
+
+
+### Features
+
+* Add chess variants to portfolio ([#55](https://github.com/druewilding/druewilding.github.io/issues/55)) ([5d3f329](https://github.com/druewilding/druewilding.github.io/commit/5d3f32915867a438f11d1dd749b872ec53aa1154))
+
 ## [1.11.0](https://github.com/druewilding/druewilding.github.io/compare/v1.10.1...v1.11.0) (2026-02-24)
 
 
