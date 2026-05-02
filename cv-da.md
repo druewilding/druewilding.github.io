@@ -36,11 +36,11 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 
 ### Kernekompetencer
 
-- **Systemdesign:** Arkitektur af skalerbare backendservices — købaseret processering, horisontal skalering, datapipelines
+- **Systemdesign:** Arkitektur af skalerbare backendservices: købaseret processering, horisontal skalering, datapipelines
 - **Databaseudvikling:** Skemadesign, indekseringsstrategi, materialized views til analyse i stor skala
 - **Performance engineering:** Belastningstest, benchmarking, kapacitetsplanlægning til produktionssystemer
 - **Kvalitet by design:** Testbarhed og observerbarhed bygget ind i systemer fra starten
-- **Autonomi:** Selvstyrende; jeg identificerer problemer, foreslår løsninger og leverer dem
+- **Autonomi:** Selvstyrende; jeg identificerer problemer, foreslår løsninger og leverer
 - **Hurtig indlæring:** Komfortabel med at skifte teknologistak; dokumenteret erfaring på tværs af Ruby, Node.js, Scala, Python
 
 ## Erhvervserfaring
@@ -52,7 +52,7 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 - Designet og implementeret en Redis-baseret køarkitektur (web+worker-mønster) til håndtering af trafikspidser. Reducerede API-svartider fra sekunder til under et millisekund, eliminerede fejlspidser og muliggjorde horisontal skalering.
 - Bygget en analyseservice fra bunden: PostgreSQL materialized views over 34M hændelser, REST API, SSO-autentificering, deployet som uafhængig microservice.
 - Optimeret PostgreSQL-forespørgsler på store datasæt. Sammensat indeksering forbedrede aggregeringsperformance.
-- Udviklet og publiceret et delt diagrambibliotek (NPM-pakke) med fuld testdækning og dokumentation.
+- Udviklet og publiceret et delt grafbibliotek (NPM-pakke) med fuld testdækning og dokumentation.
 - Implementeret microservice-routing via reverse proxy-konfiguration med håndtering af CSP- og indholdspolitikker.
 - Bygget automatiserede datapipelines med natlig opdatering via GitHub Actions.
 
@@ -73,12 +73,12 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 ### August 2018 – februar 2023: QA-koordinator hos Danmarks Radio, København, Danmark
 
 - Introducerede automatiseret test på tværs af funktionelle, performance-, belastnings-, sikkerheds- og tilgængelighedsdomæner.
-- Bygget værktøj, der gjorde det nemt for udviklere at skrive og køre deres egne tests.
+- Bygget værktøj, der gjorde det let for udviklere at skrive og køre deres egne tests.
 - Brugte Gatling til performance- og belastningstest af DR's digitale platforme.
 
 ### April 2013 – august 2018: Senior tester hos BBC, London, UK
 
-- Arbejdede i Media Services med video/audio-transkodning og afspilningssystemer og hjalp med at bygge backend-infrastruktur med høj gennemstrømning og høj tilgængelighed.
+- Byggede højperformant backend-infrastruktur til video/audio-transkodning og afspilning.
 - Ledede et team på 8 personer med teknisk lederskab og mentoring.
 - Var pioner inden for automatiseret test af medieteknologier, der tidligere blev anset for utestbare.
 - Sikrede pålidelighed under højprofilerede live-begivenheder (OL, nationale valg).
@@ -91,7 +91,7 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 
 ### Juni 2008 – marts 2011: Softwareudvikler hos Eden Development, Winchester, UK
 
-- Ruby on Rails-applikationsudvikling i et konsulenthus.
+- Ruby on Rails-applikationsudvikling hos en konsulentvirksomhed.
 - Grundlæggende træning i TDD, BDD og clean code-principper.
 - Agil udvikling i et samarbejdende startup-team.
 
