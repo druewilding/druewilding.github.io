@@ -49,6 +49,7 @@
 }
 
 .btn-back,
+.btn-lang,
 .btn-print,
 .btn-download {
   padding: 8px 16px;
@@ -91,6 +92,16 @@
 
 .btn-download:hover {
   background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.btn-lang {
+  background: #8e44ad;
+  color: white;
+}
+
+.btn-lang:hover {
+  background: #7d3c98;
   transform: translateY(-1px);
 }
 

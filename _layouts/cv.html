@@ -1,5 +1,6 @@
+{% assign cv_lang = page.lang | default: "en" %}
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ cv_lang }}">
   <head>
     <meta charset="UTF-8">
     {% seo %}
@@ -16,8 +17,13 @@
       <div class="cv-actions no-print">
         <a href="{{ '/' | relative_url }}" class="btn-back">&larr; Back to Home</a>
         <div class="cv-buttons">
+          {% if cv_lang == "da" %}
+            <a href="{{ '/cv/' | relative_url }}" class="btn-lang">🇬🇧 English</a>
+          {% else %}
+            <a href="{{ '/cv/da/' | relative_url }}" class="btn-lang">🇩🇰 Dansk</a>
+          {% endif %}
           <button onclick="window.print()" class="btn-print">🖨️ Print</button>
-          <a href="{{ '/assets/cv/drue-wilding-cv.pdf' | relative_url }}" class="btn-download" download>📄 Download</a>
+          <a href="{{ page.pdf | relative_url }}" class="btn-download" download>📄 Download</a>
         </div>
       </div>
       
