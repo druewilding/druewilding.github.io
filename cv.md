@@ -3,7 +3,7 @@ layout: cv
 title: Drue Wilding - CV
 description: Backend Developer & Quality Engineer
 permalink: /cv/
-lang: en
+lang: en-US
 pdf: /assets/cv/drue-wilding-cv.pdf
 ---
 

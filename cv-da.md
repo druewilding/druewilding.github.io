@@ -3,7 +3,7 @@ layout: cv
 title: Drue Wilding - CV
 description: Backendudvikler & kvalitetsingeniør
 permalink: /cv/da/
-lang: da
+lang: da-DK
 pdf: /assets/cv/drue-wilding-cv-da.pdf
 ---
 
