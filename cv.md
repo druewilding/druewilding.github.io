@@ -78,7 +78,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 ### April 2013 – August 2018: Senior Tester at BBC, London, UK
 
-- Worked in Media Services on video/audio transcoding and playback systems, helping to build high-throughput, high-availability backend infrastructure.
+- Built high-throughput, high-availability backend infrastructure for video/audio transcoding and playback.
 - Line managed a team of 8, providing technical leadership and mentoring.
 - Pioneered automated testing for media technologies previously considered untestable.
 - Ensured reliability during high-profile live events (Olympics, national elections).
