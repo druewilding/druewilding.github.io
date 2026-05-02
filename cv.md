@@ -3,6 +3,8 @@ layout: cv
 title: Drue Wilding - CV
 description: Backend Developer & Quality Engineer
 permalink: /cv/
+lang: en-US
+pdf: /assets/cv/drue-wilding-cv.pdf
 ---
 
 <div class="cv-header">
@@ -34,7 +36,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 ### Core Competencies
 
-- **System design:** Architecting scalable backend services — queue-based processing, horizontal scaling, data pipelines
+- **System design:** Architecting scalable backend services: queue-based processing, horizontal scaling, data pipelines
 - **Database engineering:** Schema design, indexing strategy, materialized views for analytics at scale
 - **Performance engineering:** Load testing, benchmarking, capacity planning for production systems
 - **Quality by design:** Building testability and observability into systems from the start
@@ -76,7 +78,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 ### April 2013 – August 2018: Senior Tester at BBC, London, UK
 
-- Worked in Media Services on video/audio transcoding and playback systems, helping to build high-throughput, high-availability backend infrastructure.
+- Built high-throughput, high-availability backend infrastructure for video/audio transcoding and playback.
 - Line managed a team of 8, providing technical leadership and mentoring.
 - Pioneered automated testing for media technologies previously considered untestable.
 - Ensured reliability during high-profile live events (Olympics, national elections).
