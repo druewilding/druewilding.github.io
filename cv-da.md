@@ -50,7 +50,7 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 **Backendudvikling & arkitektur:**
 
 - Designet og implementeret en Redis-baseret køarkitektur (web+worker-mønster) til håndtering af trafikspidser. Reducerede API-svartider fra sekunder til under et millisekund, eliminerede fejlspidser og muliggjorde horisontal skalering.
-- Bygget en analyseservice fra bunden: PostgreSQL materialized views over 34M hændelser, REST API, SSO-autentificering, deployet som uafhængig microservice.
+- Bygget en analyseservice fra bunden: PostgreSQL materialized views over 34M hændelser, REST API, SSO-autentificering, driftet som uafhængig microservice.
 - Optimeret PostgreSQL-forespørgsler på store datasæt. Sammensat indeksering forbedrede aggregeringsperformance.
 - Udviklet og publiceret et delt grafbibliotek (NPM-pakke) med fuld testdækning og dokumentation.
 - Implementeret microservice-routing via reverse proxy-konfiguration med håndtering af CSP- og indholdspolitikker.
@@ -93,7 +93,7 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 
 - Ruby on Rails-applikationsudvikling hos en konsulentvirksomhed.
 - Grundlæggende træning i TDD, BDD og clean code-principper.
-- Agil udvikling i et samarbejdende startup-team.
+- Agil udvikling i et tæt samarbejdende startup-team.
 
 ## Uddannelse
 
