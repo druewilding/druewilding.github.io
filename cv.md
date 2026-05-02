@@ -36,7 +36,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 ### Core Competencies
 
-- **System design:** Architecting scalable backend services — queue-based processing, horizontal scaling, data pipelines
+- **System design:** Architecting scalable backend services: queue-based processing, horizontal scaling, data pipelines
 - **Database engineering:** Schema design, indexing strategy, materialized views for analytics at scale
 - **Performance engineering:** Load testing, benchmarking, capacity planning for production systems
 - **Quality by design:** Building testability and observability into systems from the start
