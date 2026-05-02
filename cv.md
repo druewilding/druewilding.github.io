@@ -1,7 +1,7 @@
 ---
 layout: cv
 title: Drue Wilding - CV
-description: Senior QA Engineer & Test Specialist
+description: Backend Developer & Quality Engineer
 permalink: /cv/
 ---
 
@@ -28,7 +28,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 **Databases:** PostgreSQL, MongoDB, Redis
 
-**Performance & Testing:** Gatling (load/stress testing), Playwright, Detox, Cucumber (BDD, defining system behaviour in domain language)
+**Performance & Testing:** Gatling (load/stress testing), Playwright, Detox, Cucumber (BDD, defining system behavior in domain language)
 
 **DevOps & Infrastructure:** Docker, Kubernetes, GitHub Actions, CI/CD pipelines, Scalingo, AWS, Azure
 
