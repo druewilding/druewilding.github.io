@@ -39,9 +39,9 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 - **Systemdesign:** Arkitektur af skalerbare backendservices: købaseret processering, horisontal skalering, datapipelines
 - **Databaseudvikling:** Skemadesign, indekseringsstrategi, materialized views til analyse i stor skala
 - **Performance engineering:** Belastningstest, benchmarking, kapacitetsplanlægning til produktionssystemer
-- **Kvalitet by design:** Testbarhed og observerbarhed bygget ind i systemer fra starten
+- **Indbygget kvalitet:** Testbarhed og observerbarhed bygget ind i systemer fra starten
 - **Autonomi:** Selvstyrende; jeg identificerer problemer, foreslår løsninger og leverer
-- **Hurtig indlæring:** Komfortabel med at skifte teknologistak; dokumenteret erfaring på tværs af Ruby, Node.js, Scala, Python
+- **Hurtig indlæring:** Vant til at skifte teknologistak; dokumenteret erfaring på tværs af Ruby, Node.js, Scala, Python
 
 ## Erhvervserfaring
 
@@ -67,27 +67,27 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 
 - Udviklet et delt testframework med Playwright og Axios, publiceret som NPM-pakker til brug på tværs af teams.
 - Opsat automatiseret test på review-miljøer via CI/CD-workflows.
-- Advokeret for og implementeret conventional commits, standardiserede releaseprocesser og kodekvalitetsværktøjer.
+- Gik i spidsen for conventional commits, standardiserede releaseprocesser og kodekvalitetsværktøjer.
 - Samarbejdet på tværs af teams om at etablere TypeScript best practices og teststandarder.
 
 ### August 2018 – februar 2023: QA-koordinator hos Danmarks Radio, København, Danmark
 
-- Introducerede automatiseret test på tværs af funktionelle, performance-, belastnings-, sikkerheds- og tilgængelighedsdomæner.
+- Introduceret automatiseret test på tværs af funktionelle, performance-, belastnings-, sikkerheds- og tilgængelighedsdomæner.
 - Bygget værktøj, der gjorde det let for udviklere at skrive og køre deres egne tests.
-- Brugte Gatling til performance- og belastningstest af DR's digitale platforme.
+- Brugt Gatling til performance- og belastningstest af DR's digitale platforme.
 
 ### April 2013 – august 2018: Senior tester hos BBC, London, UK
 
-- Byggede højperformant backend-infrastruktur til video/audio-transkodning og afspilning.
-- Ledede et team på 8 personer med teknisk lederskab og mentoring.
-- Var pioner inden for automatiseret test af medieteknologier, der tidligere blev anset for utestbare.
-- Sikrede pålidelighed under højprofilerede live-begivenheder (OL, nationale valg).
+- Arbejdet med højtydende backend-infrastruktur til video/audio-transkodning og afspilning.
+- Ledet et team på 8 personer med teknisk lederskab og mentoring.
+- Pioner inden for automatiseret test af medieteknologier, der tidligere blev anset for utestbare.
+- Sikret pålidelighed under højprofilerede live-begivenheder (OL, nationale valg).
 
 ### Marts 2011 – april 2013: Softwareudvikler hos Aimee Rivers Ltd, UK
 
 - Bygget Ruby on Rails-applikationer og mobilløsninger til diverse kunder.
-- Udviklede den første Android-version af BufferApp.
-- Leverede projekter i varierende skala med hurtig tilpasning til nye teknologier og domæner.
+- Udviklet den første Android-version af BufferApp.
+- Leveret projekter i varierende skala med hurtig tilpasning til nye teknologier og domæner.
 
 ### Juni 2008 – marts 2011: Softwareudvikler hos Eden Development, Winchester, UK
 
