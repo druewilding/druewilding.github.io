@@ -46,6 +46,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 ### November 2023 – Present: Backend Developer & Test Specialist at Hedia, Copenhagen, Denmark
 
 **Backend development & architecture:**
+
 - Designed and implemented a Redis-backed queue architecture (web+worker pattern) to handle traffic spikes. Reduced API response times from seconds to sub-millisecond, eliminated error spikes, and enabled horizontal scaling.
 - Built an analytics service from scratch: PostgreSQL materialized views over 34M events, REST API, SSO authentication, deployed as independent microservice.
 - Optimized PostgreSQL queries on large datasets. Composite indexing improved aggregation performance.
@@ -54,6 +55,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 - Built automated data pipelines with nightly refresh via GitHub Actions.
 
 **Testing & quality engineering:**
+
 - Designed and maintained end-to-end test suites across backend services (Playwright) and mobile apps (Detox, iOS + Android).
 - Performance/stress testing with Gatling, identifying capacity limits.
 - Built CI/CD pipelines in GitHub Actions for testing, release, and deployment automation.
