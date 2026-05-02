@@ -23,7 +23,9 @@
             <a href="{{ '/cv/da/' | relative_url }}" class="btn-lang">🇩🇰 Dansk</a>
           {% endif %}
           <button onclick="window.print()" class="btn-print">🖨️ Print</button>
-          <a href="{{ page.pdf | relative_url }}" class="btn-download" download>📄 Download</a>
+          {% if page.pdf %}
+            <a href="{{ page.pdf | relative_url }}" class="btn-download" download>📄 Download</a>
+          {% endif %}
         </div>
       </div>
       
