@@ -15,16 +15,25 @@
   <body class="cv-body">
     <div class="cv-container">
       <div class="cv-actions no-print">
-        <a href="{{ '/' | relative_url }}" class="btn-back">&larr; Back to Home</a>
+        {% if cv_lang == "da-DK" %}
+          {% assign lbl_back = "Tilbage til forsiden" %}
+          {% assign lbl_print = "Udskriv" %}
+          {% assign lbl_download = "Download" %}
+        {% else %}
+          {% assign lbl_back = "Back to Home" %}
+          {% assign lbl_print = "Print" %}
+          {% assign lbl_download = "Download" %}
+        {% endif %}
+        <a href="{{ '/' | relative_url }}" class="btn-back">&larr; {{ lbl_back }}</a>
         <div class="cv-buttons">
           {% if cv_lang == "da-DK" %}
             <a href="{{ '/cv/' | relative_url }}" class="btn-lang">🇬🇧 English</a>
           {% else %}
             <a href="{{ '/cv/da/' | relative_url }}" class="btn-lang">🇩🇰 Dansk</a>
           {% endif %}
-          <button onclick="window.print()" class="btn-print">🖨️ Print</button>
+          <button onclick="window.print()" class="btn-print">🖨️ {{ lbl_print }}</button>
           {% if page.pdf %}
-            <a href="{{ page.pdf | relative_url }}" class="btn-download" download>📄 Download</a>
+            <a href="{{ page.pdf | relative_url }}" class="btn-download" download>📄 {{ lbl_download }}</a>
           {% endif %}
         </div>
       </div>
