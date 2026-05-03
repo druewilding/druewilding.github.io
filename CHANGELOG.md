@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.1](https://github.com/druewilding/druewilding.github.io/compare/v1.13.0...v1.13.1) (2026-05-03)
+
+
+### Bug Fixes
+
+* Align the language button correctly on mobile view ([#63](https://github.com/druewilding/druewilding.github.io/issues/63)) ([54d4329](https://github.com/druewilding/druewilding.github.io/commit/54d4329849921bbad5b0d0fddae1282aec1b43ae))
+* Update a little bit on the CV ([#61](https://github.com/druewilding/druewilding.github.io/issues/61)) ([cb83ae5](https://github.com/druewilding/druewilding.github.io/commit/cb83ae5a87171c0912d5e233948f196392017d91))
+
 ## [1.13.0](https://github.com/druewilding/druewilding.github.io/compare/v1.12.0...v1.13.0) (2026-05-02)
 
 
