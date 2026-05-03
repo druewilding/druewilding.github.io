@@ -26,7 +26,7 @@ A backend developer with deep roots in quality engineering. I build services, da
 
 **Languages:** TypeScript, JavaScript, Node.js, Ruby, Scala, Bash
 
-**Backend & Architecture:** Microservices, REST APIs, worker/queue patterns (Redis), reverse proxies, event-driven systems
+**Backend & Architecture:** Microservices, REST APIs, worker/queue patterns, event-driven systems, reverse proxies
 
 **Databases:** PostgreSQL, MongoDB, Redis
 

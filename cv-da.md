@@ -26,7 +26,7 @@ En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, dat
 
 **Sprog:** TypeScript, JavaScript, Node.js, Ruby, Scala, Bash
 
-**Backend & arkitektur:** Microservices, REST API'er, worker/kø-mønstre (Redis), reverse proxies, event-drevne systemer
+**Backend & arkitektur:** Microservices, REST API'er, worker/kø-mønstre, event-drevne systemer, reverse proxies
 
 **Databaser:** PostgreSQL, MongoDB, Redis
 
