@@ -25,12 +25,9 @@ You also had to get the anchors right, with `^` at the start, and `$` at the end
 When i migrated to TypeScript (see [It's always been Cucumber](/2025/06/06/its-always-been-cucumber.html) for that journey), the regex habit came with me:
 
 ```typescript
-When(
-  /^the user "([^"]*)" logs in with password "([^"]*)"$/,
-  async function (username: string, password: string) {
-    await loginPage.login(username, password);
-  }
-);
+When(/^the user "([^"]*)" logs in with password "([^"]*)"$/, async function (username: string, password: string) {
+  await loginPage.login(username, password);
+});
 ```
 
 Different language, same squinting required. The whole thing was a lot of ceremony for something that should have been readable.
@@ -42,12 +39,9 @@ Cucumber Expressions launched in September 2016, as a deliberate alternative to 
 The same step definition from above becomes:
 
 ```typescript
-When(
-  'the user {string} logs in with password {string}',
-  async function (username: string, password: string) {
-    await loginPage.login(username, password);
-  }
-);
+When("the user {string} logs in with password {string}", async function (username: string, password: string) {
+  await loginPage.login(username, password);
+});
 ```
 
 Much better. The built-in parameter types available are:
@@ -65,12 +59,9 @@ Much better. The built-in parameter types available are:
 For a long time, i didn't know this existed, so whenever i needed to match both singular and plural, i'd fall back to regex. Something like this:
 
 ```typescript
-Given(
-  /^I have (\d+) items? in the basket$/,
-  async function (count: string) {
-    await expect(basket.itemCount()).toBe(parseInt(count));
-  }
-);
+Given(/^I have (\d+) items? in the basket$/, async function (count: string) {
+  await expect(basket.itemCount()).toBe(parseInt(count));
+});
 ```
 
 That `items?` makes `s` optional in regex — the `?` means "zero or one of the preceding character". It works, but it's not as readable. Also, the regex treats everything as a string, which means i have to convert the `count` to a number in the step.
@@ -78,12 +69,9 @@ That `items?` makes `s` optional in regex — the `?` means "zero or one of the 
 In Cucumber Expressions, parentheses mean _optional text_, which is a much more natural fit:
 
 ```typescript
-Given(
-  'I have {int} item(s) in the basket',
-  async function (count: number) {
-    await expect(basket.itemCount()).toBe(count);
-  }
-);
+Given("I have {int} item(s) in the basket", async function (count: number) {
+  await expect(basket.itemCount()).toBe(count);
+});
 ```
 
 Matching:
@@ -96,12 +84,9 @@ Given I have 3 items in the basket
 You can use parentheses around any optional text, not just `s`. For example:
 
 ```typescript
-Given(
-  'I am logged in(to the app)',
-  async function () {
-    await expect(homePage.welcomeMessage()).toBeVisible();
-  }
-);
+Given("I am logged in(to the app)", async function () {
+  await expect(homePage.welcomeMessage()).toBeVisible();
+});
 ```
 
 Matching:
@@ -122,12 +107,9 @@ This is where alternation syntax comes in. Added in March 2017, it lets you writ
 Before i knew about it, i would be writing ugly regex, something like this:
 
 ```typescript
-Then(
-  /^there (?:is|are) (\d+) entr(?:y|ies) in the list$/,
-  async function (count: string) {
-    await expect(entries).toHaveCount(parseInt(count));
-  }
-);
+Then(/^there (?:is|are) (\d+) entr(?:y|ies) in the list$/, async function (count: string) {
+  await expect(entries).toHaveCount(parseInt(count));
+});
 ```
 
 The regex uses `(?:...)` non-capturing groups because the thing being matched isn't actually relevant. All of this is a mess.
@@ -135,12 +117,9 @@ The regex uses `(?:...)` non-capturing groups because the thing being matched is
 With alternation in Cucumber Expressions:
 
 ```typescript
-Then(
-  'there is/are {int} entry/entries in the list',
-  async function (count: number) {
-    await expect(entries).toHaveCount(count);
-  }
-);
+Then("there is/are {int} entry/entries in the list", async function (count: number) {
+  await expect(entries).toHaveCount(count);
+});
 ```
 
 Matching:
@@ -183,13 +162,10 @@ defineParameterType({
 Now you can write:
 
 ```typescript
-Then(
-  'the {string} entry should be {status}',
-  async function (title: string, status: Status) {
-    const entry = page.getByRole('row', { name: title });
-    await expect(entry.getByTestId('status')).toHaveText(status);
-  }
-);
+Then("the {string} entry should be {status}", async function (title: string, status: Status) {
+  const entry = page.getByRole("row", { name: title });
+  await expect(entry.getByTestId("status")).toHaveText(status);
+});
 ```
 
 ```gherkin
