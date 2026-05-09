@@ -10,7 +10,7 @@ I'm writing this post as much for my future self as for anyone else. I keep forg
 
 ## The before times
 
-When i first started using Cucumber, i was writing Ruby. Step definitions looked like this:
+When i first started using Cucumber, i was writing Ruby. Step definitions used regular expressions, and looked like this:
 
 ```ruby
 When(/^the user "([^"]*)" logs in with password "([^"]*)"$/) do |username, password|
@@ -22,7 +22,7 @@ That `([^"]*)` is a capture group that matches any character except a double quo
 
 You also had to get the anchors right, with `^` at the start, and `$` at the end, otherwise the step might match things you didn't intend.
 
-When i migrated to TypeScript (see [It's always been Cucumber](/2025/06/06/its-always-been-cucumber.html) for that journey), the regex habit came with me:
+When i migrated to TypeScript, the regex habit came with me:
 
 ```typescript
 When(/^the user "([^"]*)" logs in with password "([^"]*)"$/, async function (username: string, password: string) {
@@ -34,7 +34,7 @@ Different language, same squinting required. The whole thing was a lot of ceremo
 
 ## Cucumber Expressions arrive
 
-Cucumber Expressions launched in September 2016, as a deliberate alternative to regular expressions. The idea was simple: make step definitions readable by people, not just by regex parsers.
+Cucumber Expressions launched in September 2016, as a friendlier alternative to regular expressions. The idea was simple: make step definitions readable by people, not just by regex parsers.
 
 The same step definition from above becomes:
 
@@ -81,7 +81,7 @@ Given I have 1 item in the basket
 Given I have 3 items in the basket
 ```
 
-You can use parentheses around any optional text, not just `s`. For example:
+You can use parentheses around any optional text, for example:
 
 ```typescript
 Given("I am logged in(to the app)", async function () {
@@ -112,7 +112,7 @@ Then(/^there (?:is|are) (\d+) entr(?:y|ies) in the list$/, async function (count
 });
 ```
 
-The regex uses `(?:...)` non-capturing groups because the thing being matched isn't actually relevant. All of this is a mess.
+The regex uses `(?:...)` for non-capturing groups, since the thing being matched isn't actually relevant. All of this is a mess.
 
 With alternation in Cucumber Expressions:
 
@@ -139,7 +139,7 @@ The `{string}` type gives you a string. The `{int}` type gives you a number. But
 
 I wrote about this in depth in [Using Cucumber Custom Parameter Types in TypeScript](/2025/09/12/using-cucumber-custom-parameter-types-in-typescript.html), using what i call the `shouldOrNot` pattern as an example. The short version: you can define your own `{shouldOrNot}` parameter type that converts `"should"` to `true` and `"should not"` to `false`, giving you a clean boolean in your step function instead of a string you have to check.
 
-Alternation alone (`should/should not`) gives you the readability in the Gherkin. Custom parameter types give you the clean types in the TypeScript.
+Alternation alone gives you the readability in the Gherkin. Custom parameter types give you the clean types in the TypeScript.
 
 ## Enum parameter types
 
