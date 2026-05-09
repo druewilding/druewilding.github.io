@@ -162,6 +162,43 @@ I wrote about this in depth in [Using Cucumber Custom Parameter Types in TypeScr
 
 Alternation alone (`should/should not`) gives you the readability in the Gherkin. Custom parameter types give you the clean types in the TypeScript.
 
+## Enum parameter types
+
+For an enum, the pattern is the same as for `shouldOrNot` — define a parameter type with a regexp that lists the allowed values, and a transformer that converts the matched string into the enum value:
+
+```typescript
+enum Status {
+  Draft = "draft",
+  Published = "published",
+  Archived = "archived",
+}
+
+defineParameterType({
+  name: "status",
+  regexp: /draft|published|archived/,
+  transformer: (s: string) => s as Status,
+});
+```
+
+Now you can write:
+
+```typescript
+Then(
+  'the {string} entry should be {status}',
+  async function (title: string, status: Status) {
+    const entry = page.getByRole('row', { name: title });
+    await expect(entry.getByTestId('status')).toHaveText(status);
+  }
+);
+```
+
+```gherkin
+Then the "Hello World" entry should be draft
+Then the "Release Notes" entry should be published
+```
+
+Your step function gets a proper `Status` enum value rather than a raw string, which means TypeScript will tell you if you accidentally handle a status that doesn't exist.
+
 ## Looking back
 
 I've been using Cucumber for years, and the introduction of Cucumber Expressions quietly removed one of the most common sources of friction. Regex step definitions still work, but it's always better to use a Cucumber Expression wherever possible.
