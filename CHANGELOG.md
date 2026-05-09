@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/druewilding/druewilding.github.io/compare/v1.13.1...v1.14.0) (2026-05-09)
+
+
+### Features
+
+* Add a blog post on Cucumber expressions ([#65](https://github.com/druewilding/druewilding.github.io/issues/65)) ([ec2390e](https://github.com/druewilding/druewilding.github.io/commit/ec2390e318dd116b9330c5085d22b26a54aef552))
+
 ## [1.13.1](https://github.com/druewilding/druewilding.github.io/compare/v1.13.0...v1.13.1) (2026-05-03)
 
 
