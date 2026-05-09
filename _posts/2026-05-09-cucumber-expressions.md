@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Cucumber Expressions: Actually readable step definitions"
+title: "Cucumber Expressions: Readable step definitions"
 description: From anchored regex nightmares to optional text and alternation — the evolution of Cucumber step matching
 ---
 
