@@ -62,7 +62,7 @@ When the user "admin" logs in with password "hunter2"
 
 Then your function receives `admin` and `hunter2` without quotes, which is almost always what you want.
 
-## Handling plurals - optional text
+## Handling plurals with optional text
 
 For a long time, i didn't know this existed, so whenever i needed to match both singular and plural, i'd fall back to regex. Something like this:
 
@@ -106,7 +106,7 @@ Given I am logged in to the app
 
 Both resolve to the same step function, which can be useful in some situations.
 
-## Irregular plurals — alternation syntax
+## Irregular plurals with alternation syntax
 
 The `(s)` trick works beautifully with most English nouns, but there are always exceptions, like the word "entry" becomes "entries" in plural.
 
