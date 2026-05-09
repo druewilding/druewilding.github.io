@@ -149,9 +149,7 @@ I wrote about this in depth in [Using Cucumber Custom Parameter Types in TypeScr
 
 Alternation alone gives you the readability in the Gherkin. Custom parameter types give you the clean types in the TypeScript.
 
-## Enum parameter types
-
-For an enum, the pattern is the same as for `shouldOrNot` — define a parameter type with a regexp that lists the allowed values, and a transformer that converts the matched string into the enum value:
+For an enum, the pattern is the same — define a parameter type with a regexp that lists the allowed values, and a transformer that converts the matched string into the enum value:
 
 ```typescript
 enum Status {
