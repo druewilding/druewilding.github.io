@@ -92,7 +92,7 @@ Given I have 3 items in the basket
 You can use parentheses around any optional text, for example:
 
 ```typescript
-Given("I am logged in(to the app)", async function () {
+Given("I am logged in( to the app)", async function () {
   await expect(homePage.welcomeMessage()).toBeVisible();
 });
 ```
@@ -101,7 +101,7 @@ Matching:
 
 ```gherkin
 Given I am logged in
-Given I am logged into the app
+Given I am logged in to the app
 ```
 
 Both resolve to the same step function, which can be useful in some situations.
