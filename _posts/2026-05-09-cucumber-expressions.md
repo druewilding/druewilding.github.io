@@ -10,7 +10,19 @@ I'm writing this post as much for my future self as for anyone else. I keep forg
 
 ## The before times
 
-When i started using Cucumber, step definitions were regular expression matchers, that looked like this:
+When i first started using Cucumber, i was writing Ruby. Step definitions looked like this:
+
+```ruby
+When(/^the user "([^"]*)" logs in with password "([^"]*)"$/) do |username, password|
+  login_page.login(username, password)
+end
+```
+
+That `([^"]*)` is a capture group that matches any character except a double quote, zero or more times. It's not exactly welcoming, is it?
+
+You also had to get the anchors right, with `^` at the start, and `$` at the end, otherwise the step might match things you didn't intend.
+
+When i migrated to TypeScript (see [It's always been Cucumber](/2025/06/06/its-always-been-cucumber.html) for that journey), the regex habit came with me:
 
 ```typescript
 When(
@@ -21,9 +33,7 @@ When(
 );
 ```
 
-That `([^"]*)` is a capture group that matches any character except a double quote, zero or more times. It's not exactly welcoming, is it?
-
-You also had to get the anchors right, with `^` at the start, and `$` at the end, otherwise the step might match things you didn't intend. The whole thing was a lot of ceremony for something that should have been readable.
+Different language, same squinting required. The whole thing was a lot of ceremony for something that should have been readable.
 
 ## Cucumber Expressions arrive
 
