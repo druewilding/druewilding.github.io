@@ -60,14 +60,6 @@ Much better. The built-in parameter types available are:
 | `{word}`   | A single word with no spaces                    | `string`                   |
 | `{}`       | Anything at all                                 | `string`                   |
 
-One thing worth noting about `{string}`: it matches the quoted value in your Gherkin and strips the quotes before passing it to your function. So if your scenario says:
-
-```gherkin
-When the user "admin" logs in with password "hunter2"
-```
-
-Then your function receives `admin` and `hunter2` — no quotes. This is almost always what you want.
-
 ## Handling plurals - optional text
 
 For a long time, i didn't know this existed, so whenever i needed to match both singular and plural, i'd fall back to regex. Something like this:
