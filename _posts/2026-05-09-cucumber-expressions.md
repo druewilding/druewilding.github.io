@@ -86,15 +86,40 @@ Given(
 );
 ```
 
-You can use parentheses around any optional text, not just `s`. Something like `I am logged in(to the application)` would match both `I am logged in` and `I am logged in to the application`. This can be useful sometimes.
+Matching:
+
+```gherkin
+Given I have 1 item in the basket
+Given I have 3 items in the basket
+```
+
+You can use parentheses around any optional text, not just `s`. For example:
+
+```typescript
+Given(
+  'I am logged in(to the app)',
+  async function () {
+    await expect(homePage.welcomeMessage()).toBeVisible();
+  }
+);
+```
+
+Matching:
+
+```gherkin
+Given I am logged in
+Given I am logged into the app
+```
+
+Both resolve to the same step function, which can be useful in some situations.
 
 ## Irregular plurals — alternation syntax
 
 The `(s)` trick works beautifully with most English nouns, but there are always exceptions, like the word "entry" becomes "entries" in plural.
 
-This is where the `/` alternation syntax comes in. Added in March 2017, it lets you write two alternatives separated by a slash.
+This is where alternation syntax comes in. Added in March 2017, it lets you write two alternatives separated by a slash.
 
-Before i knew about it, the regex would have looked something like this:
+Before i knew about it, i would be writing ugly regex, something like this:
 
 ```typescript
 Then(
@@ -105,7 +130,7 @@ Then(
 );
 ```
 
-The regex uses `(?:...)` non-capturing groups because the thing being matched isn't actually relevant. All of this is an ugly mess.
+The regex uses `(?:...)` non-capturing groups because the thing being matched isn't actually relevant. All of this is a mess.
 
 With alternation in Cucumber Expressions:
 
@@ -125,7 +150,7 @@ Then there is 1 entry in the list
 Then there are 117 entries in the list
 ```
 
-Note that alternation is purely for matching — the alternatives aren't passed as parameters to your function. Only `{parameter_type}` syntax creates parameters. That's worth keeping in mind if you find yourself wanting to branch on which alternative was used; for that, you'd want a custom parameter type, which is what the next section is about.
+Note that alternation is purely for matching — the alternatives aren't passed as parameters to your function. Only `{}` syntax creates parameters. That's worth keeping in mind if you find yourself wanting to branch on which alternative was used; for that, you want a custom parameter type.
 
 ## When you need even more — custom parameter types
 
