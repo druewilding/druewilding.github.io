@@ -183,7 +183,7 @@ Your step function gets a proper `Status` enum value rather than a raw string, w
 
 ## Looking back
 
-I've been using Cucumber for years, and the introduction of Cucumber Expressions quietly removed one of the most common sources of friction. Regex step definitions still work, but it's always better to use a Cucumber Expression wherever possible.
+I've been using Cucumber for years, and the introduction of Cucumber Expressions quietly removed one of the most common sources of friction. Regex step definitions still work, but i can't think of a reason i'd reach for one now.
 
 Have you found any particularly elegant uses of optional text or alternation? i'd love to see examples from real test suites.
 
