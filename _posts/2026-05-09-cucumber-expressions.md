@@ -162,19 +162,6 @@ I wrote about this in depth in [Using Cucumber Custom Parameter Types in TypeScr
 
 Alternation alone (`should/should not`) gives you the readability in the Gherkin. Custom parameter types give you the clean types in the TypeScript.
 
-## A quick reference
-
-In case this is the thing you actually came here for:
-
-| Syntax       | Meaning                         | Example            |
-| ------------ | ------------------------------- | ------------------ |
-| `{string}`   | Quoted string (quotes stripped) | `the "admin" user` |
-| `{int}`      | Integer                         | `42 items`         |
-| `{float}`    | Decimal number                  | `3.14 seconds`     |
-| `{word}`     | Single unquoted word            | `the red button`   |
-| `(optional)` | Optional text                   | `item(s)`          |
-| `this/that`  | Alternation                     | `enabled/disabled` |
-
 ## Looking back
 
 I've been using Cucumber for years, and the introduction of Cucumber Expressions quietly removed one of the most common sources of friction. Regex step definitions still work, but it's always better to use a Cucumber Expression wherever possible.
