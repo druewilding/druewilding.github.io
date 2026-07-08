@@ -1,7 +1,7 @@
 ---
 layout: cv
 title: Drue Wilding - CV
-description: Backendudvikler & kvalitetsingeniør
+description: Testautomatiseringsingeniør
 permalink: /cv/da/
 lang: da-DK
 pdf: /assets/cv/drue-wilding-cv-da.pdf
@@ -10,78 +10,78 @@ pdf: /assets/cv/drue-wilding-cv-da.pdf
 <div class="cv-header">
   <div class="cv-header-left">
     <h1>Drue Wilding</h1>
-    <div class="cv-subtitle">Backendudvikler & kvalitetsingeniør</div>
+    <div class="cv-subtitle">Testautomatiseringsingeniør</div>
   </div>
   <ul class="cv-contact">
     <li>2300 København S, Danmark</li>
     <li><a href="tel:+4571454564">+45 71 45 45 64</a></li>
     <li><a href="mailto:drue@wilding.dk">drue@wilding.dk</a></li>
     <li><a href="https://linkedin.com/in/druewilding">linkedin.com/in/druewilding</a></li>
+    <li><a href="https://github.com/druewilding">github.com/druewilding</a></li>
   </ul>
 </div>
 
-En backendudvikler med dybe rødder i kvalitetssikring. Jeg bygger services, datainfrastruktur og automatisering. Jeg bringer et sjældent perspektiv: alt, hvad jeg bygger, er designet til at være testbart, observerbart og pålideligt under belastning. Jeg trives i miljøer, der værdsætter autonomi, håndværk og tillid.
+En kvalitetsingeniør med mere end ti års erfaring med at bygge testautomatiseringsframeworks og CI/CD-pipelines, samt praktisk erfaring med backendudvikling. Jeg har bygget testværktøjer til medieinfrastruktur inden for broadcast, e-handelsplatforme og sundhedsteknologi; altid med fokus på at gøre systemer testbare, observerbare og pålidelige under reel belastning. Jeg trives med at arbejde tæt sammen med ingeniører fra andre fagområder og tage ejerskab for kvalitet fra ende til anden.
 
 ## Teknisk profil
 
-**Sprog:** TypeScript, JavaScript, Node.js, Ruby, Scala, Bash
+**Testautomatisering & kvalitetssikring:** Playwright, Detox, Cucumber, Gatling, design og ejerskab af CI/CD-pipelines
 
-**Backend & arkitektur:** Microservices, REST API'er, worker/kø-mønstre, event-drevne systemer, reverse proxies
+**Sprog:** TypeScript, JavaScript, Node.js, Ruby, Scala, Bash samt arbejdskendskab til C# og Python
+
+**Backend & arkitektur:** Microservices, REST API'er, worker/kø-mønstre, event-drevne systemer
 
 **Databaser:** PostgreSQL, MongoDB, Redis
 
-**Performance & test:** Gatling (belastnings-/stresstest), Playwright, Detox, Cucumber (BDD, definition af systemadfærd i domænesprog)
-
-**DevOps & infrastruktur:** Docker, Kubernetes, GitHub Actions, CI/CD-pipelines, Scalingo, AWS, Azure
+**DevOps & infrastruktur:** Docker, Kubernetes, Scalingo, AWS, Azure, Windows- og Linux-miljøer
 
 ### Kernekompetencer
 
-- **Systemdesign:** Arkitektur af skalerbare backendservices: købaseret processering, horisontal skalering, datapipelines
-- **Databaseudvikling:** Skemadesign, indekseringsstrategi, materialized views til analyse i stor skala
-- **Performance engineering:** Belastningstest, benchmarking, kapacitetsplanlægning til produktionssystemer
+- **Testautomatiseringsframeworks:** Design og vedligeholdelse af skalerbare, genbrugelige automatiserede testsuiter og delte testbiblioteker på tværs af flere teams og produkter
+- **CI/CD-ejerskab:** Opbygning og overvågning af pipelines, triagering af fejl og koordinering af rettelser med udviklingsteams
+- **Performance- og pålidelighedsengineering:** Belastningstest, benchmarking og kapacitetsplanlægning for at finde og udvide systemgrænser, før de svigter i produktion
+- **Tværfagligt samarbejde:** Bred erfaring med at arbejde sammen med ingeniører fra tilstødende fagområder om at definere og validere systemadfærd
 - **Indbygget kvalitet:** Testbarhed og observerbarhed bygget ind i systemer fra starten
-- **Autonomi:** Selvstyrende; jeg identificerer problemer, foreslår løsninger og leverer
-- **Hurtig indlæring:** Vant til at skifte teknologistak; dokumenteret erfaring på tværs af Ruby, Node.js, Scala, Python
+- **Hurtig indlæring:** Vant til at skifte teknologistak; dokumenteret erfaring på tværs af Ruby, Node.js, Scala og Python
 
 ## Erhvervserfaring
 
 ### November 2023 – nu: Backendudvikler & testspecialist hos Hedia, København, Danmark
 
-**Backendudvikling & arkitektur:**
-
-- Designet og implementeret en Redis-baseret køarkitektur (web+worker-mønster) til håndtering af trafikspidser. Reducerede API-svartider fra sekunder til under et millisekund, eliminerede fejlspidser og muliggjorde horisontal skalering.
-- Bygget en analyseservice fra bunden: PostgreSQL materialized views over 34M hændelser, REST API, SSO-autentificering, driftet som uafhængig microservice.
-- Optimeret PostgreSQL-forespørgsler på store datasæt. Sammensat indeksering forbedrede aggregeringsperformance.
-- Udviklet og publiceret et delt grafbibliotek (NPM-pakke) med fuld testdækning og dokumentation.
-- Implementeret microservice-routing via reverse proxy-konfiguration med håndtering af CSP- og indholdspolitikker.
-- Bygget automatiserede datapipelines med natlig opdatering via GitHub Actions.
-
 **Test & kvalitetssikring:**
 
 - Designet og vedligeholdt end-to-end-testsuiter på tværs af backendservices (Playwright) og mobilapps (Detox, iOS + Android).
-- Performance-/stresstest med Gatling til identifikation af kapacitetsgrænser.
-- Bygget CI/CD-pipelines i GitHub Actions til test, release og deployment-automatisering.
-- Oprettet delte testframeworks og publiceret genbrugelige NPM-pakker.
+- Performance-/stresstest med Gatling til identifikation af kapacitetsgrænser under belastning.
+- Bygget og vedligeholdt CI/CD-pipelines i GitHub Actions til automatisering af test, release og deployment.
+- Oprettet delte testframeworks og undervist andre i at bruge dem.
+
+**Backendudvikling & arkitektur:**
+
+- Designet og implementeret en Redis-baseret køarkitektur (web+worker-mønster) til håndtering af trafikspidser. Reducerede API-svartider fra sekunder til under et millisekund, eliminerede fejlspidser og muliggjorde horisontal skalering.
+- Bygget en analyseservice fra bunden: PostgreSQL materialized views over 34M hændelser, REST API, SSO-autentificering, driftet som selvstændig microservice.
+- Optimeret PostgreSQL-forespørgsler på store datasæt. Sammensat indeksering forbedrede aggregeringsperformance.
+- Implementeret microservice-routing via reverse proxy-konfiguration med håndtering af CSP- og indholdspolitikker.
+- Bygget automatiserede datapipelines med natlig opdatering via GitHub Actions.
 
 ### Februar 2023 – oktober 2023: Senior QA-ingeniør hos Planday, København, Danmark
 
 - Udviklet et delt testframework med Playwright og Axios, publiceret som NPM-pakker til brug på tværs af teams.
 - Opsat automatiseret test på review-miljøer via CI/CD-workflows.
-- Gik i spidsen for conventional commits, standardiserede releaseprocesser og kodekvalitetsværktøjer.
-- Samarbejdet på tværs af teams om at etablere TypeScript best practices og teststandarder.
+- Gik i spidsen for og implementerede conventional commits, standardiserede releaseprocesser og kodekvalitetsværktøjer.
+- Foreslået TypeScript best practices og teststandarder til udbredelse på tværs af teams.
 
 ### August 2018 – februar 2023: QA-koordinator hos Danmarks Radio, København, Danmark
 
 - Introduceret automatiseret test på tværs af funktionelle, performance-, belastnings-, sikkerheds- og tilgængelighedsdomæner.
 - Bygget værktøj, der gjorde det let for udviklere at skrive og køre deres egne tests.
-- Brugt Gatling til performance- og belastningstest af DR's digitale platforme.
+- Brugt Gatling til at simulere hundredtusindvis af samtidige brugere til belastningstest af DR's digitale platforme, herunder streamingtjenesten DRTV og valgresultatsiderne.
 
 ### April 2013 – august 2018: Senior tester hos BBC, London, UK
 
-- Arbejdet med højtydende backend-infrastruktur til video/audio-transkodning og afspilning.
+- Bygget et testframework, der emulerede en fysisk Chromecast-enhed til at verificere integrationen af HTML-videoafspilleren uden at have den fysiske hardware ved hånden — et tidligt eksempel på at bygge testopsætninger til at validere software mod en hardwaremålgruppe.
+- Pioner inden for automatiseret test af medieteknologier, der tidligere blev anset for utestbare, herunder højtydende, højtilgængelig infrastruktur til video-/audiotranskodning og afspilning — systemer med hårde realtids- og hardwarenære begrænsninger.
+- Sikret pålidelighed under højprofilerede live-begivenheder med faste deadlines og ingen plads til fejl (OL, nationale valg).
 - Ledet et team på 8 personer med teknisk lederskab og mentoring.
-- Pioner inden for automatiseret test af medieteknologier, der tidligere blev anset for utestbare.
-- Sikret pålidelighed under højprofilerede live-begivenheder (OL, nationale valg).
 
 ### Marts 2011 – april 2013: Softwareudvikler hos Aimee Rivers Ltd, UK
 
