@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/druewilding/druewilding.github.io/compare/v1.14.0...v1.15.0) (2026-07-08)
+
+
+### Features
+
+* Update CV ([#67](https://github.com/druewilding/druewilding.github.io/issues/67)) ([07d0312](https://github.com/druewilding/druewilding.github.io/commit/07d0312184a3fe840d46a85091d677459c82b473))
+
 ## [1.14.0](https://github.com/druewilding/druewilding.github.io/compare/v1.13.1...v1.14.0) (2026-05-09)
 
 
