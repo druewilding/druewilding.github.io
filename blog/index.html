@@ -6,10 +6,13 @@ description: Testing, Cucumber, AI, Copenhagen, and things i make with my hands.
 image: https://www.druewilding.com/assets/images/blog/og-image.png
 ---
 
+{% include tag-bar.html %}
+
 <div class="blog-grid">
   {% for post in paginator.posts %}
     {% if paginator.page == 1 and forloop.first %}
       {% include post-card.html post=post feature=true label="Newest" %}
+      {% include series-promo.html series="cucumber" %}
     {% else %}
       {% include post-card.html post=post %}
     {% endif %}

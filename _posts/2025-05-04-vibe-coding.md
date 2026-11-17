@@ -3,6 +3,7 @@ layout: post
 title: An experiment in vibe coding
 description: I had a go at vibe coding a little app. Here are my thoughts.
 image: https://www.druewilding.com/assets/images/vibe-coding/og-image.png
+tags: [ai]
 ---
 
 <img src="/assets/images/vibe-coding/music-quiz-app.png" style="float: right; margin: 0 0 1em 1em; width: 40%; max-width: 300px;">

@@ -3,6 +3,7 @@ layout: post
 title: Glostrup Lightrail
 description: Copenhagen Lightrail progress
 image: https://www.druewilding.com/assets/images/lightrail/glostrup/progress-og-image.jpg
+tags: [copenhagen, drones]
 ---
 
 I am excited about the Copenhagen Lightrail (Hovedstadens Letbane) that is due to open in 2025. Yesterday i went for a bike ride with my drone to see how they're getting on around Glostrup, which is where i live.

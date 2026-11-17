@@ -3,6 +3,8 @@ layout: post
 title: It's always been Cucumber
 description: How Cucumber/Gherkin has remained my constant companion through years of changing tech stacks in software testing
 image: https://www.druewilding.com/assets/images/cucumber/og-image.png
+tags: [testing]
+series: cucumber
 ---
 
 As a software tester, i've watched my tech stack evolve dramatically over the years. Languages have changed, frameworks have been replaced, and entire philosophies around testing have shifted. But through all of this transformation, there's been one constant companion that has never let me down: Cucumber.

@@ -1,0 +1,17 @@
+{% assign next_post = nil %}
+{% include series-part.html post=page %}
+{% if series_part %}
+  {% assign s = site.data.series[page.series] %}
+  {% assign next_index = series_part %}
+  {% assign next_post = series_posts[next_index] %}
+  <aside class="series-next" aria-label="{{ s.name }}">
+    {% if next_post %}
+      {% assign next_label = "Next in the " | append: s.short %}
+      {% include post-card.html post=next_post label=next_label %}
+    {% else %}
+      <p class="series-next__done">
+        That's the latest in <a href="{{ s.url | relative_url }}">{{ s.name | downcase }}</a>, with more to come.
+      </p>
+    {% endif %}
+  </aside>
+{% endif %}

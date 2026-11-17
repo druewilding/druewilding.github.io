@@ -4,6 +4,7 @@ light_mode: true
 title: Crochet Dog Ball
 description: A fun and safe toy for your furry friend
 image: https://www.druewilding.com/assets/images/crochet/dog-ball/og-image.jpg
+tags: [making]
 ---
 
 ## Summary

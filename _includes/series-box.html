@@ -1,0 +1,18 @@
+{% include series-part.html post=page %}
+{% if series_part %}
+  {% assign s = site.data.series[page.series] %}
+  <details class="series-box">
+    <summary>
+      <span class="series-box__part">Part {{ series_part }} of {{ series_posts.size }}</span>
+      <span class="series-box__name">{{ s.name }}</span>
+    </summary>
+    <ol class="series-box__list">
+      {% for sp in series_posts %}
+        <li{% if sp.url == page.url %} aria-current="page"{% endif %}>
+          {% if sp.url == page.url %}<span>{{ sp.title }}</span> <span class="series-box__here">you are here</span>{% else %}<a href="{{ sp.url | relative_url }}">{{ sp.title }}</a>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+    <a class="series-box__all" href="{{ s.url | relative_url }}">About the series</a>
+  </details>
+{% endif %}

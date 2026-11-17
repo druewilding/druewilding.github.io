@@ -9,16 +9,22 @@ layout: default
 {% endif %}
 
 <article class="prose">
+  {% include series-box.html %}
   {{ content }}
 </article>
 
-{% if page.previous or page.next %}
+{% include series-next.html %}
+
+{% assign newer = page.next %}
+{% if next_post and newer and newer.url == next_post.url %}{% assign newer = nil %}{% endif %}
+
+{% if page.previous or newer %}
   <nav class="post-nav" aria-label="More posts">
     {% if page.previous %}
       {% include post-card.html post=page.previous label="Older post" %}
     {% endif %}
-    {% if page.next %}
-      {% include post-card.html post=page.next label="Newer post" %}
+    {% if newer %}
+      {% include post-card.html post=newer label="Newer post" %}
     {% endif %}
   </nav>
 {% endif %}

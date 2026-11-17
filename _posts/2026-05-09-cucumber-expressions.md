@@ -3,6 +3,8 @@ layout: post
 title: "Cucumber Expressions: Readable step definitions"
 description: From anchored regex nightmares to optional text and alternation — the evolution of Cucumber step matching
 image: https://www.druewilding.com/assets/images/cucumber-expressions/og-image.png
+tags: [testing]
+series: cucumber
 ---
 
 _This post assumes you're familiar with Cucumber and TypeScript._

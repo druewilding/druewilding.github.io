@@ -20,6 +20,9 @@
             </div>
           </div>
         {% else %}
+          {% assign lede = page.description %}
+          {% if page.layout == 'tag' %}{% assign lede = site.data.tags[page.tag].description %}{% endif %}
+          {% if page.layout == 'series' %}{% assign lede = site.data.series[page.series].description %}{% endif %}
           <div class="band__intro">
             {% if page.layout == 'post' %}
               {% assign words = page.content | number_of_words %}
@@ -31,9 +34,22 @@
                 <span aria-hidden="true">·</span>
                 {{ minutes }} min read
               </p>
+            {% elsif page.layout == 'tag' or page.layout == 'series' %}
+              <p class="band__meta">
+                <a href="{{ '/blog/' | relative_url }}">Blog</a>
+                <span aria-hidden="true">·</span>
+                {% if page.layout == 'tag' %}Tag{% else %}Series{% endif %}
+              </p>
             {% endif %}
             <h1 class="band__title">{{ page.heading | default: page.title }}</h1>
-            {% if page.description %}<p class="band__lede">{{ page.description }}</p>{% endif %}
+            {% if lede %}<p class="band__lede">{{ lede }}</p>{% endif %}
+            {% if page.layout == 'post' and page.tags.size > 0 %}
+              <ul class="band__tags" aria-label="Tags">
+                {% for t in page.tags %}
+                  <li><a href="{{ '/blog/tag/' | append: t | append: '/' | relative_url }}">{{ site.data.tags[t].name | default: t }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </div>
         {% endif %}
 

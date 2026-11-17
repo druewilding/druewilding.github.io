@@ -1,4 +1,5 @@
 {% assign p = include.post %}
+{% include series-part.html post=p %}
 <a class="post-card{% if include.feature %} post-card--feature{% endif %}" href="{{ p.url | relative_url }}">
   {% if p.image %}
     <span class="post-card__image">
@@ -14,5 +15,11 @@
     <span class="post-card__title">{{ p.title }}</span>
     <time class="post-card__date" datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d %B %Y' }}</time>
     {% if p.description %}<span class="post-card__desc">{{ p.description }}</span>{% endif %}
+    {% if p.tags.size > 0 or series_part %}
+      <span class="post-card__tags">
+        {% if series_part %}<span class="pill pill--series">{{ site.data.series[p.series].short }} · part {{ series_part }}</span>{% endif %}
+        {% for t in p.tags %}<span class="pill">{{ site.data.tags[t].name | default: t }}</span>{% endfor %}
+      </span>
+    {% endif %}
   </span>
 </a>

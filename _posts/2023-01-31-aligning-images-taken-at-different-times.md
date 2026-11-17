@@ -3,6 +3,7 @@ layout: post
 title: Drone image alignment with Hugin
 description: Aligning images taken at different times
 image: https://www.druewilding.com/assets/images/hugin/aligning-images-taken-at-different-times.jpg
+tags: [copenhagen, drones]
 ---
 
 I have programmed repeatable drone flights using [Litchi](https://flylitchi.com/) so that i can take progress photos of the Copenhagen Lightrail.

@@ -3,6 +3,7 @@ layout: post
 title: Playing with genetic algorithms
 description: Using genetic algorithms to make images out of triangles
 image: https://www.druewilding.com/assets/images/genetic-algorithms/og-image.jpg
+tags: [creative-coding]
 ---
 
 Genetic algorithms take inspiration from biology to solve difficult problems. A population undergoes selection, competition, cross-breeding and random mutation to produce the next generation. After iterating over many generations, the entire population becomes closer to optimum, however you define that.
