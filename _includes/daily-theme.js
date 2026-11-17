@@ -248,11 +248,20 @@
     if (day.toDateString() === date.toDateString()) return null;
     return {
       hex: getDailyColor(day),
-      when: "on " + day.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      when: dayName(day),
       // "on 1 Mar the site was", "on 25 Dec the site will be"
       verb: day < date ? "was" : "will be",
       date: day,
     };
+  }
+
+  // "yesterday", "tomorrow", or "on 25 Dec"
+  function dayName(day) {
+    var midnight = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    var days = Math.round((day - midnight) / 86400000);
+    if (days === -1) return "yesterday";
+    if (days === 1) return "tomorrow";
+    return "on " + day.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   }
 
   var m = /[?&]date=(\d{4}-\d{2}-\d{2})/.exec(location.search);
