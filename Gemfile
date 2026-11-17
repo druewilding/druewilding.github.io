@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem "jekyll"
-gem "jekyll-theme-cayman"
 gem "jekyll-paginate"
+gem "jekyll-seo-tag"
+gem "jekyll-feed"
 gem "webrick"

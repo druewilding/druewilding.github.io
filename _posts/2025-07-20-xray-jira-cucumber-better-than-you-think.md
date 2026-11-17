@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Xray + Cucumber: Better Than You Think"
 description: Moving your Cucumber scenarios into Jira makes automated testing accessible to everyone on your team
 image: https://www.druewilding.com/assets/images/xray-cucumber/og-image.png

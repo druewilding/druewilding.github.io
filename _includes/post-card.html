@@ -1,0 +1,18 @@
+{% assign p = include.post %}
+<a class="post-card{% if include.feature %} post-card--feature{% endif %}" href="{{ p.url | relative_url }}">
+  {% if p.image %}
+    <span class="post-card__image">
+      <img
+        src="{{ p.image | replace: 'https://www.druewilding.com', '' }}"
+        alt=""
+        loading="lazy"
+      />
+    </span>
+  {% endif %}
+  <span class="post-card__body">
+    {% if include.label %}<span class="post-card__label">{{ include.label }}</span>{% endif %}
+    <span class="post-card__title">{{ p.title }}</span>
+    <time class="post-card__date" datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d %B %Y' }}</time>
+    {% if p.description %}<span class="post-card__desc">{{ p.description }}</span>{% endif %}
+  </span>
+</a>

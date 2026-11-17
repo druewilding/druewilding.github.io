@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% if page.image %}
+  <figure class="post-cover">
+    <img src="{{ page.image | replace: 'https://www.druewilding.com', '' }}" alt="" />
+  </figure>
+{% endif %}
+
+<article class="prose">
+  {{ content }}
+</article>
+
+{% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}
+      {% include post-card.html post=page.previous label="Older post" %}
+    {% endif %}
+    {% if page.next %}
+      {% include post-card.html post=page.next label="Newer post" %}
+    {% endif %}
+  </nav>
+{% endif %}

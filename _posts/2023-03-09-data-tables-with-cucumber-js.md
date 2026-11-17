@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Data tables with cucumber-js
 description: How to use Cucumber data tables with Javascript/Typescript
 image: https://www.druewilding.com/assets/images/data-tables/og-image.png

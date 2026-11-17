@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Glostrup Lightrail
 description: Copenhagen Lightrail progress
 image: https://www.druewilding.com/assets/images/lightrail/glostrup/progress-og-image.jpg

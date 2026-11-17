@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Drone image alignment with Hugin
 description: Aligning images taken at different times
 image: https://www.druewilding.com/assets/images/hugin/aligning-images-taken-at-different-times.jpg

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Playing with genetic algorithms
 description: Using genetic algorithms to make images out of triangles
 image: https://www.druewilding.com/assets/images/genetic-algorithms/og-image.jpg

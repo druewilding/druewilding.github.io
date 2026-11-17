@@ -1,0 +1,61 @@
+# Projects on the homepage, in display order.
+#   size: wide   -> spans two columns, image beside the text
+#   live: daily  -> shows today's colour instead of a screenshot
+#   note:        -> a handwritten note on the tile (keep it short)
+- title: Chess Variants
+  url: /chess/
+  image: chess.png
+  description: Alternative versions of chess, playable against an opponent or a bot.
+  size: wide
+- title: Daily Color
+  url: /daily-color/
+  live: daily
+  description: A unique hex code for every day.
+  note: this is why the site is this colour
+- title: Random Abstract Art
+  url: /random-art/
+  image: random-art.png
+  description: Randomly generated, ever-changing abstract art.
+- title: Push the button
+  url: /push-the-button/
+  image: push-the-button.png
+  description: A button to be pushed when you need to push a button.
+  note: go on…
+- title: Plural Pride Logo
+  url: /plural-pride-logo/
+  image: plural-pride-logo.png
+  description: A scalable version of the plural pride logo.
+- title: Gradient Painter
+  url: /gradient-painter/
+  image: gradient-painter.png
+  description: Make your own beautiful CSS gradients.
+  size: wide
+- title: Fancy Gradients
+  url: /fancy-gradients/
+  image: fancy-gradients.png
+  description: A collection of CSS gradient ideas.
+- title: Pride Flags
+  url: /prideflags/
+  image: pride-flags.png
+  description: Blend your own pride flags.
+- title: Clock
+  url: /clock/
+  image: clock.png
+  description: The current time and date, in colours.
+- title: Byskilt
+  url: /byskilt/
+  image: byskilt.png
+  description: A 3D rendering of the sign that welcomes you to Danish towns.
+- title: Drue's handwriting
+  url: /handwriting/
+  image: handwriting.png
+  description: My handwriting as a font.
+  note: you're reading it!
+- title: How Old Am I?
+  url: /howoldami/
+  image: howoldami.png
+  description: Work out your exact age.
+- title: Nyhavn
+  url: /nyhavn/
+  image: nyhavn.png
+  description: Nyhavn in pure CSS.

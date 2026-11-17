@@ -1,0 +1,53 @@
+---
+layout: default
+home: true
+title: Drue Wilding
+heading: Drue Wilding
+description: Test engineer and developer in Copenhagen, making weird and wonderful things.
+intro: Test engineer and developer in Copenhagen. This is a small selection of the weird and wonderful things that i make.
+image: https://www.druewilding.com/assets/images/og-image.png
+---
+
+<section class="section" aria-labelledby="latest">
+  <div class="section__head">
+    <h2 id="latest" class="section__title">Latest from the blog</h2>
+    <a class="section__more" href="{{ '/blog/' | relative_url }}">All posts</a>
+  </div>
+  <div class="latest">
+    {% for post in site.posts limit: 3 %}
+      {% if forloop.first %}
+        {% include post-card.html post=post feature=true %}
+      {% else %}
+        {% include post-card.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="made" aria-labelledby="made-title">
+  <div class="section__head">
+    <h2 id="made-title" class="section__title">Things i've made</h2>
+  </div>
+  <div class="bento">
+    {% for project in site.data.projects %}
+      <a class="tile{% if project.size == 'wide' %} tile--wide{% endif %}" href="{{ project.url }}">
+        <span class="tile__image">
+          {% if project.live == 'daily' %}
+            <span class="tile__live-colour"><span data-daily-hex>#??????</span></span>
+          {% else %}
+            <img src="/assets/images/portfolio/{{ project.image }}" alt="" loading="lazy" />
+          {% endif %}
+        </span>
+        <span class="tile__body">
+          <span class="tile__title">{{ project.title }}</span>
+          <span class="tile__desc">{{ project.description }}</span>
+        </span>
+        {% if project.note %}<span class="tile__note hand">{{ project.note }}</span>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section cv-callout">
+  <p>Looking for my CV? <a href="{{ '/cv/' | relative_url }}">Find it here</a>, in English or <a href="{{ '/cv/da/' | relative_url }}">på dansk</a>.</p>
+</section>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 light_mode: true
 title: Building a Raspberry Pi dashboard
 description: How to turn any television into an awesome dashboard display

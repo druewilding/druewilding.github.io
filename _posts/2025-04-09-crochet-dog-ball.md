@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 light_mode: true
 title: Crochet Dog Ball
 description: A fun and safe toy for your furry friend

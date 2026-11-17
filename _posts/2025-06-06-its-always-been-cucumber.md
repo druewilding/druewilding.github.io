@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: It's always been Cucumber
 description: How Cucumber/Gherkin has remained my constant companion through years of changing tech stacks in software testing
 image: https://www.druewilding.com/assets/images/cucumber/og-image.png
