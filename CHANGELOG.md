@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.1](https://github.com/druewilding/druewilding.github.io/compare/v1.16.0...v1.16.1) (2026-11-17)
+
+
+### Documentation
+
+* Link the redesign post to its Mastodon thread ([#71](https://github.com/druewilding/druewilding.github.io/issues/71)) ([9d30d24](https://github.com/druewilding/druewilding.github.io/commit/9d30d249462cbba809af837a20573a041792dec8))
+
 ## [1.16.0](https://github.com/druewilding/druewilding.github.io/compare/v1.15.0...v1.16.0) (2026-11-17)
 
 
