@@ -160,7 +160,33 @@
     };
     dark["on-accent"] = bestInk(dark.accent);
 
+    var codeC = Math.min(Math.max(C, 0.12), 0.16);
+    Object.assign(light, codeColours(ok(0.962, tint * 0.2, H), light.fg, H, codeC, tint, 0.6, -1));
+    Object.assign(dark, codeColours(ok(0.15, tint * 0.14, H), dark.fg, H, codeC, tint, 0.72, 1));
+
     return { hex: hex, hero: hero, light: light, dark: dark };
+  }
+
+  // Code highlighting: six hues spaced evenly round the colour wheel, starting
+  // from today's, so keywords are today's colour and strings its complement.
+  // Each one gets the same contrast rule as links.
+  function codeColours(bg, fg, H, C, tint, start, dir) {
+    function hue(turn) {
+      return findLight(start, C, (H + turn) % 360, bg, dir);
+    }
+    var tag = hue(300);
+    return {
+      "code-bg": bg,
+      "code-fg": fg,
+      "code-keyword": hue(0),
+      "code-title": hue(60),
+      "code-number": hue(120),
+      "code-string": hue(180),
+      "code-type": hue(240),
+      "code-attr": tag,
+      "code-tag": tag,
+      "code-comment": findLight(start, tint * 0.2, H, bg, dir),
+    };
   }
 
   // ── Write as klods tokens ───────────────────────────────────────────────
@@ -178,6 +204,9 @@
     "hero-2": "--drue-hero-2",
     "on-hero": "--drue-on-hero",
   };
+  ["bg", "fg", "keyword", "title", "number", "string", "type", "attr", "tag", "comment"].forEach(function (k) {
+    TOKENS["code-" + k] = "--klods-code-" + k;
+  });
   function decls(s) {
     return Object.keys(s)
       .map(function (k) {

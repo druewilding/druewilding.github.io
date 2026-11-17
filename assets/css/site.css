@@ -41,7 +41,8 @@
   }
 }
 
-/* Code colours: GitHub light / dark, following the visitor's mode */
+/* Code colours: GitHub light / dark, following the visitor's mode. Only a
+   fallback: the daily theme script replaces them with today's colours. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
@@ -920,8 +921,13 @@ a:hover {
 .highlight .sh,
 .highlight .si,
 .highlight .sr,
-.highlight .sx {
+.highlight .sx,
+.highlight .dl {
   color: var(--klods-code-string);
+}
+
+.highlight .nv {
+  color: var(--klods-code-attr);
 }
 
 .highlight .kt,
@@ -941,6 +947,12 @@ a:hover {
 .highlight .fm,
 .highlight .nd {
   color: var(--klods-code-title);
+}
+
+/* Given / When / Then are the stars of a Cucumber post: today's colour */
+.language-gherkin .highlight .nf,
+.language-cucumber .highlight .nf {
+  color: var(--klods-code-keyword);
 }
 
 .highlight .gd {
