@@ -972,11 +972,6 @@ a:hover {
   margin: 0;
 }
 
-.site-footer__note {
-  font-size: 1.5rem;
-  color: var(--drue-secondary);
-}
-
 .site-footer__links {
   display: flex;
   flex-wrap: wrap;
