@@ -32,6 +32,12 @@
   image: push-the-button.png
   description: A button to be pushed when you need to push a button.
   note: go on…
+- title: klods
+  url: /klods/
+  image: klods.png
+  description: A tiny, themeable component library for HTML, CSS and JavaScript, with a Ruby gem too. It feels like building with lego.
+  size: wide
+  note: this site is built with it!
 - title: Plural Pride Logo
   url: /plural-pride-logo/
   image: plural-pride-logo.png
@@ -49,6 +55,10 @@
   url: /prideflags/
   image: pride-flags.png
   description: Blend your own pride flags.
+- title: Queermoji
+  url: /queermoji/
+  image: queermoji.png
+  description: Make pride-striped emoji for Discord and Slack.
 - title: Clock
   url: /clock/
   image: clock.png
@@ -57,6 +67,14 @@
   url: /byskilt/
   image: byskilt.png
   description: A 3D rendering of the sign that welcomes you to Danish towns.
+- title: KnitThis
+  url: /knitthis/
+  image: knitthis.png
+  description: Knitting and crochet patterns, one step at a time.
+- title: Det Danske Alfabet
+  url: https://rvedotrc.github.io/det-danske-alfabet/index.html
+  image: det-danske-alfabet.png
+  description: Type a letter and hear it in Danish, in three different voices. Kept alive by Rachel Evans.
 - title: Drue's handwriting
   url: /handwriting/
   image: handwriting.png
