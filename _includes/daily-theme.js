@@ -342,6 +342,9 @@
     },
   };
 
+  // A date in the address (?date=, e.g. from the colour calendar) beats the
+  // dice, and replaces any rolled colour
+  if (m) writeShuffled(null);
   apply(readShuffled() || todayHex);
 
   document.addEventListener("DOMContentLoaded", function () {
