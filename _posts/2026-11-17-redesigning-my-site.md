@@ -4,6 +4,7 @@ title: "I redesigned my site, and now it's a different colour every day"
 description: A custom Jekyll theme, a daily colour scheme, a tiny text adventure, and a dice for when you don't like today's colour
 image: https://www.druewilding.com/assets/images/site-redesign/og-image.jpg
 tags: [creative-coding, ai]
+mastodon: https://tech.lgbt/@druewilding/117633700571551068
 ---
 
 My site had been wearing the same outfit for years. It was a perfectly nice outfit (the Cayman theme for Jekyll, with a blue-to-green gradient) but it didn't really look like _me_.
