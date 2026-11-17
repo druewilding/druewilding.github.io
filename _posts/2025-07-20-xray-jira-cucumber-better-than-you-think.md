@@ -7,7 +7,7 @@ tags: [testing]
 series: cucumber
 ---
 
-## How Xray + Cucumber Transformed My Team's Testing
+## How Xray + Cucumber transformed my team's testing
 
 For years, i've been passionate about making automated testing accessible to everyone. Cucumber has always been a huge part of that mission: it puts testing into plain English, creates beautifully readable reports, and (thanks to some [AI analysis](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios.html) work i've done recently) can even make test failures more understandable. I love seeing automated test results displayed prominently on dashboards where the whole team can see them.
 
@@ -17,7 +17,7 @@ When your test scenarios live in a code repository, you need a text editor, know
 
 _Note: This blog post assumes you're using Jira and Xray Cloud, and have some sort of CI setup (GitHub Actions, Jenkins, Travis CI, etc)._
 
-## The Bold Move: Put Your Scenarios in Jira
+## The bold move: put your scenarios in Jira
 
 Here's the thing about Xray and Cucumber that most people don't realise: _they work extremely well together_, but only if you're willing to make a bold architectural decision. You have to move your test scenarios out of your code repository and into Jira.
 
@@ -37,15 +37,15 @@ No Git knowledge required. No pull requests. No waiting for code reviews. Just w
 
 <p align="center"><em>Xray Test Repository showing Cucumber scenarios as individual Tests, grouped into Test Sets</em></p>
 
-## How It Works
+## How it works
 
 Let me walk you through how i set this up. It's not as difficult as you might imagine.
 
-### Step 1: Get Your Tests Running Normally First
+### Step 1: get your tests running normally first
 
 Start with your Cucumber scenarios running on CI in the traditional way, reading `.feature` files from your code repository. Make sure this is solid before you add any Xray integration.
 
-### Step 2: Import Your Scenarios to Xray
+### Step 2: import your scenarios to Xray
 
 Once your test scenarios are running reliably, import them into Xray. Each Cucumber scenario becomes an individual Test in Xray. You can use Xray Preconditions to share common setup steps between tests.
 
@@ -53,7 +53,7 @@ Once your test scenarios are running reliably, import them into Xray. Each Cucum
 
 <p align="center"><em>Individual Test in Xray showing a Cucumber scenario with Gherkin syntax</em></p>
 
-### Step 3: Add Jira Automation for CI Triggers
+### Step 3: add Jira automation for CI triggers
 
 This is where the magic happens. Set up a Jira automation to trigger your CI system with the Test Execution key. You could automate this to happen when the Test Execution is created, or when it enters a specific state, but i wanted it to be an intentional action, so i added a button.
 
@@ -70,7 +70,7 @@ Your CI will need to know the Test Execution key, and potentially the platform t
 }
 ```
 
-### Step 4: CI Downloads Scenarios from Xray
+### Step 4: CI downloads scenarios from Xray
 
 Given the Test Execution key, your CI workflow now needs to authenticate with Xray using a Client ID and Client Secret, download the relevant test scenarios and unzip them into your features folder.
 
@@ -99,7 +99,7 @@ Now that your CI has the features it needs, Cucumber can run as normal.
 
 <p align="center"><em>Test Execution running on CI</em></p>
 
-### Step 5: Post Results Back to Xray
+### Step 5: post results back to Xray
 
 After running all the scenarios, your CI should post the results back to Xray so that Test Execution status gets updated automatically. This is really easy - just send the `cucumber.json` file and Xray figures it all out.
 
@@ -128,23 +128,23 @@ Test failures are now automatically documented in Xray. Any screenshots that wer
 
 Retesting failed scenarios is simple: Xray helps you to set up a new Test Execution, just with the failing scenarios.
 
-## The Real Benefits
+## The real benefits
 
-### 1: Traceability Like You've Never Seen Before
+### 1. Traceability like you've never seen before
 
 This setup gives you incredible traceability for test results. Every test run is linked to a specific Test Execution, which is linked to a Test Plan, which can be linked to Epics, Stories, or Requirements. You can see exactly what was tested, when, on which platform, and why.
 
 For a company like [Hedia](https://www.hedia.com/), building highly regulated medical software, this is perfect. We're documenting automated testing in exactly the same way as manual testing, with the same audit trail and approval processes.
 
-### 2: Easy Test Creation
+### 2. Easy test creation
 
 Suddenly your Product Owners can write acceptance criteria as Cucumber scenarios and immediately test them. Your QA team can create regression test suites without touching code. Your Support team can write scenarios to reproduce customer issues and verify fixes.
 
-### 3: Better Collaboration
+### 3. Better collaboration
 
 When test scenarios live in Jira, they become part of your regular workflow. Product requirements link directly to acceptance tests. Bug reports can reference specific failing scenarios. Test coverage becomes visible to stakeholders who might never look at a code repository.
 
-## The Learning Curve
+## The learning curve
 
 I'll be honest - there is a bit of a learning curve here. Your team will need to understand how Test Plans and Test Executions work in Xray. You'll need to establish conventions for how scenarios are written and organised. And yes, you'll lose some of the benefits of having tests version-controlled alongside your code.
 
@@ -168,7 +168,7 @@ Xray automatically keeps a version history of each Test, so you can see who chan
 
 You can, but i don't recommend it. Keeping your scenarios in one place (Jira) and your step definitions in another (your repo) keeps things clear and avoids confusion about which scenarios are the "real" ones.
 
-## Final Thoughts
+## Final thoughts
 
 Xray and Cucumber really are better together than you might think. But you have to be willing to challenge the assumption that everything test-related must live in your code repository.
 

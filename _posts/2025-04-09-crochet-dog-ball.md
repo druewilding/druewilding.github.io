@@ -50,7 +50,7 @@ Increase into every stitch (12)
 
 ![Round 4](/assets/images/crochet/dog-ball/round-4.jpg)
 
-### Rounds 5-8
+### Rounds 5–8
 
 Single crochet in each stitch for 4 rows (24)
 

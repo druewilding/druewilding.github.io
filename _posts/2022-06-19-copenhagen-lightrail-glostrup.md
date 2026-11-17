@@ -28,7 +28,7 @@ Looking West, we can see the link to the main route on Ring 3. This used to be a
 
 Looking North, this is Søndre Ringvej where they have had to extend the bridge over Sydvestvej to make room for two lightrail tracks. This is the point at which a line will branch off Ring 3 to serve Glostrup station.
 
-## Ring 3 Crossroads
+## Ring 3 crossroads
 
 ![Ring 3 crossroads](/assets/images/lightrail/glostrup/crossroads.jpg)
 

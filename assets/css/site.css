@@ -1338,8 +1338,48 @@ kbd {
 
 /* "In this post": a folded box at the top on smaller screens, and a sticky
    list in the right-hand margin when there's room */
-.prose h2[id] {
+.prose h2[id],
+.prose h3[id] {
   scroll-margin-top: 1.5rem;
+}
+
+/* The "#" after a heading: shows on hover, or faintly on touch screens */
+.heading-link {
+  position: relative;
+  color: var(--klods-color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--klods-transition);
+}
+
+.prose :is(h2, h3):hover .heading-link,
+.heading-link:focus-visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .heading-link {
+    opacity: 0.35;
+  }
+}
+
+.heading-link[data-copied] {
+  opacity: 1;
+}
+
+.heading-link[data-copied]::after {
+  content: "copied!";
+  position: absolute;
+  left: 100%;
+  bottom: 0.6em;
+  margin-left: 0.3rem;
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--drue-secondary);
+  transform: rotate(-6deg);
 }
 
 .post-toc {

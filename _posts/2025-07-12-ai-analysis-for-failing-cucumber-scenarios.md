@@ -9,7 +9,7 @@ series: cucumber
 
 During Growth Hack Week at Hedia, while my colleagues were building exciting new features and exploring innovative product ideas, I decided to tackle a different kind of problem: making our E2E test failures more human-friendly and actionable.
 
-## The Problem: Stack Traces Aren't For Everyone
+## The problem: stack traces aren't for everyone
 
 When our Cucumber E2E tests fail in CI, we get detailed stack traces and error outputs that can be useful if you're familiar with the test setup. But here's the thing: not everyone on the team is great at interpreting these kind of technical failure reports.
 
@@ -33,7 +33,7 @@ A typical failure might look like this:
 
 What does this actually mean for the product? What should someone do about it? It's not immediately obvious.
 
-## The Solution: AI-Powered Test Failure Analysis
+## The solution: AI-powered test failure analysis
 
 I experimented with parsing our test failures and sending them to the Gemini API along with contextual information about our system. The goal was to get human-readable summaries and actionable next steps that anyone could understand.
 
@@ -45,7 +45,7 @@ Here's how it works:
 4. **Format and share** - Post the AI analysis to our team Slack channel
 5. **Enable team collaboration** - Everyone can quickly see what went wrong and contribute to the solution
 
-## Example Output
+## Example output
 
 Here's what Gemini produced for the stack trace mentioned above:
 
@@ -61,7 +61,7 @@ Here's what Gemini produced for the stack trace mentioned above:
 
 This is so much more meaningful than a raw stack trace. I was surprised at how well Gemini translated technical error messages into clear, actionable feedback.
 
-## AI in the Right Place, Not Everywhere
+## AI in the right place, not everywhere
 
 One thing I want to emphasize: AI works best in small, well-defined, well-constrained places. This improvement added just a touch of AI to an existing workflow, in exactly the right spot to be most powerful and meaningful.
 
@@ -69,7 +69,7 @@ I don't think AI should be given free reign to do anything it wants. But little 
 
 In this case, we're not asking AI to write our tests, fix our code, or make product decisions. We're asking it to do one specific thing: translate technical error messages into human-readable explanations. It's a focused, bounded task that leverages AI's strength in language processing while keeping human expertise firmly in control of the important decisions.
 
-## Making Testing Accessible to Everyone
+## Making testing accessible to everyone
 
 This experiment ties into something I'm passionate about: making automated testing accessible and understandable to everyone on the team. Testing shouldn't be a black box that only engineers can peer into. When the whole team understands the impact of a failure, we can collaborate more effectively on solutions.
 

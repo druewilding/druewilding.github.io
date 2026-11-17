@@ -14,13 +14,13 @@ Since it was a simple, one-off tool that wouldn't require ongoing maintenance, i
 
 I used GitHub Copilot to write HTML, CSS, and JavaScript for me. I barely looked at the code it generated — i just tested the output and gave feedback.
 
-## The Finished App
+## The finished app
 
 You can try out the finished app here: [www.druewilding.com/music-quiz](https://www.druewilding.com/music-quiz/)
 
 The source code is available on GitHub: [github.com/druewilding/music-quiz](https://github.com/druewilding/music-quiz)
 
-## How We Got There
+## How we got there
 
 Here's how i began the session:
 
@@ -50,7 +50,7 @@ Here's how i began the session:
 
 If you're interested, you can read the full set of prompts used here: [PROMPT.md](https://github.com/druewilding/music-quiz/blob/main/PROMPT.md)
 
-## Problems Along the Way
+## Problems along the way
 
 While i was generally happy with the design (i gave no direction on style), Copilot struggled with spatial terms like _"next to"_ or _"underneath"_. It didn't seem to have a clear concept of layout, so positioning elements took a few tries.
 
@@ -58,7 +58,7 @@ Similarly, when i asked for more padding between buttons, it added top padding i
 
 Later, when we needed to refactor how element IDs were assigned, that went pretty badly. Copilot began rewriting entire pages and adding the wrong number of play buttons. I had to step in and manually fix that part.
 
-## Benefits of Vibe Coding
+## Benefits of vibe coding
 
 This experiment was _perfect_ for a quick, disposable tool. It was definitely faster than writing the code myself.
 

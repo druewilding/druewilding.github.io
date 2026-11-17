@@ -9,13 +9,13 @@ mastodon: https://tech.lgbt/@druewilding/116108090531069935
 
 _This post assumes you have a Discord account and aren't afraid of the terminal._
 
-## The Problem: I Wanted an AI Assistant, Not a Second Mortgage
+## The problem: i wanted an AI assistant, not a second mortgage
 
 For the past couple of weeks, I've been playing around with [OpenClaw](https://openclaw.ai/), an open-source AI assistant framework that runs on your own machine. The idea appealed to me: a personal assistant that lives on my Mac, chats with me on Discord, and helps with everyday tasks.
 
 I didn't want to spend hundreds of pounds on a new Mac Mini or a fancy GPU setup. I just wanted to see what was possible with what I already had. And I certainly didn't want to burn loads of money on API access to flagship AI models.
 
-## The Solution: Old Hardware, Free Tokens, and a Bit of Terminal Magic
+## The solution: old hardware, free tokens, and a bit of terminal magic
 
 As it turns out, you don't need much to get a decent AI assistant running. Here's what I used:
 
@@ -28,7 +28,7 @@ The setup was surprisingly straightforward. I won't go through every step (plent
 
 One small trick: I asked my assistant to get the Mac to stay awake even with the lid closed. Because it runs locally, it has access to do all the necessary things. It downloaded [caffeinate](https://www.theapplegeek.co.uk/blog/caffeinate) and ran the relevant commands.
 
-## What Can It Actually Do?
+## What can it actually do?
 
 Here's where it gets fun. Over the past two weeks, my little assistant (who I've named _Clawby_ 🦞) has been helping out with:
 
@@ -41,7 +41,7 @@ Here's where it gets fun. Over the past two weeks, my little assistant (who I've
 
 None of this required me to write code or set up complex workflows; I just _asked_ Clawby to do things in Discord.
 
-## Defining Tasks Together
+## Defining tasks together
 
 One of the most interesting parts of this experiment is how we define tasks. It's not like I wrote a specification document or created a ticket system. It's just conversation, like you would chat to a colleague.
 
@@ -57,7 +57,7 @@ Each request led to a small adjustment, and Clawby just _got it_. We iterated to
 
 I get Clawby to commit config and memories and push to a GitHub repo, partly for backup purposes, and partly so that I can see what Clawby is "thinking".
 
-## Keeping It Secure
+## Keeping it secure
 
 Running an AI agent on your own machine means giving it access to _do things_. That's the great power of it, but it also means you need to think about security.
 
@@ -70,7 +70,7 @@ Here's how I approached it:
 
 The general principle: start with nothing and slowly add permissions as needed. It's much easier to grant access than to revoke it after something goes wrong.
 
-## What Did I Learn?
+## What did i learn?
 
 You don't need expensive hardware to have a useful AI assistant. The heavy lifting happens in the cloud, and your local machine just needs to be _on_ and _connected_. The free tiers of Ollama and Brave are enough to build something genuinely useful.
 

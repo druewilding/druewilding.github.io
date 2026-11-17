@@ -26,7 +26,7 @@ I quickly learned that versions matter, so let me state up front the versions I�
 - `detox-cli` 20.0.0 - November 2022
 - `tsx` 4.19.3 - February 2025
 
-## Install Dependencies
+## Install dependencies
 
 To get started, install the required development dependencies using either `yarn` or `npm`:
 
@@ -56,7 +56,7 @@ detox init
 
 You can skip this step if Detox is already set up in your project.
 
-## Switch Detox Test Runner to use cucumber-js
+## Switch the Detox test runner to cucumber-js
 
 By default, Detox assumes you’ll use `jest` as your test runner. To switch to `cucumber-js`, update the `.detoxrc.js` file. It should start like this:
 
@@ -73,13 +73,13 @@ module.exports = {
   ...
 ```
 
-## Update Detox App Configs
+## Update Detox app configs
 
 Detox builds and runs binary versions of your app for testing. If you haven’t set this up yet, now is the time to configure the `build` and `binaryPath` settings for your app.
 
 If you’re unsure how to do this, refer to the [Detox Project Setup guide](https://wix.github.io/Detox/docs/introduction/project-setup).
 
-## Build the App
+## Build the app
 
 Once your Detox configuration is set, build the app with:
 
@@ -89,7 +89,7 @@ detox build
 
 This will generate a binary version of your app that Detox can use for testing.
 
-## Replace the Detox Template Files
+## Replace the Detox template files
 
 Detox likely generated some Jest-based test templates, which you won’t need. You can safely remove them. In my case, these were:
 
@@ -137,7 +137,7 @@ export class CustomWorld extends World {
 setWorldConstructor(CustomWorld);
 ```
 
-### 3. Set Up Hooks for Detox Lifecycle
+### 3. Set up hooks for the Detox lifecycle
 
 Now, create `e2e/features/support/hooks.ts` to handle Detox initialization, app launch, and cleanup:
 
@@ -201,7 +201,7 @@ Then("they should see the greeting {string}", async function (this: CustomWorld,
 });
 ```
 
-## Run Your Tests!
+## Run your tests!
 
 You are now ready to begin running your Cucumber scenarios through Detox.
 

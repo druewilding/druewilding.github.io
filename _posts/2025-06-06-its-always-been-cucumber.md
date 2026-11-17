@@ -11,7 +11,7 @@ As a software tester, i've watched my tech stack evolve dramatically over the ye
 
 Let me take you on a journey through my testing evolution.
 
-## The Great Tech Stack Migration
+## The great tech stack migration
 
 When i first started serious testing automation, my world looked very different:
 
@@ -29,13 +29,13 @@ When an action is taken
 Then this should be the result
 ```
 
-## Why Cucumber Endures
+## Why Cucumber endures
 
 There's something beautifully simple about the **Given** - **When** - **Then** structure that transcends whatever technology is running underneath. It maps perfectly to how humans naturally think about testing.
 
 This isn't just useful for me as the person writing the tests. The real magic happens when these scenarios become a shared language across the entire team.
 
-## The Universal Language of Testing
+## The universal language of testing
 
 **For developers:** Cucumber scenarios challenge assumptions. i love the word _"should"_ because it invites a challenge: _"should it really?"_
 
@@ -45,7 +45,7 @@ This isn't just useful for me as the person writing the tests. The real magic ha
 
 **For stakeholders:** When you're trying to prove that your software is doing what you promised it would do, there's nothing quite like a green Cucumber report listing every scenario that was tested.
 
-## Encoding Thought Processes
+## Encoding thought processes
 
 But perhaps most importantly for me personally, Cucumber scenarios capture my thought process when i test something manually. When i'm exploring a new feature, i naturally think in terms of:
 
@@ -53,7 +53,7 @@ _"Okay, so if i set up this situation... and then i do this action... i would ex
 
 Writing that down as a Cucumber scenario means i can run that exact same thought process again and again, automatically, without doing all the thinking again.
 
-## The Constant in a Sea of Change
+## The constant in a sea of change
 
 The testing landscape continues to evolve rapidly. AI is starting to generate tests, visual testing tools are becoming more sophisticated, and new frameworks appear constantly. But i suspect that even as AI starts writing more of our test code, we'll still need that human-readable layer that explains _what_ we're testing and _why_.
 
@@ -61,7 +61,7 @@ Programming languages will continue to rise and fall in popularity. Testing fram
 
 It turns out programming in English has always been the hot new thing!
 
-## Looking Forward
+## Looking forward
 
 As i write this in 2025, i'm confident that my tech stack will continue to evolve. There will be new languages to learn, new tools to master, and new approaches to discover. But i'm equally confident that somewhere in my test suite, there will still be files that start with:
 
