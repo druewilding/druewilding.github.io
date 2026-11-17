@@ -290,16 +290,22 @@ a:hover {
   transform: rotate(-1.5deg);
 }
 
+/* On wide screens it hangs skew-whiff at the bottom right of the band */
 @media (min-width: 60rem) {
-  .band--home .today-pill {
+  .today-pill {
     position: absolute;
     right: 0;
     bottom: 0.5rem;
     transform: rotate(-4deg);
   }
 
-  .band--home .today-pill:hover {
+  .today-pill:hover {
     transform: rotate(-6deg);
+  }
+
+  /* Keep the title and lede clear of the pill on narrower desktops */
+  .band__intro {
+    max-width: min(50rem, 100% - 20rem);
   }
 }
 
