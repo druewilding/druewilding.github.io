@@ -1,0 +1,25 @@
+{% comment %}
+  "In this post": a list of the post's sections, built from its <h2>s.
+  Shown when a post has at least four sections; `toc: false` turns it off.
+  Plain Liquid (GitHub Pages can't run plugins), so it splits the rendered
+  HTML on '<h2 id="' and reads each heading's id and text.
+{% endcomment %}
+{% assign toc_parts = content | split: '<h2 id="' %}
+{% if page.toc != false and toc_parts.size > 4 %}
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+    <details class="post-toc__box" data-post-toc>
+      <summary class="post-toc__summary">
+        <span id="post-toc-title">In this post…</span>
+        <span class="post-toc__count">{{ toc_parts.size | minus: 1 }} sections</span>
+      </summary>
+      <ol class="post-toc__list">
+        {% for part in toc_parts offset: 1 %}
+          {% assign toc_id = part | split: '"' | first %}
+          {% assign toc_text = part | split: '</h2>' | first | split: '>' | shift | join: '>' | strip_html %}
+          <li><a href="#{{ toc_id }}">{{ toc_text }}</a></li>
+        {% endfor %}
+      </ol>
+    </details>
+  </nav>
+  <script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
+{% endif %}

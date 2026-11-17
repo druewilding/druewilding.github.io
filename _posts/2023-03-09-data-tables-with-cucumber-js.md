@@ -15,7 +15,7 @@ This is a reference for me on how to use the different data table formats with c
 
 ---
 
-# Typescript implementation
+## Typescript implementation
 
 Imagine there is a `createUser` function that takes `name`, `email`, `city` and `dob` as parameters. I'm just going to `console.log()` the information so we can understand what's happening, but in reality this would likely do something more interesting.
 
@@ -30,7 +30,7 @@ function createUser(name: string, email: string, city: string, dob: string) {
 
 ---
 
-# Option 1. Key-value pairs using .rowsHash()
+## Option 1. Key-value pairs using .rowsHash()
 
 This is a 2-column table format where the left is the key and the right is the value. I like to write the keys in uppercase for readability, but it's not necessary.
 
@@ -70,7 +70,7 @@ Creating Ganesh Raffaella (gr@example.com) who lives in Redlands and was born 19
 
 ---
 
-# Option 2. Table with headings using .hashes()
+## Option 2. Table with headings using .hashes()
 
 This is a multi-row format where the first row is a heading. The step definition will need to loop through the rows.
 
@@ -114,7 +114,7 @@ Creating Shea Ziemann (sz@example.com) who lives in Medford and was born 1982-06
 
 ---
 
-# Option 3. Table without headings using .raw()
+## Option 3. Table without headings using .raw()
 
 You can also use a table without headings and access the raw data with indices. I don't like this because it seems less clear, but i'm just documenting it as an option in case it's useful for some reason.
 
@@ -159,7 +159,7 @@ Creating Hilda White (hw@example.com) who lives in Owensboro and was born 1933-0
 
 ---
 
-# Bonus option: Scenario Outline
+## Bonus option: Scenario Outline
 
 It's also possible to use a Scenario Outline which is not a table step at all but sends example values using a table format.
 
