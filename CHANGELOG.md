@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/druewilding/druewilding.github.io/compare/v1.15.0...v1.16.0) (2026-11-17)
+
+
+### Features
+
+* Redesign the site with a daily colour theme built on klods ([#69](https://github.com/druewilding/druewilding.github.io/issues/69)) ([f7dc093](https://github.com/druewilding/druewilding.github.io/commit/f7dc093bb30b37568946e03b9befde2e8f78f03d))
+
 ## [1.15.0](https://github.com/druewilding/druewilding.github.io/compare/v1.14.0...v1.15.0) (2026-07-08)
 
 
