@@ -10,7 +10,10 @@
   // Looked up every time, because the dice can change the colour mid-game
   const theme = window.dailyTheme;
   const hex = () => (theme && theme.hex) || "a colour you can't quite name";
-  const rolled = () => Boolean(theme && theme.hex !== theme.today);
+  // Where the colour came from: "today", "dice", or a day picked in the colour calendar
+  const source = () => (!theme || !theme.choice ? "today" : theme.chosenDate ? "day" : "dice");
+  const chosenDay = () =>
+    theme.chosenDate.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
   const posts = readPosts();
   const signpost = findSignpost(location.pathname, posts);
 
@@ -90,16 +93,18 @@
       return say("You hum a few bars. The room has excellent acoustics, for a page that doesn't exist.");
     if (["wait", "z"].includes(verb)) return say("Time passes. The page still isn't here.");
     if (["hello", "hi", "hej", "hey"].includes(verb)) return say("Hello! It's nice to have company down here.");
-    if (["colour", "color"].includes(verb))
-      return say(
-        rolled()
-          ? "Right now the whole site is " + hex() + ", thanks to the dice. Today's real colour is " + theme.today + "."
-          : "Today the whole site is " + hex() + ". Come back tomorrow and it'll be different."
-      );
+    if (["colour", "color"].includes(verb)) return colour();
     if (["quit", "exit", "q"].includes(verb)) return say("There's no quitting here, only going <kbd>home</kbd>.");
     if (["search", "find"].includes(verb)) return search(noun);
 
     return say("I don't know how to “" + escapeHtml(raw) + "”. Type <kbd>help</kbd> for ideas.");
+  }
+
+  function colour() {
+    if (source() === "today")
+      return say("Today the whole site is " + hex() + ". Come back tomorrow and it'll be different.");
+    const why = source() === "dice" ? "thanks to the dice" : "borrowed from " + chosenDay();
+    say("Right now the whole site is " + hex() + ", " + why + ". Today's real colour is " + theme.today + ".");
   }
 
   function look() {
@@ -148,11 +153,10 @@
   function examine(noun) {
     if (!noun) return look();
     if (isChip(noun) && (state.haveChip || state.chipOnFloor)) {
-      return say(
-        rolled()
-          ? "It's a paint chip, " + hex() + ". It changed colour when you rolled the dice. Spooky."
-          : "It's a paint chip in today's colour, " + hex() + ". Tomorrow it will be a different colour."
-      );
+      if (source() === "dice")
+        return say("It's a paint chip, " + hex() + ". It changed colour when you rolled the dice. Spooky.");
+      if (source() === "day") return say("It's a paint chip, " + hex() + ", the colour of " + chosenDay() + ".");
+      return say("It's a paint chip in today's colour, " + hex() + ". Tomorrow it will be a different colour.");
     }
     if (isSign(noun) && signpost) {
       return say(

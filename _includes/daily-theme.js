@@ -10,7 +10,8 @@
 //   - secondary: the complementary hue (+180°), same contrast rule
 //   - neutrals:  faintly tinted with today's hue (plain greys on grey days)
 //
-// Add ?date=YYYY-MM-DD to any URL to preview another day.
+// Add ?date=YYYY-MM-DD to any URL to see another day. Like a dice roll, it
+// lasts for the rest of the visit, until "back to today".
 (function () {
   // ── getDailyColor (verbatim from the daily-color package) ──────────────
   function getSimpleHash(date) {
@@ -216,28 +217,46 @@
   }
 
   var date = new Date();
-  var m = /[?&]date=(\d{4})-(\d{2})-(\d{2})/.exec(location.search);
-  if (m) date = new Date(+m[1], +m[2] - 1, +m[3]);
   var todayHex = getDailyColor(date);
 
-  // A shuffled colour (from the dice button) lasts until the tab is closed
-  var SHUFFLE_KEY = "drue-shuffled-colour";
-  function readShuffled() {
+  // A colour you chose lasts until the tab is closed. It's either a rolled
+  // colour from the dice ("#36fed0") or another day's ("2026-12-25", from
+  // ?date= in the address, e.g. via the colour calendar).
+  var CHOICE_KEY = "drue-colour-choice";
+  function readChoice() {
     try {
-      var v = sessionStorage.getItem(SHUFFLE_KEY);
-      return /^#[0-9a-f]{6}$/.test(v) ? v : null;
+      return sessionStorage.getItem(CHOICE_KEY);
     } catch {
       return null;
     }
   }
-  function writeShuffled(hex) {
+  function writeChoice(value) {
     try {
-      if (hex) sessionStorage.setItem(SHUFFLE_KEY, hex);
-      else sessionStorage.removeItem(SHUFFLE_KEY);
+      if (value) sessionStorage.setItem(CHOICE_KEY, value);
+      else sessionStorage.removeItem(CHOICE_KEY);
     } catch {
       // Storage blocked: the colour still changes, it just won't follow you
     }
   }
+
+  // Turns a choice into { hex, when, date }, or null for today's colour
+  function resolve(choice) {
+    if (/^#[0-9a-f]{6}$/.test(choice)) return { hex: choice, when: "right now", verb: "is", date: null };
+    var d = /^(\d{4})-(\d{2})-(\d{2})$/.exec(choice || "");
+    if (!d) return null;
+    var day = new Date(+d[1], +d[2] - 1, +d[3]);
+    if (day.toDateString() === date.toDateString()) return null;
+    return {
+      hex: getDailyColor(day),
+      when: "on " + day.toLocaleDateString("en-GB", { day: "numeric", month: "short" }),
+      // "on 1 Mar the site was", "on 25 Dec the site will be"
+      verb: day < date ? "was" : "will be",
+      date: day,
+    };
+  }
+
+  var m = /[?&]date=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+  if (m) writeChoice(m[1]);
 
   var style = document.createElement("style");
   style.id = "daily-theme";
@@ -269,7 +288,9 @@
     return "data:image/svg+xml," + encodeURIComponent(svg);
   }
 
-  function apply(hex) {
+  function apply(choice) {
+    var chosen = resolve(choice);
+    var hex = chosen ? chosen.hex : todayHex;
     var scheme = dailyScheme(hex);
     // --drue-accent-light is the light-mode accent in every mode, for pages that
     // are always light, like the CV (it's white paper even in dark mode)
@@ -290,15 +311,19 @@
     if (meta) meta.setAttribute("content", hex);
     favicon.href = faviconFor(scheme.hero);
 
-    var shuffled = hex !== todayHex;
-    document.documentElement.toggleAttribute("data-shuffled", shuffled);
+    document.documentElement.toggleAttribute("data-shuffled", Boolean(chosen));
     document.querySelectorAll("[data-daily-hex]").forEach(function (el) {
       el.textContent = hex;
     });
     document.querySelectorAll("[data-daily-when]").forEach(function (el) {
-      el.textContent = shuffled ? "right now" : "today";
+      el.textContent = chosen ? chosen.when : "today";
+    });
+    document.querySelectorAll("[data-daily-verb]").forEach(function (el) {
+      el.textContent = chosen ? chosen.verb : "is";
     });
 
+    window.dailyTheme.choice = chosen ? choice : null;
+    window.dailyTheme.chosenDate = chosen ? chosen.date : null;
     window.dailyTheme.hex = hex;
     window.dailyTheme.scheme = scheme;
   }
@@ -330,26 +355,23 @@
     inkFor: bestInk,
     shuffle: function () {
       var hex = randomHex();
-      writeShuffled(hex);
+      writeChoice(hex);
       fade();
       apply(hex);
       return hex;
     },
     reset: function () {
-      writeShuffled(null);
+      writeChoice(null);
       fade();
-      apply(todayHex);
+      apply(null);
     },
   };
 
-  // A date in the address (?date=, e.g. from the colour calendar) beats the
-  // dice, and replaces any rolled colour
-  if (m) writeShuffled(null);
-  apply(readShuffled() || todayHex);
+  apply(m ? m[1] : readChoice());
 
   document.addEventListener("DOMContentLoaded", function () {
     // Fill in text that wasn't in the page yet when the theme was applied
-    apply(window.dailyTheme.hex);
+    apply(window.dailyTheme.choice);
     document.querySelectorAll("[data-theme-shuffle]").forEach(function (button) {
       button.addEventListener("click", window.dailyTheme.shuffle);
     });
