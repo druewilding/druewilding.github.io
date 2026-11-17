@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/druewilding/druewilding.github.io/compare/v1.16.1...v1.17.0) (2026-11-17)
+
+
+### Features
+
+* Add a calendar to enable changing the colour theme by date ([#73](https://github.com/druewilding/druewilding.github.io/issues/73)) ([fa00904](https://github.com/druewilding/druewilding.github.io/commit/fa009049a0e23f4c46b4bff495227920f67ee4aa))
+
 ## [1.16.1](https://github.com/druewilding/druewilding.github.io/compare/v1.16.0...v1.16.1) (2026-11-17)
 
 
