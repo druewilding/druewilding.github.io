@@ -354,17 +354,11 @@ a:hover {
   display: none;
 }
 
-/* While swapping schemes, colours fade instead of snapping. !important is
-   deliberate: for 600ms it overrides every component's own transition. */
-.theme-fading,
-.theme-fading *,
-.theme-fading *::before,
-.theme-fading *::after {
-  transition:
-    background-color 600ms ease,
-    border-color 600ms ease,
-    color 600ms ease,
-    box-shadow 600ms ease !important;
+/* Swapping schemes (dice, "back to today") crossfades the whole page as a
+   view transition; this sets its speed */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 500ms;
 }
 
 /* On wide screens it all hangs skew-whiff at the bottom right of the band */
@@ -968,6 +962,136 @@ kbd {
 
 .highlight .gi {
   color: var(--klods-code-attr);
+}
+
+/* ── A year in colour (/colours/) ─────────────────────────────────────── */
+
+.colours {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  min-width: 0;
+}
+
+.colours__intro {
+  max-width: var(--prose-max);
+  margin: 0;
+  font-size: 1.06rem;
+}
+
+.calendar__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar__year {
+  min-width: 4ch;
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-variant-numeric: tabular-nums;
+}
+
+.calendar__step {
+  width: 2.75rem;
+  height: 2.75rem;
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--klods-color-accent);
+  background: var(--klods-color-surface);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar__step:hover {
+  color: var(--klods-color-accent-fg);
+  background: var(--klods-color-accent);
+  border-color: var(--klods-color-accent);
+}
+
+.calendar__months {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr));
+  gap: 2rem 1.75rem;
+}
+
+.month__name {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+}
+
+/* Phones: two months side by side, so the year doesn't go on forever */
+@media (max-width: 40rem) {
+  .calendar__months {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+  }
+
+  .month__name {
+    font-size: 1rem;
+  }
+
+  .month__days {
+    gap: 3px;
+  }
+
+  .day {
+    font-size: 0.6rem;
+    border-radius: 3px;
+  }
+
+  .month__weekday {
+    font-size: 0.6rem;
+  }
+}
+
+.month__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.month__weekday {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--klods-color-muted);
+}
+
+.day {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--day-ink);
+  background: var(--day);
+  border-radius: 5px;
+  text-decoration: none;
+  /* A hairline so very pale and very dark days still show their edges */
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--klods-color-fg) 12%, transparent);
+  transition: transform var(--klods-transition);
+}
+
+.day:hover,
+.day:focus-visible {
+  position: relative;
+  z-index: 1;
+  transform: scale(1.35);
+  box-shadow: var(--klods-shadow-md);
+}
+
+.day--today {
+  outline: 3px solid var(--klods-color-fg);
+  outline-offset: 2px;
 }
 
 /* ── Footer ───────────────────────────────────────────────────────────── */

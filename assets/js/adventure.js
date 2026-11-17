@@ -7,7 +7,13 @@
   const input = document.getElementById("adventure-input");
   if (!log || !form || !input) return;
 
-  const hex = (window.dailyTheme && window.dailyTheme.hex) || "a colour you can't quite name";
+  // Looked up every time, because the dice can change the colour mid-game
+  const theme = window.dailyTheme;
+  const hex = () => (theme && theme.hex) || "a colour you can't quite name";
+  // Where the colour came from: "today", "dice", or a day picked in the colour calendar
+  const source = () => (!theme || !theme.choice ? "today" : theme.chosenDate ? "day" : "dice");
+  const chosenDay = () =>
+    theme.chosenDate.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
   const posts = readPosts();
   const signpost = findSignpost(location.pathname, posts);
 
@@ -87,16 +93,22 @@
       return say("You hum a few bars. The room has excellent acoustics, for a page that doesn't exist.");
     if (["wait", "z"].includes(verb)) return say("Time passes. The page still isn't here.");
     if (["hello", "hi", "hej", "hey"].includes(verb)) return say("Hello! It's nice to have company down here.");
-    if (["colour", "color"].includes(verb))
-      return say("Today the whole site is " + hex + ". Come back tomorrow and it'll be different.");
+    if (["colour", "color"].includes(verb)) return colour();
     if (["quit", "exit", "q"].includes(verb)) return say("There's no quitting here, only going <kbd>home</kbd>.");
     if (["search", "find"].includes(verb)) return search(noun);
 
     return say("I don't know how to “" + escapeHtml(raw) + "”. Type <kbd>help</kbd> for ideas.");
   }
 
+  function colour() {
+    if (source() === "today")
+      return say("Today the whole site is " + hex() + ". Come back tomorrow and it'll be different.");
+    const why = source() === "dice" ? "thanks to the dice" : "borrowed from " + chosenDay();
+    say("Right now the whole site is " + hex() + ", " + why + ". Today's real colour is " + theme.today + ".");
+  }
+
   function look() {
-    const lines = ["You're in a small, quiet room. The walls are painted " + hex + "."];
+    const lines = ["You're in a small, quiet room. The walls are painted " + hex() + "."];
     if (state.chipOnFloor) lines.push("A paint chip lies on the floor.");
     if (signpost) lines.push("A wooden signpost in the corner points somewhere.");
     lines.push(
@@ -113,7 +125,7 @@
   }
 
   function inventory() {
-    say(state.haveChip ? "You are carrying a paint chip (" + hex + ")." : "You are carrying nothing but curiosity.");
+    say(state.haveChip ? "You are carrying a paint chip (" + hex() + ")." : "You are carrying nothing but curiosity.");
   }
 
   function take(noun) {
@@ -141,7 +153,10 @@
   function examine(noun) {
     if (!noun) return look();
     if (isChip(noun) && (state.haveChip || state.chipOnFloor)) {
-      return say("It's a paint chip in today's colour, " + hex + ". Tomorrow it will be a different colour.");
+      if (source() === "dice")
+        return say("It's a paint chip, " + hex() + ". It changed colour when you rolled the dice. Spooky.");
+      if (source() === "day") return say("It's a paint chip, " + hex() + ", the colour of " + chosenDay() + ".");
+      return say("It's a paint chip in today's colour, " + hex() + ". Tomorrow it will be a different colour.");
     }
     if (isSign(noun) && signpost) {
       return say(
@@ -150,7 +165,11 @@
       );
     }
     if (["wall", "walls", "room"].includes(noun))
-      return say("The walls are painted " + hex + ". Freshly, by the look of it. They change every day.");
+      return say(
+        "The walls are painted " +
+          hex() +
+          ". Freshly, by the look of it. They change every day, or whenever someone rolls the dice."
+      );
     if (["floor", "ground"].includes(noun))
       return say("A very ordinary floor." + (state.chipOnFloor ? " A paint chip lies on it." : ""));
     if (["door", "doors"].includes(noun)) return say("There are doors marked HOME, BLOG, THINGS I'VE MADE and CV.");
