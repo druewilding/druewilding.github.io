@@ -324,6 +324,10 @@
   window.dailyTheme = {
     today: todayHex,
     hex: todayHex,
+    date: date,
+    // For the colour calendar: any day's colour, and black or white to go on it
+    colourFor: getDailyColor,
+    inkFor: bestInk,
     shuffle: function () {
       var hex = randomHex();
       writeShuffled(hex);

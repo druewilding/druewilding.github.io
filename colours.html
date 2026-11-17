@@ -1,0 +1,27 @@
+---
+layout: default
+title: A year in colour
+heading: A year in colour
+description: This site wears a different colour every day. Here's every one of them.
+permalink: /colours/
+---
+
+<div class="colours">
+  <p class="colours__intro">
+    Each colour comes from <a href="{{ '/daily-color/' | relative_url }}">Daily Color</a>, which turns the date into a
+    hex code, so everyone in the world sees the same one. Pick any day to see the whole site in its colour.
+  </p>
+
+  <noscript><p>The calendar needs JavaScript, sorry! Today's colour is in the pill at the top.</p></noscript>
+
+  <div class="calendar" data-calendar hidden>
+    <div class="calendar__bar">
+      <button class="calendar__step" type="button" data-step="-1" aria-label="Previous year">‹</button>
+      <h2 class="calendar__year" data-year aria-live="polite"></h2>
+      <button class="calendar__step" type="button" data-step="1" aria-label="Next year">›</button>
+    </div>
+    <div class="calendar__months" data-months></div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/colour-calendar.js' | relative_url }}" defer></script>
