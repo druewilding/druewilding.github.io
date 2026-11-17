@@ -337,15 +337,17 @@
     window.dailyTheme.scheme = scheme;
   }
 
-  // Fade between schemes instead of snapping (skipped for reduced motion)
-  function fade() {
-    var root = document.documentElement;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    root.classList.add("theme-fading");
-    clearTimeout(fade.timer);
-    fade.timer = setTimeout(function () {
-      root.classList.remove("theme-fading");
-    }, 700);
+  // Crossfade the whole page to the new scheme, so everything changes together
+  // (a view transition). Browsers without it, and reduced motion, just switch.
+  function change(choice) {
+    var update = function () {
+      apply(choice);
+    };
+    if (document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.startViewTransition(update);
+    } else {
+      update();
+    }
   }
 
   function randomHex() {
@@ -365,14 +367,12 @@
     shuffle: function () {
       var hex = randomHex();
       writeChoice(hex);
-      fade();
-      apply(hex);
+      change(hex);
       return hex;
     },
     reset: function () {
       writeChoice(null);
-      fade();
-      apply(null);
+      change(null);
     },
   };
 

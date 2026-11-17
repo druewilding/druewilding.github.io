@@ -354,17 +354,11 @@ a:hover {
   display: none;
 }
 
-/* While swapping schemes, colours fade instead of snapping. !important is
-   deliberate: for 600ms it overrides every component's own transition. */
-.theme-fading,
-.theme-fading *,
-.theme-fading *::before,
-.theme-fading *::after {
-  transition:
-    background-color 600ms ease,
-    border-color 600ms ease,
-    color 600ms ease,
-    box-shadow 600ms ease !important;
+/* Swapping schemes (dice, "back to today") crossfades the whole page as a
+   view transition; this sets its speed */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 500ms;
 }
 
 /* On wide screens it all hangs skew-whiff at the bottom right of the band */
