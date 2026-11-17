@@ -40,7 +40,7 @@ We checked every single day of 2026 and 2027, in both light and dark mode, and e
 
 ## Building it
 
-I wanted to stay on Jekyll and GitHub Pages, so the site is still plain old Markdown files. The difference is that it now has its own theme, built on [klods](/klods/), my tiny component library. (It's a nice test of klods, too: anything that was awkward to do with it went onto the klods to-do list.)
+I wanted to stay on Jekyll and GitHub Pages, so the site is still plain old Markdown files. The difference is that it now has its own theme, built on [klods](/klods/), my tiny component library.
 
 Here's the first version:
 
@@ -96,7 +96,7 @@ The thing i'm proudest of is my remake of [Merlin's Castle](https://merlinscastl
 
 Finally, we added the projects that had been missing (klods, Queermoji, KnitThis and Det Danske Alfabet) and sorted everything into groups, so the page feels less like a pile of things and more like a set of shelves:
 
-![All the projects, grouped into Games & toys, Useful things, Colour & CSS art, and Pride & personal](/assets/images/site-redesign/things-ive-made.jpg)
+![Projects grouped under "Useful things" and "Colour & CSS art"](/assets/images/site-redesign/things-ive-made.jpg)
 
 ## What i learnt
 
