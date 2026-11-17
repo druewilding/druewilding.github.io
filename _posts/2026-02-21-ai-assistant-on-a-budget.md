@@ -2,7 +2,7 @@
 layout: post
 title: I Built an AI Assistant on a Budget
 description: Who needs a Mac Mini when you've got an old MacBook Air and some free API tokens?
-image: https://www.druewilding.com/assets/images/openclaw-on-a-budget/og-image.png
+image: https://www.druewilding.com/assets/images/openclaw-on-a-budget/og-image.jpg
 tags: [ai]
 ---
 
@@ -36,7 +36,7 @@ Here's where it gets fun. Over the past two weeks, my little assistant (who I've
 - **Flight searches** — when I was looking for a trip to London, Clawby used the browser tool to check prices on Kayak and Skyscanner.
 - **Widget updates** — one of my colleagues has a home screen widget that pulls text from a secret URL. Clawby updates it with silly messages.
 
-![Home screen widget updated by Clawby](/assets/images/openclaw-on-a-budget/widget.png)
+![Home screen widget updated by Clawby](/assets/images/openclaw-on-a-budget/widget.jpg)
 
 None of this required me to write code or set up complex workflows; I just _asked_ Clawby to do things in Discord.
 

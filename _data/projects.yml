@@ -18,7 +18,7 @@
       note: "i'm very proud of this one"
     - title: Chess Variants
       url: /chess/
-      image: chess.png
+      image: chess.jpg
       size: wide
       description: Alternative versions of chess, playable against an opponent or a bot
     - title: Push the button
@@ -45,7 +45,7 @@
       description: Knitting and crochet patterns, one step at a time
     - title: Det Danske Alfabet
       url: "https://rvedotrc.github.io/det-danske-alfabet/"
-      image: det-danske-alfabet.png
+      image: det-danske-alfabet.jpg
       description: Type a letter and hear it in Danish, in three different voices. Kept alive by Rachel Evans.
 
 - group: Colour & CSS art
@@ -57,24 +57,24 @@
       note: this is why the site is this colour
     - title: Random Abstract Art
       url: /random-art/
-      image: random-art.png
+      image: random-art.jpg
       description: Randomly generated, ever-changing abstract art
     - title: Gradient Painter
       url: /gradient-painter/
-      image: gradient-painter.png
+      image: gradient-painter.jpg
       size: wide
       description: Make your own beautiful CSS gradients
     - title: Fancy Gradients
       url: /fancy-gradients/
-      image: fancy-gradients.png
+      image: fancy-gradients.jpg
       description: A collection of CSS gradient ideas
     - title: Clock
       url: /clock/
-      image: clock.png
+      image: clock.jpg
       description: The current time and date, in colours
     - title: Nyhavn
       url: /nyhavn/
-      image: nyhavn.png
+      image: nyhavn.jpg
       description: Nyhavn in pure CSS
     - title: Byskilt
       url: /byskilt/
@@ -85,7 +85,7 @@
   projects:
     - title: Plural Pride Logo
       url: /plural-pride-logo/
-      image: plural-pride-logo.png
+      image: plural-pride-logo.jpg
       description: A scalable version of the plural pride logo
     - title: Pride Flags
       url: /prideflags/

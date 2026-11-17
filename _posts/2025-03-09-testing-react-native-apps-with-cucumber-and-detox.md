@@ -2,7 +2,7 @@
 layout: post
 title: Testing React-Native apps with Cucumber and Detox
 description: A working guide as of March 2025
-image: https://www.druewilding.com/assets/images/react-native-cucumber-detox/og-image.png
+image: https://www.druewilding.com/assets/images/react-native-cucumber-detox/og-image.jpg
 tags: [testing]
 series: cucumber
 ---

@@ -10,7 +10,7 @@ Genetic algorithms take inspiration from biology to solve difficult problems. A 
 
 In this, the population is pictures made of 500 triangles, and optimum means: get as close as possible to this picture that i took recently in Skanderborg:
 
-![A boat on Skanderborg lake](/assets/images/genetic-algorithms/a-boat-on-skanderborg-lake.png)
+![A boat on Skanderborg lake](/assets/images/genetic-algorithms/a-boat-on-skanderborg-lake.jpg)
 
 I know i'm at least 15 years late to this game, but i've always wanted to try it, so i suddenly just decided to give it a go.
 
@@ -18,7 +18,7 @@ I know i'm at least 15 years late to this game, but i've always wanted to try it
 
 I started off by generating 100 random images, each using 500 random triangles.
 
-![Initial population](/assets/images/genetic-algorithms/initial-population.png)
+![Initial population](/assets/images/genetic-algorithms/initial-population.jpg)
 
 ## Selection
 
@@ -26,7 +26,7 @@ Selection, akin to "survival of the fittest", means that not all images survive 
 
 At this stage, all of the images are far from ideal, but some are slightly better than others. I decided to rank them all by fitness and eliminate half of the population.
 
-![Ranked by fitness](/assets/images/genetic-algorithms/ranked-by-fitness.png)
+![Ranked by fitness](/assets/images/genetic-algorithms/ranked-by-fitness.jpg)
 
 ## Competition
 
@@ -44,7 +44,7 @@ You can consider the 500 triangles as a strand of DNA. In cross-breeding, i took
 
 Here's an example of what that looks like:
 
-![Cross-breeding](/assets/images/genetic-algorithms/cross-breeding.png)
+![Cross-breeding](/assets/images/genetic-algorithms/cross-breeding.jpg)
 
 It's nice because you can see visually that the child contains some elements from each parent.
 
@@ -56,11 +56,11 @@ For each child image i take a few triangles and adjust them a little bit. Either
 
 Here's an example of what mutation can look like:
 
-![Before and after mutation](/assets/images/genetic-algorithms/before-and-after-mutation.png)
+![Before and after mutation](/assets/images/genetic-algorithms/before-and-after-mutation.jpg)
 
 If it's hard to see the differences, try comparing in new tabs:
 
-[before-mutation.png](/assets/images/genetic-algorithms/before-mutation.png), [after-mutation.png](/assets/images/genetic-algorithms/after-mutation.png)
+[before-mutation.png](/assets/images/genetic-algorithms/before-mutation.jpg), [after-mutation.png](/assets/images/genetic-algorithms/after-mutation.jpg)
 
 I found a variable mutation rate works well. At the beginning you can gain a lot with a high variation, but as the picture gets closer, the mutation rate needs to be smaller. If you change too much, you might improve one thing, but lose it by changing too many other things that aren't helpful.
 
@@ -72,19 +72,19 @@ It's really fascinating to see how a process like this slowly nudges the entire 
 
 Here was the best image after 10 generations, still pretty random:
 
-![Generation 10](/assets/images/genetic-algorithms/generation_0010.png)
+![Generation 10](/assets/images/genetic-algorithms/generation_0010.jpg)
 
 By generation 100 you can start to see the colours getting closer to desired, and a ghostly impression of the boat begins to emerge:
 
-![Generation 100](/assets/images/genetic-algorithms/generation_0100.png)
+![Generation 100](/assets/images/genetic-algorithms/generation_0100.jpg)
 
 By generation 1000 the boat is getting clearer, and there is a distinction of sky and lake:
 
-![Generation 1000](/assets/images/genetic-algorithms/generation_1000.png)
+![Generation 1000](/assets/images/genetic-algorithms/generation_1000.jpg)
 
 The diminishing returns means that generation 10000 isn't all that much different, but if you look from a distance and squint your eyes, you can kind of imagine you're in Skanderborg!
 
-![Generation 3280](/assets/images/genetic-algorithms/generation_10000.png)
+![Generation 3280](/assets/images/genetic-algorithms/generation_10000.jpg)
 
 ## What i learned from all of this
 
@@ -92,7 +92,7 @@ The beauty of genetic algorithms is there are so many things you can tweak: popu
 
 Here are some previous resuts, using different strategies:
 
-![Fitness by generation graph](/assets/images/genetic-algorithms/previous-bests.png)
+![Fitness by generation graph](/assets/images/genetic-algorithms/previous-bests.jpg)
 
 Sometimes a strategy saw big gains early on, but leveled out and couldn't get any better after 200 generations.
 
@@ -106,11 +106,11 @@ Sometimes i tried taking the best of previous runs, and cross-breeding them toge
 
 When doing something like this, it is customary to try a piece of classic art. I chose The Starry Night, by Vincent van Gogh.
 
-![Starry Night](/assets/images/genetic-algorithms/starry-night.png)
+![Starry Night](/assets/images/genetic-algorithms/starry-night.jpg)
 
 The crossing triangles remind me of creases in a flag, so i decided to try the non-binary flag. Apparently, solid blocks of bold colours works really well for this. I'm delighted at how this one turned out!
 
-![Non-binary flag](/assets/images/genetic-algorithms/enby-flag.png)
+![Non-binary flag](/assets/images/genetic-algorithms/enby-flag.jpg)
 
 ## Conclusion
 

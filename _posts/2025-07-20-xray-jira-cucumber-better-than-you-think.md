@@ -2,7 +2,7 @@
 layout: post
 title: "Xray + Cucumber: Better Than You Think"
 description: Moving your Cucumber scenarios into Jira makes automated testing accessible to everyone on your team
-image: https://www.druewilding.com/assets/images/xray-cucumber/og-image.png
+image: https://www.druewilding.com/assets/images/xray-cucumber/og-image.jpg
 tags: [testing]
 series: cucumber
 ---
@@ -57,7 +57,7 @@ Once your test scenarios are running reliably, import them into Xray. Each Cucum
 
 This is where the magic happens. Set up a Jira automation to trigger your CI system with the Test Execution key. You could automate this to happen when the Test Execution is created, or when it enters a specific state, but i wanted it to be an intentional action, so i added a button.
 
-![Screenshot of Jira Automation for triggering CI](/assets/images/xray-cucumber/jira-automation-trigger-ci.png)
+![Screenshot of Jira Automation for triggering CI](/assets/images/xray-cucumber/jira-automation-trigger-ci.jpg)
 
 <p align="center"><em>Jira Automation that triggers CI to run</em></p>
 

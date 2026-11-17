@@ -2,7 +2,7 @@
 layout: post
 title: Using AI to Interpret Failing Cucumber Scenarios
 description: How I used Gemini API to make E2E test failures more accessible and actionable
-image: https://www.druewilding.com/assets/images/cucumber-ai/og-image.png
+image: https://www.druewilding.com/assets/images/cucumber-ai/og-image.jpg
 tags: [testing, ai]
 series: cucumber
 ---

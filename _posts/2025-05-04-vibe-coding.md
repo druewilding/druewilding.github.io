@@ -2,7 +2,7 @@
 layout: post
 title: An experiment in vibe coding
 description: I had a go at vibe coding a little app. Here are my thoughts.
-image: https://www.druewilding.com/assets/images/vibe-coding/og-image.png
+image: https://www.druewilding.com/assets/images/vibe-coding/og-image.jpg
 tags: [ai]
 ---
 
