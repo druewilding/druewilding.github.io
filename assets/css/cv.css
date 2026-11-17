@@ -334,3 +334,73 @@
     box-sizing: border-box;
   }
 }
+
+/* Today's colour, on screen only. The print styles above are untouched:
+   printing still hides the actions bar and turns everything black on white. */
+@media screen {
+  .cv-content .cv-subtitle,
+  .cv-content .cv-contact a,
+  .cv-content li::before {
+    color: var(--drue-accent-light, #3498db);
+  }
+
+  .cv-content h2 {
+    border-bottom-color: var(--drue-accent-light, #3498db);
+  }
+
+  /* The actions bar becomes the site's daily-colour band, with faint studs */
+  .cv-actions {
+    overflow: hidden;
+    color: var(--drue-on-hero, white);
+    background: linear-gradient(
+      125deg,
+      var(--drue-hero, #34495e) 0%,
+      var(--drue-hero, #34495e) 40%,
+      var(--drue-hero-2, #34495e) 100%
+    );
+  }
+
+  .cv-actions::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at center, currentColor 0 18%, transparent 19%);
+    background-size: 40px 40px;
+    opacity: 0.07;
+    pointer-events: none;
+  }
+
+  .cv-actions > * {
+    position: relative;
+  }
+
+  /* Same buttons, outlined in the band's text colour instead of four colours */
+  .btn-back,
+  .btn-lang,
+  .btn-print,
+  .btn-download {
+    background: transparent;
+    color: inherit;
+    border: 2px solid currentColor;
+    /* 2px less padding all round, so the outline keeps the buttons the same size */
+    padding: 6px 14px;
+  }
+
+  .btn-back:hover,
+  .btn-lang:hover,
+  .btn-print:hover,
+  .btn-download:hover {
+    background: var(--drue-on-hero, white);
+    color: var(--drue-hero, #34495e);
+  }
+}
+
+/* Keep the bigger tap targets on phones (again 2px less for the outline) */
+@media screen and (max-width: 640px) {
+  .btn-back,
+  .btn-lang,
+  .btn-print,
+  .btn-download {
+    padding: 10px 14px;
+  }
+}

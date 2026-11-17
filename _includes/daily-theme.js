@@ -242,7 +242,9 @@
 
   function apply(hex) {
     var scheme = dailyScheme(hex);
-    var light = decls(scheme.light) + decls(scheme.hero);
+    // --drue-accent-light is the light-mode accent in every mode, for pages that
+    // are always light, like the CV (it's white paper even in dark mode)
+    var light = decls(scheme.light) + decls(scheme.hero) + "--drue-accent-light:" + scheme.light.accent + ";";
     var dark = decls(scheme.dark) + decls(scheme.hero);
     style.textContent =
       ":root{" +
