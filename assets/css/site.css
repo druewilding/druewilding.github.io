@@ -253,20 +253,31 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* "today the site is #xxxxxx" */
-.today-pill {
+/* "today the site is #xxxxxx", the dice and "back to today" */
+.today {
   justify-self: start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.6rem;
+}
+
+.today-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.35rem 0.9rem 0.35rem 0.4rem;
   border: 2px solid currentColor;
   border-radius: var(--klods-radius-pill);
+  box-shadow:
+    0 0 0.5px currentColor,
+    inset 0 0 0.5px currentColor;
   font-family: var(--font-hand);
   font-weight: 700;
   font-size: 1.15rem;
   line-height: 1.2;
   text-decoration: none;
+  transition: transform var(--klods-transition);
 }
 
 .today-pill__swatch {
@@ -290,31 +301,92 @@ a:hover {
   transform: rotate(-1.5deg);
 }
 
-/* On wide screens it hangs skew-whiff at the bottom right of the band */
+.today-button {
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
+  border: 2px solid currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  box-shadow:
+    0 0 0.5px currentColor,
+    inset 0 0 0.5px currentColor;
+}
+
+.today-button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+.today-button--shuffle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--klods-radius-md);
+  transition: transform 300ms ease;
+}
+
+.today-button--shuffle:hover {
+  background: var(--drue-on-hero);
+  color: var(--drue-hero);
+  transform: rotate(-12deg);
+}
+
+.today-button--shuffle:active {
+  transform: rotate(200deg) scale(0.9);
+}
+
+.today-button--reset {
+  padding: 0.3rem 0.8rem;
+  border-style: dashed;
+  border-radius: var(--klods-radius-pill);
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.today-button--reset:hover {
+  border-style: solid;
+}
+
+/* Only offer "back to today" after a shuffle */
+:root:not([data-shuffled]) .today-button--reset {
+  display: none;
+}
+
+/* While swapping schemes, colours fade instead of snapping. !important is
+   deliberate: for 600ms it overrides every component's own transition. */
+.theme-fading,
+.theme-fading *,
+.theme-fading *::before,
+.theme-fading *::after {
+  transition:
+    background-color 600ms ease,
+    border-color 600ms ease,
+    color 600ms ease,
+    box-shadow 600ms ease !important;
+}
+
+/* On wide screens it all hangs skew-whiff at the bottom right of the band */
 @media (min-width: 60rem) {
-  .today-pill {
+  .today {
     position: absolute;
     right: 0;
     bottom: 0.5rem;
+    justify-content: flex-end;
+    max-width: 24rem;
     transform: rotate(-4deg) translateZ(0);
-    box-shadow:
-      0 0 0.5px currentColor,
-      inset 0 0 0.5px currentColor;
+    transform-origin: right center;
+    /* Drawing the group on its own layer, then rotating, keeps edges smooth */
     backface-visibility: hidden;
-    outline: 1px solid transparent;
   }
 
   .today-pill:hover {
-    transform: rotate(-6deg) translateZ(0);
-  }
-
-  .today-pill:focus-visible {
-    outline: 3px solid currentColor;
+    transform: rotate(-2deg);
   }
 
   /* Keep the title and lede clear of the pill on narrower desktops */
   .band__intro {
-    max-width: min(50rem, 100% - 20rem);
+    max-width: min(50rem, 100% - 24rem);
   }
 }
 
@@ -930,8 +1002,14 @@ a:hover {
   .post-card__image img,
   .tile__image img,
   .band__button,
-  .today-pill {
+  .today-pill,
+  .today-button--shuffle {
     transition: none;
+  }
+
+  .today-button--shuffle:hover,
+  .today-button--shuffle:active {
+    transform: none;
   }
 
   .post-card:hover,

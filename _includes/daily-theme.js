@@ -189,31 +189,107 @@
   var date = new Date();
   var m = /[?&]date=(\d{4})-(\d{2})-(\d{2})/.exec(location.search);
   if (m) date = new Date(+m[1], +m[2] - 1, +m[3]);
+  var todayHex = getDailyColor(date);
 
-  var scheme = dailyScheme(getDailyColor(date));
-  var light = decls(scheme.light) + decls(scheme.hero);
-  var dark = decls(scheme.dark) + decls(scheme.hero);
+  // A shuffled colour (from the dice button) lasts until the tab is closed
+  var SHUFFLE_KEY = "drue-shuffled-colour";
+  function readShuffled() {
+    try {
+      var v = sessionStorage.getItem(SHUFFLE_KEY);
+      return /^#[0-9a-f]{6}$/.test(v) ? v : null;
+    } catch {
+      return null;
+    }
+  }
+  function writeShuffled(hex) {
+    try {
+      if (hex) sessionStorage.setItem(SHUFFLE_KEY, hex);
+      else sessionStorage.removeItem(SHUFFLE_KEY);
+    } catch {
+      // Storage blocked: the colour still changes, it just won't follow you
+    }
+  }
+
   var style = document.createElement("style");
   style.id = "daily-theme";
-  style.textContent =
-    ":root{" +
-    light +
-    "}" +
-    "@media (prefers-color-scheme: dark){:root:not([data-theme=light]){" +
-    dark +
-    "}}" +
-    ":root[data-theme=dark]{" +
-    dark +
-    "}";
   document.head.appendChild(style);
 
-  var meta = document.querySelector("meta[name=theme-color]");
-  if (meta) meta.setAttribute("content", scheme.hex);
+  function apply(hex) {
+    var scheme = dailyScheme(hex);
+    var light = decls(scheme.light) + decls(scheme.hero);
+    var dark = decls(scheme.dark) + decls(scheme.hero);
+    style.textContent =
+      ":root{" +
+      light +
+      "}" +
+      "@media (prefers-color-scheme: dark){:root:not([data-theme=light]){" +
+      dark +
+      "}}" +
+      ":root[data-theme=dark]{" +
+      dark +
+      "}";
 
-  window.dailyTheme = scheme;
-  document.addEventListener("DOMContentLoaded", function () {
+    var meta = document.querySelector("meta[name=theme-color]");
+    if (meta) meta.setAttribute("content", hex);
+
+    var shuffled = hex !== todayHex;
+    document.documentElement.toggleAttribute("data-shuffled", shuffled);
     document.querySelectorAll("[data-daily-hex]").forEach(function (el) {
-      el.textContent = scheme.hex;
+      el.textContent = hex;
+    });
+    document.querySelectorAll("[data-daily-when]").forEach(function (el) {
+      el.textContent = shuffled ? "right now" : "today";
+    });
+
+    window.dailyTheme.hex = hex;
+    window.dailyTheme.scheme = scheme;
+  }
+
+  // Fade between schemes instead of snapping (skipped for reduced motion)
+  function fade() {
+    var root = document.documentElement;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    root.classList.add("theme-fading");
+    clearTimeout(fade.timer);
+    fade.timer = setTimeout(function () {
+      root.classList.remove("theme-fading");
+    }, 700);
+  }
+
+  function randomHex() {
+    var channel = function () {
+      return hex2(Math.floor(Math.random() * 256));
+    };
+    return "#" + channel() + channel() + channel();
+  }
+
+  window.dailyTheme = {
+    today: todayHex,
+    hex: todayHex,
+    shuffle: function () {
+      var hex = randomHex();
+      writeShuffled(hex);
+      fade();
+      apply(hex);
+      return hex;
+    },
+    reset: function () {
+      writeShuffled(null);
+      fade();
+      apply(todayHex);
+    },
+  };
+
+  apply(readShuffled() || todayHex);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Fill in text that wasn't in the page yet when the theme was applied
+    apply(window.dailyTheme.hex);
+    document.querySelectorAll("[data-theme-shuffle]").forEach(function (button) {
+      button.addEventListener("click", window.dailyTheme.shuffle);
+    });
+    document.querySelectorAll("[data-theme-reset]").forEach(function (button) {
+      button.addEventListener("click", window.dailyTheme.reset);
     });
   });
 })();

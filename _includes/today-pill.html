@@ -1,4 +1,18 @@
-<a class="today-pill" href="/daily-color/" title="The site's colours come from Daily Color, and change every day">
-  <span class="today-pill__swatch" aria-hidden="true"></span>
-  <span>today the site is <span class="today-pill__hex" data-daily-hex>colourful</span></span>
-</a>
+<div class="today">
+  <a class="today-pill" href="/daily-color/" title="The site's colours come from Daily Color, and change every day">
+    <span class="today-pill__swatch" aria-hidden="true"></span>
+    <span><span data-daily-when>today</span> the site is <span class="today-pill__hex" data-daily-hex>colourful</span></span>
+  </a>
+  <button class="today-button today-button--shuffle" type="button" data-theme-shuffle title="Shuffle the colours">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
+      <circle cx="8.5" cy="8.5" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="8.5" cy="15.5" r="1.4" fill="currentColor" stroke="none" />
+      <circle cx="15.5" cy="15.5" r="1.4" fill="currentColor" stroke="none" />
+    </svg>
+    <span class="visually-hidden">Shuffle the colours</span>
+  </button>
+  <button class="today-button today-button--reset hand" type="button" data-theme-reset>back to today</button>
+</div>
