@@ -1,0 +1,29 @@
+# Places to find me, used by the homepage "Find me elsewhere" section and the footer.
+#   verb:   small line above the name on the homepage card
+#   handle: shown on the homepage card
+#   rel_me: adds rel="me" (Mastodon uses it to verify the link)
+- name: Mastodon
+  url: https://tech.lgbt/@druewilding
+  verb: Follow on
+  handle: "@druewilding@tech.lgbt"
+  rel_me: true
+- name: Instagram
+  url: https://www.instagram.com/druewilding/
+  verb: Follow on
+  handle: "@druewilding"
+- name: YouTube
+  url: https://www.youtube.com/@druewilding
+  verb: Watch on
+  handle: "@druewilding"
+- name: SoundCloud
+  url: https://soundcloud.com/druewilding/
+  verb: Listen on
+  handle: druewilding
+- name: GitHub
+  url: https://github.com/druewilding
+  verb: Code on
+  handle: druewilding
+- name: LinkedIn
+  url: https://www.linkedin.com/in/druewilding/
+  verb: Connect on
+  handle: druewilding

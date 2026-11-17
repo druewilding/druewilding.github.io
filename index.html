@@ -55,6 +55,23 @@ image: https://www.druewilding.com/assets/images/og-image.png
   {% endfor %}
 </section>
 
+<section class="section" aria-labelledby="elsewhere-title">
+  <div class="section__head">
+    <h2 id="elsewhere-title" class="section__title">Find me elsewhere</h2>
+  </div>
+  <ul class="elsewhere">
+    {% for place in site.data.elsewhere %}
+      <li>
+        <a class="elsewhere__card" href="{{ place.url }}"{% if place.rel_me %} rel="me"{% endif %}>
+          <span class="elsewhere__verb">{{ place.verb }}</span>
+          <span class="elsewhere__name">{{ place.name }}</span>
+          <span class="elsewhere__handle">{{ place.handle | replace: "@", "<wbr>@" }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
 <section class="section cv-callout">
   <p>Looking for my CV? Read it <a href="{{ '/cv/' | relative_url }}">in English</a> or <a href="{{ '/cv/da/' | relative_url }}">på dansk</a>.</p>
 </section>
