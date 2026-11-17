@@ -214,6 +214,32 @@
   style.id = "daily-theme";
   document.head.appendChild(style);
 
+  // The browser tab icon: my initials on a little tile in today's colours.
+  // Added after the PNG icons, so browsers that understand SVG icons use it.
+  // (Icons can't load web fonts, so the letters use the system's bold sans.)
+  var favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.type = "image/svg+xml";
+  document.head.appendChild(favicon);
+
+  function faviconFor(hero) {
+    var svg =
+      "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>" +
+      "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>" +
+      "<stop offset='.4' stop-color='" +
+      hero.hero +
+      "'/><stop offset='1' stop-color='" +
+      hero["hero-2"] +
+      "'/></linearGradient></defs>" +
+      "<rect width='32' height='32' rx='8' fill='url(#g)'/>" +
+      "<text x='15.2' y='15.65' text-anchor='middle' dominant-baseline='central' " +
+      "font-family='Helvetica Neue, Helvetica, Arial, sans-serif' font-weight='800' " +
+      "font-size='15' letter-spacing='-0.6' fill='" +
+      hero["on-hero"] +
+      "'>DW</text></svg>";
+    return "data:image/svg+xml," + encodeURIComponent(svg);
+  }
+
   function apply(hex) {
     var scheme = dailyScheme(hex);
     var light = decls(scheme.light) + decls(scheme.hero);
@@ -231,6 +257,7 @@
 
     var meta = document.querySelector("meta[name=theme-color]");
     if (meta) meta.setAttribute("content", hex);
+    favicon.href = faviconFor(scheme.hero);
 
     var shuffled = hex !== todayHex;
     document.documentElement.toggleAttribute("data-shuffled", shuffled);
