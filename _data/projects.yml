@@ -1,7 +1,18 @@
 # Projects on the homepage, in display order.
 #   size: wide   -> spans two columns, image beside the text
 #   live: daily  -> shows today's colour instead of a screenshot
+#   size: feature -> spans the whole row, big picture beside the text
 #   note:        -> a handwritten note on the tile (keep it short)
+- title: Merlin's Castle
+  url: https://merlinscastle.net/
+  image: merlins-castle-illustrated.jpg
+  size: feature
+  kicker: Remake of a 1983 BBC Micro adventure
+  description: >-
+    Anita Straker's adventure game for the BBC Micro, rebuilt from the original program.
+    A painted picture for every place, music and sound effects, or the original teletext screen
+    if you prefer. Plays in your browser, and offline on phones and iPads.
+  note: i'm very proud of this one
 - title: Chess Variants
   url: /chess/
   image: chess.png

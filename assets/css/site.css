@@ -1478,3 +1478,63 @@ a:hover {
 .page:has(.adventure) {
   justify-items: center;
 }
+
+/* ── Feature tile (Merlin's Castle) ───────────────────────────────────── */
+
+.tile--feature {
+  grid-column: 1 / -1;
+}
+
+.tile--feature .tile__image {
+  aspect-ratio: 16 / 10;
+}
+
+.tile__kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--drue-secondary);
+}
+
+.tile__cta {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--klods-color-accent);
+}
+
+.tile__cta::after {
+  content: " →";
+}
+
+.tile--feature .tile__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tile--feature .tile__desc {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+@media (min-width: 48rem) {
+  .tile--feature {
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: none;
+  }
+
+  .tile--feature .tile__image {
+    aspect-ratio: auto;
+    min-height: 22rem;
+    border-bottom: 0;
+    border-right: 1px solid var(--klods-color-border);
+    border-radius: calc(var(--klods-radius-lg) - 1px) 0 0 calc(var(--klods-radius-lg) - 1px);
+  }
+
+  .tile--feature .tile__body {
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 2rem;
+  }
+}

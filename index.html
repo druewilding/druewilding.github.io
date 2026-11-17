@@ -30,7 +30,7 @@ image: https://www.druewilding.com/assets/images/og-image.png
   </div>
   <div class="bento">
     {% for project in site.data.projects %}
-      <a class="tile{% if project.size == 'wide' %} tile--wide{% endif %}" href="{{ project.url }}">
+      <a class="tile{% if project.size == 'wide' %} tile--wide{% endif %}{% if project.size == 'feature' %} tile--feature{% endif %}" href="{{ project.url }}">
         <span class="tile__image">
           {% if project.live == 'daily' %}
             <span class="tile__live-colour"><span data-daily-hex>#??????</span></span>
@@ -39,8 +39,10 @@ image: https://www.druewilding.com/assets/images/og-image.png
           {% endif %}
         </span>
         <span class="tile__body">
+          {% if project.kicker %}<span class="tile__kicker">{{ project.kicker }}</span>{% endif %}
           <span class="tile__title">{{ project.title }}</span>
           <span class="tile__desc">{{ project.description }}</span>
+          {% if project.size == 'feature' %}<span class="tile__cta">Play it</span>{% endif %}
         </span>
         {% if project.note %}<span class="tile__note hand">{{ project.note }}</span>{% endif %}
       </a>
