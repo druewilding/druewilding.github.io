@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.1](https://github.com/druewilding/druewilding.github.io/compare/v1.17.0...v1.17.1) (2026-11-17)
+
+
+### Chores
+
+* Update eslint-config-plus-prettier ([#75](https://github.com/druewilding/druewilding.github.io/issues/75)) ([1c99ddc](https://github.com/druewilding/druewilding.github.io/commit/1c99ddc8e2cd5505084dce211c1f6fc1b9fa4b66))
+
 ## [1.17.0](https://github.com/druewilding/druewilding.github.io/compare/v1.16.1...v1.17.0) (2026-11-17)
 
 
