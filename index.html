@@ -28,8 +28,11 @@ image: https://www.druewilding.com/assets/images/og-image.png
   <div class="section__head">
     <h2 id="made-title" class="section__title">Things i've made</h2>
   </div>
+  {% for group in site.data.projects %}
+  <div class="bento-group">
+  <h3 class="bento-group__title">{{ group.group }}</h3>
   <div class="bento">
-    {% for project in site.data.projects %}
+    {% for project in group.projects %}
       <a class="tile{% if project.size == 'wide' %} tile--wide{% endif %}{% if project.size == 'feature' %} tile--feature{% endif %}" href="{{ project.url }}">
         <span class="tile__image">
           {% if project.live == 'daily' %}
@@ -48,6 +51,8 @@ image: https://www.druewilding.com/assets/images/og-image.png
       </a>
     {% endfor %}
   </div>
+  </div>
+  {% endfor %}
 </section>
 
 <section class="section cv-callout">

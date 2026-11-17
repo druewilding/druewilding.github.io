@@ -1616,3 +1616,37 @@ a:hover {
     padding: 2rem;
   }
 }
+
+/* ── Project groups ───────────────────────────────────────────────────── */
+
+.bento-group {
+  display: grid;
+  /* Room for handwritten notes that hang above the first row */
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.bento-group + .bento-group {
+  margin-top: 1.5rem;
+}
+
+.bento-group__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  font-size: 0.8rem;
+  font-family: var(--klods-font-sans);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--klods-color-muted);
+}
+
+/* A thin rule runs from the heading to the edge */
+.bento-group__title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--klods-color-border);
+}
