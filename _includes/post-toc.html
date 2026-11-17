@@ -1,23 +1,40 @@
 {% comment %}
-  "In this post": a list of the post's sections, built from its <h2>s.
-  Shown when a post has at least four sections; `toc: false` turns it off.
+  "In this post": a list of the post's sections, built from its headings.
+  Shown when there are at least four entries. Front matter options:
+    toc: false      no list
+    toc_depth: 3    include the ### sub-sections too
   Plain Liquid (GitHub Pages can't run plugins), so it splits the rendered
-  HTML on '<h2 id="' and reads each heading's id and text.
+  HTML on '<h' and reads each heading's level, id and text.
 {% endcomment %}
-{% assign toc_parts = content | split: '<h2 id="' %}
-{% if page.toc != false and toc_parts.size > 4 %}
+{% assign toc_depth = page.toc_depth | default: 2 %}
+{% assign toc_count = 0 %}
+{% capture toc_items %}
+  {% assign toc_parts = content | split: '<h' %}
+  {% for part in toc_parts offset: 1 %}
+    {% assign toc_level = part | slice: 0 %}
+    {% assign toc_start = part | slice: 1, 5 %}
+    {% if toc_start == ' id="' %}
+      {% assign toc_show = false %}
+      {% if toc_level == '2' %}{% assign toc_show = true %}{% endif %}
+      {% if toc_level == '3' and toc_depth >= 3 %}{% assign toc_show = true %}{% endif %}
+      {% if toc_show %}
+        {% assign toc_bits = part | split: '"' %}
+        {% assign toc_text = part | split: '</h' | first | split: '>' | shift | join: '>' | strip_html %}
+        {% assign toc_count = toc_count | plus: 1 %}
+        <li{% if toc_level == '3' %} class="post-toc__sub"{% endif %}><a href="#{{ toc_bits[1] }}">{{ toc_text }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+{% if page.toc != false and toc_count >= 4 %}
   <nav class="post-toc" aria-labelledby="post-toc-title">
     <details class="post-toc__box" data-post-toc>
       <summary class="post-toc__summary">
         <span id="post-toc-title">In this post…</span>
-        <span class="post-toc__count">{{ toc_parts.size | minus: 1 }} sections</span>
+        <span class="post-toc__count">{{ toc_count }} sections</span>
       </summary>
       <ol class="post-toc__list">
-        {% for part in toc_parts offset: 1 %}
-          {% assign toc_id = part | split: '"' | first %}
-          {% assign toc_text = part | split: '</h2>' | first | split: '>' | shift | join: '>' | strip_html %}
-          <li><a href="#{{ toc_id }}">{{ toc_text }}</a></li>
-        {% endfor %}
+        {{ toc_items }}
       </ol>
     </details>
   </nav>
