@@ -1,0 +1,7 @@
+# Blog series. Posts join a series with `series: <slug>` in their front matter,
+# and are numbered by date, oldest first.
+cucumber:
+  name: The Cucumber series
+  short: Cucumber series
+  url: /blog/cucumber/
+  description: Cucumber has been my testing tool of choice for over a decade. These posts cover data tables, parameter types, expressions, mobile testing, Jira and AI.

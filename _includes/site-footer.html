@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__signature hand">Drue Wilding</p>
+    <ul class="site-footer__links">
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+      <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+      {% for place in site.data.elsewhere %}
+        <li><a href="{{ place.url }}"{% if place.rel_me %} rel="me"{% endif %}>{{ place.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <p class="site-footer__small">
+      Built with Jekyll and <a href="/klods/">klods-css</a>.
+      <a href="https://github.com/druewilding/druewilding.github.io">Source on GitHub</a>.
+    </p>
+  </div>
+</footer>

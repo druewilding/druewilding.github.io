@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include tag-bar.html current=page.series %}
+
+{% assign series_list = site.posts | where: "series", page.series | reverse %}
+<ol class="series-list">
+  {% for post in series_list %}
+    <li class="series-list__item">
+      <span class="series-list__number" aria-hidden="true">{{ forloop.index }}</span>
+      {% include post-card.html post=post %}
+    </li>
+  {% endfor %}
+</ol>

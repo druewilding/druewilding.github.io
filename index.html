@@ -1,0 +1,77 @@
+---
+layout: default
+home: true
+title: Drue Wilding
+heading: Drue Wilding
+description: Test engineer and developer in Copenhagen, making weird and wonderful things.
+intro: Test engineer and developer in Copenhagen. This is a small selection of the weird and wonderful things that i make.
+image: https://www.druewilding.com/assets/images/og-image.jpg
+---
+
+<section class="section" aria-labelledby="latest">
+  <div class="section__head">
+    <h2 id="latest" class="section__title">Latest from the blog</h2>
+    <a class="section__more" href="{{ '/blog/' | relative_url }}">All posts</a>
+  </div>
+  <div class="latest">
+    {% for post in site.posts limit: 3 %}
+      {% if forloop.first %}
+        {% include post-card.html post=post feature=true %}
+      {% else %}
+        {% include post-card.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="made" aria-labelledby="made-title">
+  <div class="section__head">
+    <h2 id="made-title" class="section__title">Things i've made</h2>
+  </div>
+  {% for group in site.data.projects %}
+  <div class="bento-group">
+  <h3 class="bento-group__title">{{ group.group }}</h3>
+  <div class="bento">
+    {% for project in group.projects %}
+      <a class="tile{% if project.size == 'wide' %} tile--wide{% endif %}{% if project.size == 'feature' %} tile--feature{% endif %}" href="{{ project.url }}">
+        <span class="tile__image">
+          {% if project.live == 'daily' %}
+            <span class="tile__live-colour"><span data-daily-hex>#??????</span></span>
+          {% else %}
+            <img src="/assets/images/portfolio/{{ project.image }}" alt="" loading="lazy" />
+          {% endif %}
+        </span>
+        <span class="tile__body">
+          {% if project.kicker %}<span class="tile__kicker">{{ project.kicker }}</span>{% endif %}
+          <span class="tile__title">{{ project.title }}</span>
+          <span class="tile__desc">{{ project.description }}</span>
+          {% if project.size == 'feature' %}<span class="tile__cta">Play it</span>{% endif %}
+        </span>
+        {% if project.note %}<span class="tile__note hand">{{ project.note }}</span>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="section" aria-labelledby="elsewhere-title">
+  <div class="section__head">
+    <h2 id="elsewhere-title" class="section__title">Find me elsewhere</h2>
+  </div>
+  <ul class="elsewhere">
+    {% for place in site.data.elsewhere %}
+      <li>
+        <a class="elsewhere__card" href="{{ place.url }}"{% if place.rel_me %} rel="me"{% endif %}>
+          <span class="elsewhere__verb">{{ place.verb }}</span>
+          <span class="elsewhere__name">{{ place.name }}</span>
+          <span class="elsewhere__handle">{{ place.handle | replace: "@", "<wbr>@" }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section cv-callout">
+  <p>Looking for my CV? Read it <a href="{{ '/cv/' | relative_url }}">in English</a> or <a href="{{ '/cv/da/' | relative_url }}">på dansk</a>.</p>
+</section>

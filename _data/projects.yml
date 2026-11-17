@@ -1,0 +1,102 @@
+# Projects on the homepage, in groups. Each group gets a heading.
+#   size: wide    -> spans two columns, image beside the text
+#   size: feature -> spans the whole row, big picture beside the text
+#   live: daily   -> shows today's colour instead of a screenshot
+#   kicker:       -> a small line above the title
+#   note:         -> a handwritten note on the tile (keep it short)
+# Tip: a group looks tidiest when its tiles fill rows of four
+# (a wide tile counts as two).
+
+- group: Games & toys
+  projects:
+    - title: "Merlin's Castle"
+      url: "https://merlinscastle.net/"
+      image: merlins-castle-illustrated.jpg
+      size: feature
+      kicker: Remake of a 1983 BBC Micro adventure
+      description: "Anita Straker's adventure game for the BBC Micro, rebuilt from the original program. A painted picture for every place, music and sound effects, or the original teletext screen if you prefer. Plays in your browser, and offline on phones and iPads."
+      note: "i'm very proud of this one"
+    - title: Chess Variants
+      url: /chess/
+      image: chess.jpg
+      size: wide
+      description: Alternative versions of chess, playable against an opponent or a bot
+    - title: Push the button
+      url: /push-the-button/
+      image: push-the-button.png
+      description: A button to be pushed when you need to push a button
+      note: go on…
+    - title: How Old Am I?
+      url: /howoldami/
+      image: howoldami.png
+      description: Work out your exact age
+
+- group: Useful things
+  projects:
+    - title: klods
+      url: /klods/
+      image: klods.png
+      size: wide
+      description: A tiny, themeable component library for HTML, CSS and JavaScript, with a Ruby gem too. It feels like building with lego.
+      note: this site is built with it!
+    - title: KnitThis
+      url: /knitthis/
+      image: knitthis.png
+      description: Knitting and crochet patterns, one step at a time
+    - title: Det Danske Alfabet
+      url: "https://rvedotrc.github.io/det-danske-alfabet/"
+      image: det-danske-alfabet.jpg
+      description: Type a letter and hear it in Danish, in three different voices. Kept alive by Rachel Evans.
+
+- group: Colour & CSS art
+  projects:
+    - title: Daily Color
+      url: /daily-color/
+      live: daily
+      description: A unique hex code for every day
+      note: this is why the site is this colour
+    - title: Random Abstract Art
+      url: /random-art/
+      image: random-art.jpg
+      description: Randomly generated, ever-changing abstract art
+    - title: Gradient Painter
+      url: /gradient-painter/
+      image: gradient-painter.jpg
+      size: wide
+      description: Make your own beautiful CSS gradients
+    - title: Fancy Gradients
+      url: /fancy-gradients/
+      image: fancy-gradients.jpg
+      description: A collection of CSS gradient ideas
+    - title: Clock
+      url: /clock/
+      image: clock.jpg
+      description: The current time and date, in colours
+    - title: Nyhavn
+      url: /nyhavn/
+      image: nyhavn.jpg
+      description: Nyhavn in pure CSS
+    - title: Byskilt
+      url: /byskilt/
+      image: byskilt.png
+      description: A 3D rendering of the sign that welcomes you to Danish towns
+
+- group: Pride & personal
+  projects:
+    - title: Plural Pride Logo
+      url: /plural-pride-logo/
+      image: plural-pride-logo.jpg
+      description: A scalable version of the plural pride logo
+    - title: Pride Flags
+      url: /prideflags/
+      image: pride-flags.png
+      description: Blend your own pride flags
+    - title: Queermoji
+      url: /queermoji/
+      image: queermoji.png
+      description: Make pride-striped emoji for Discord and Slack
+    - title: "Drue's handwriting"
+      url: /handwriting/
+      image: handwriting.png
+      description: My handwriting as a font
+      note: "you're reading it!"

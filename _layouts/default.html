@@ -1,45 +1,66 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en-GB' }}">
   <head>
-    <meta charset="UTF-8">
-
-{% seo %}
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
+    {% include head.html %}
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <a class="skip-link" href="#content">Skip to the content</a>
 
-    <header class="page-header" role="banner"{% if page.image %} data-bg-image style="background-image: url('{{ page.image | replace: 'https://www.druewilding.com', '' }}')"{% endif %}>
-      
-      {% if page.url contains ".html" %}
-        <div class="back-to-root"><a href="{{ '/blog' | relative_url }}">&lt; blog</a></div>
-      {% elsif page.url != "/" %}
-      <div class="back-to-root"><a href="{{ '/' | relative_url }}">&lt; home</a></div>
-      {% endif %}
-      
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+    <header class="band{% if page.home %} band--home{% endif %}{% if page.layout == 'post' %} band--post{% endif %}">
+      <div class="band__inner">
+        {% include site-nav.html %}
+
+        {% if page.home %}
+          <div class="band__intro">
+            <h1 class="band__title band__title--huge">Drue Wilding</h1>
+            <p class="band__lede">{{ page.intro }}</p>
+            <div class="band__actions">
+              <a class="band__button" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+              <a class="band__button band__button--ghost" href="#made">See what i've made</a>
+            </div>
+          </div>
+        {% else %}
+          {% assign lede = page.description %}
+          {% if page.layout == 'tag' %}{% assign lede = site.data.tags[page.tag].description %}{% endif %}
+          {% if page.layout == 'series' %}{% assign lede = site.data.series[page.series].description %}{% endif %}
+          <div class="band__intro">
+            {% if page.layout == 'post' %}
+              {% assign words = page.content | number_of_words %}
+              {% assign minutes = words | divided_by: 200 | at_least: 1 %}
+              <p class="band__meta">
+                <a href="{{ '/blog/' | relative_url }}">Blog</a>
+                <span aria-hidden="true">·</span>
+                <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time>
+                <span aria-hidden="true">·</span>
+                {{ minutes }} min read
+              </p>
+            {% elsif page.layout == 'tag' or page.layout == 'series' %}
+              <p class="band__meta">
+                <a href="{{ '/blog/' | relative_url }}">Blog</a>
+                <span aria-hidden="true">·</span>
+                {% if page.layout == 'tag' %}Tag{% else %}Series{% endif %}
+              </p>
+            {% endif %}
+            <h1 class="band__title">{{ page.heading | default: page.title }}</h1>
+            {% if lede %}<p class="band__lede">{{ lede }}</p>{% endif %}
+            {% if page.layout == 'post' and page.tags.size > 0 %}
+              <ul class="band__tags" aria-label="Tags">
+                {% for t in page.tags %}
+                  <li><a href="{{ '/blog/tag/' | append: t | append: '/' | relative_url }}">{{ site.data.tags[t].name | default: t }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% include today-pill.html %}
+      </div>
     </header>
 
-    <main id="content" class="main-content" role="main">
+    <main id="content" class="page{% if page.layout == 'post' %} page--post{% endif %}">
       {{ content }}
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/druewilding/druewilding.github.io">druewilding.github.io</a> is maintained by <a href="https://github.com/druewilding">Drue Wilding</a></span>
-      </footer>
     </main>
+
+    {% include site-footer.html %}
   </body>
 </html>

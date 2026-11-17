@@ -1,8 +1,25 @@
-theme: jekyll-theme-cayman
 title: Drue Wilding
+description: Test engineer and developer in Copenhagen, making weird and wonderful things.
+url: https://www.druewilding.com
 lang: en-GB
+author: Drue Wilding
 
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
 paginate: 12
 paginate_path: "/blog/page:num/"
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - package.json
+  - package-lock.json
+  - eslint.config.js
+  - node_modules
+  - Gemfile
+  - Gemfile.lock

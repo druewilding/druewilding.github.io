@@ -1,0 +1,20 @@
+# Blog tags, in the order they appear in the tag bar.
+# Each tag needs a page in blog/tag/<slug>.html (copy an existing one).
+testing:
+  name: Testing
+  description: Test automation, Cucumber, and making tests that everyone on the team can read.
+ai:
+  name: AI
+  description: Experiments with AI tools, from vibe coding to a home-made assistant.
+copenhagen:
+  name: Copenhagen
+  description: Watching the city's new metro and light rail being built.
+drones:
+  name: Drones
+  description: Repeatable drone flights and the photos they take.
+making:
+  name: Making
+  description: Things made with hands, yarn and Raspberry Pis.
+creative-coding:
+  name: Creative coding
+  description: Code for the fun of it, and for pictures.

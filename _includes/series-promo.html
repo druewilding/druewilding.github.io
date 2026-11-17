@@ -1,0 +1,15 @@
+{% assign s = site.data.series[include.series] %}
+{% assign promo_posts = site.posts | where: "series", include.series %}
+<a class="series-promo" href="{{ s.url | relative_url }}">
+  <span class="series-promo__stack" aria-hidden="true">
+    {% for sp in promo_posts limit: 4 %}
+      <img src="{{ sp.image | replace: 'https://www.druewilding.com', '' }}" alt="" loading="lazy" style="--i: {{ forloop.index0 }}" />
+    {% endfor %}
+  </span>
+  <span class="series-promo__body">
+    <span class="post-card__label">Series · {{ promo_posts.size }} posts</span>
+    <span class="series-promo__title">{{ s.name }}</span>
+    <span class="series-promo__desc">{{ s.description }}</span>
+    <span class="series-promo__cta">Read the series</span>
+  </span>
+</a>

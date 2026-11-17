@@ -1,15 +1,17 @@
 ---
-layout: default
+layout: post
 title: Using Cucumber Custom Parameter Types in TypeScript
 description: Using what I call the "shouldOrNot" pattern as an example
-image: https://www.druewilding.com/assets/images/cucumber-custom-parameter-types/og-image.png
+image: https://www.druewilding.com/assets/images/cucumber-custom-parameter-types/og-image.jpg
+tags: [testing]
+series: cucumber
 ---
 
-## Writing Flexible Step Definitions in Cucumber with TypeScript
+## Writing flexible step definitions in Cucumber with TypeScript
 
 Sometimes, when writing Cucumber step definitions, you want a single step to behave in opposite ways depending on the scenario. For example, you might want to check that a checkbox **should** be checked in one case, and **should not** be checked in another.
 
-### Example Scenario
+## Example scenario
 
 ```gherkin
 Feature: Login form
@@ -21,7 +23,7 @@ Feature: Login form
     But the "Subscribe to newsletter" checkbox should not be checked
 ```
 
-### Using a Regular Expression
+## Using a regular expression
 
 The way i always used to achieve this was using a regular expression:
 
@@ -43,7 +45,7 @@ Then(
 
 This works, but you miss out on the nice pattern matching of Cucumber expressions, and the regular expression can be hard to read and maintain.
 
-### The Neater Way: Custom Parameter Types
+## The neater way: custom parameter types
 
 Cucumber allows you to define custom parameter types, which can make your step definitions cleaner and more readable. Here’s how you can do it:
 
@@ -79,5 +81,3 @@ This approach makes your step definitions easier to read and maintain, and your 
 To find out how to implement Cucumber custom parameter types in other languages, please see the [cucumber-expressions](https://github.com/cucumber/cucumber-expressions) documentation.
 
 Have you used custom parameter types in your Cucumber tests? I'd love to hear about other patterns you've found useful.
-
-_You can find me on [Mastodon](https://tech.lgbt/@druewilding) or [LinkedIn](https://www.linkedin.com/in/druewilding/) if you'd like to continue the conversation._

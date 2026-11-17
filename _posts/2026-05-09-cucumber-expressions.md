@@ -1,8 +1,10 @@
 ---
-layout: default
+layout: post
 title: "Cucumber Expressions: Readable step definitions"
 description: From anchored regex nightmares to optional text and alternation — the evolution of Cucumber step matching
-image: https://www.druewilding.com/assets/images/cucumber-expressions/og-image.png
+image: https://www.druewilding.com/assets/images/cucumber-expressions/og-image.jpg
+tags: [testing]
+series: cucumber
 ---
 
 _This post assumes you're familiar with Cucumber and TypeScript._
@@ -187,5 +189,3 @@ Your step function gets a proper `Status` enum value rather than a raw string, w
 I've been using Cucumber for years, and the introduction of Cucumber Expressions quietly removed one of the most common sources of friction. Regex step definitions still work, but i can't think of a reason i'd reach for one now.
 
 Have you found any particularly elegant uses of optional text or alternation? i'd love to see examples from real test suites.
-
-_You can find me on [Mastodon](https://tech.lgbt/@druewilding) or [LinkedIn](https://www.linkedin.com/in/druewilding/) if you'd like to continue the conversation._

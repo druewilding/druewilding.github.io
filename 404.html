@@ -1,0 +1,45 @@
+---
+layout: default
+title: Page not found
+heading: "404: You've wandered off the map"
+description: The page you were looking for isn't here. Maybe it moved, maybe it never existed. You could look around…
+permalink: /404.html
+sitemap: false
+---
+
+<section class="adventure" aria-labelledby="adventure-title">
+  <h2 id="adventure-title" class="visually-hidden">A very small adventure</h2>
+  <div class="adventure__screen">
+    <div class="adventure__log" id="adventure-log" aria-live="polite">
+      <p>You are standing in an empty room where a page should be.</p>
+      <p class="adventure__hint">Type <kbd>look</kbd> to look around, or <kbd>help</kbd> if you're stuck.</p>
+    </div>
+    <form class="adventure__form" id="adventure-form" autocomplete="off" hidden>
+      <label class="adventure__prompt" for="adventure-input">What now?</label>
+      <input
+        class="adventure__input"
+        id="adventure-input"
+        type="text"
+        spellcheck="false"
+        autocapitalize="off"
+        enterkeyhint="go"
+      />
+    </form>
+  </div>
+
+  <p class="adventure__exits">
+    <span class="hand">Or take a shortcut:</span>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog/' | relative_url }}">Blog</a>
+    <a href="{{ '/#made' | relative_url }}">Things i've made</a>
+    <a href="{{ '/cv/' | relative_url }}">CV</a>
+  </p>
+</section>
+
+<script type="application/json" id="adventure-posts">
+  [
+    {% for post in site.posts %}{"title": {{ post.title | jsonify }}, "url": {{ post.url | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+</script>
+<script src="{{ '/assets/js/adventure.js' | relative_url }}" defer></script>

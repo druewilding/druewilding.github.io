@@ -1,0 +1,11 @@
+{% comment %}
+  Sets `series_posts` (oldest first) and `series_part` for include.post.
+{% endcomment %}
+{% assign series_part = nil %}
+{% assign series_posts = nil %}
+{% if include.post.series %}
+  {% assign series_posts = site.posts | where: "series", include.post.series | reverse %}
+  {% for sp in series_posts %}
+    {% if sp.url == include.post.url %}{% assign series_part = forloop.index %}{% endif %}
+  {% endfor %}
+{% endif %}

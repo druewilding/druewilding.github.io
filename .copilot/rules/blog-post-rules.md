@@ -14,7 +14,8 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 ### Structure and Organization
 
 - Start posts with clear, descriptive titles that explain what the post is about
-- Use descriptive section headers (## format) to break up content logically
+- Use descriptive section headers (## format, ### for sub-sections, never #) to break up content logically
+- Write headers in sentence case: "Handling plurals with optional text", not "Handling Plurals With Optional Text"
 - Include a brief introduction that sets context and explains what you're trying to achieve
 - End with conclusions or reflections on what you learned
 - **For tutorials, structure as: Problem → Solution → How It Works → Benefits → Questions**
@@ -36,7 +37,7 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 - Provide working examples or demos when possible
 - **Add assumption notes** at the top of technical posts (e.g., "This post assumes you're using...")
 - **Include FAQ/Questions sections** for complex tutorials to address practical concerns
-- **Add contact information** at the end encouraging readers to share experiences
+- **Don't add a contact sign-off** at the end: every post ends with a "Talk to me on Mastodon" box automatically. Once the post has been tooted about, add `mastodon: <toot url>` to the front matter so the box links to the thread
 
 ### Language and Grammar
 
@@ -75,7 +76,6 @@ Based on analysis of your blog posts, follow these writing style guidelines when
 
 - **Always encourage reader engagement** by asking about their experiences
 - **Link to related blog posts** at the end to create a cohesive series
-- **Include social media contact info** (Mastodon and LinkedIn) for ongoing conversations
 - **Reference previous work authentically** (e.g., mentioning AI analysis work you've done)
 
 Remember: Your writing style is personal, thoughtful, and educational. You share not just what you did, but why you did it and what you learned along the way.

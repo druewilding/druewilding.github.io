@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: Drone image alignment with Hugin
 description: Aligning images taken at different times
 image: https://www.druewilding.com/assets/images/hugin/aligning-images-taken-at-different-times.jpg
+tags: [copenhagen, drones]
 ---
 
 I have programmed repeatable drone flights using [Litchi](https://flylitchi.com/) so that i can take progress photos of the Copenhagen Lightrail.
@@ -41,21 +42,21 @@ What i needed was a way of choosing the match points myself. I remembered [Hugin
 
 I installed Hugin and loaded the images.
 
-![Images loaded into Hugin](/assets/images/hugin/images-in-hugin.png)
+![Images loaded into Hugin](/assets/images/hugin/images-in-hugin.webp)
 
 Initially it seemed to want to treat them as a panorama, side by side. I pressed the "Align" button and it told me it couldn't find any common points, so i would have to find them myself. Perfect!
 
 So i went about finding common features in both photos.
 
-![Finding common features](/assets/images/hugin/finding-common-features.png)
+![Finding common features](/assets/images/hugin/finding-common-features.webp)
 
 I chose corners and areas of high contrast. I ended up with 20 points, spread across as much of the two photos as i could match.
 
-![20 common points chosen](/assets/images/hugin/common-points-chosen.png)
+![20 common points chosen](/assets/images/hugin/common-points-chosen.webp)
 
 This time, when i pressed "Align" it managed to align them pretty nicely! All i had to do was choose a good crop that worked for both photos and export them.
 
-![Cropping aligned pictures](/assets/images/hugin/cropping-pictures.png)
+![Cropping aligned pictures](/assets/images/hugin/cropping-pictures.webp)
 
 ## Finished comparison
 

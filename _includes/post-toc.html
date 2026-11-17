@@ -1,0 +1,42 @@
+{% comment %}
+  "In this post": a list of the post's sections, built from its headings.
+  Shown when there are at least four entries. Front matter options:
+    toc: false      no list
+    toc_depth: 3    include the ### sub-sections too
+  Plain Liquid (GitHub Pages can't run plugins), so it splits the rendered
+  HTML on '<h' and reads each heading's level, id and text.
+{% endcomment %}
+{% assign toc_depth = page.toc_depth | default: 2 %}
+{% assign toc_count = 0 %}
+{% capture toc_items %}
+  {% assign toc_parts = content | split: '<h' %}
+  {% for part in toc_parts offset: 1 %}
+    {% assign toc_level = part | slice: 0 %}
+    {% assign toc_start = part | slice: 1, 5 %}
+    {% if toc_start == ' id="' %}
+      {% assign toc_show = false %}
+      {% if toc_level == '2' %}{% assign toc_show = true %}{% endif %}
+      {% if toc_level == '3' and toc_depth >= 3 %}{% assign toc_show = true %}{% endif %}
+      {% if toc_show %}
+        {% assign toc_bits = part | split: '"' %}
+        {% assign toc_text = part | split: '</h' | first | split: '>' | shift | join: '>' | strip_html %}
+        {% assign toc_count = toc_count | plus: 1 %}
+        <li{% if toc_level == '3' %} class="post-toc__sub"{% endif %}><a href="#{{ toc_bits[1] }}">{{ toc_text }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+{% if page.toc != false and toc_count >= 4 %}
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+    <details class="post-toc__box" data-post-toc>
+      <summary class="post-toc__summary">
+        <span id="post-toc-title">In this post…</span>
+        <span class="post-toc__count">{{ toc_count }} sections</span>
+      </summary>
+      <ol class="post-toc__list">
+        {{ toc_items }}
+      </ol>
+    </details>
+  </nav>
+  <script src="{{ '/assets/js/post-toc.js' | relative_url }}" defer></script>
+{% endif %}

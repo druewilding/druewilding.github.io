@@ -1,0 +1,51 @@
+{% comment %}
+  An invitation to reply at the end of a post.
+  Add `mastodon: <toot url>` to a post's front matter once you've tooted about
+  it, and the box links to that thread. Without it, it links to the profile.
+{% endcomment %}
+{% assign masto = site.data.elsewhere | where: "name", "Mastodon" | first %}
+<aside class="post-reply" aria-labelledby="post-reply-title">
+  <p class="post-reply__note hand" aria-hidden="true">say hi!</p>
+  <h2 class="post-reply__title" id="post-reply-title">
+    {% if page.mastodon %}Reply on Mastodon{% else %}Talk to me on Mastodon{% endif %}
+  </h2>
+  {% if page.mastodon %}
+    <p>
+      There’s a thread for this post on Mastodon. Questions, ideas, your own war stories: reply there and i’ll see
+      it.
+    </p>
+    <div class="post-reply__actions">
+      <a class="klods-button klods-button--primary" href="{{ page.mastodon }}">Join the conversation</a>
+      <button class="klods-button post-reply__copy" type="button" data-copy="{{ page.mastodon }}" hidden>
+        Copy link
+      </button>
+    </div>
+    <p class="post-reply__hint">
+      On a different server? Paste the link into your own server’s search to reply from your account.
+    </p>
+  {% else %}
+    <p>
+      Questions, ideas, or something you made because of this post? I’d love to hear about it. I’m
+      <a href="{{ masto.url }}">{{ masto.handle }}</a>.
+    </p>
+    <div class="post-reply__actions">
+      <a class="klods-button klods-button--primary" href="{{ masto.url }}">Say hi on Mastodon</a>
+    </div>
+  {% endif %}
+</aside>
+{% if page.mastodon %}
+  <script>
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      if (!navigator.clipboard) return;
+      button.hidden = false;
+      button.addEventListener("click", function () {
+        navigator.clipboard.writeText(button.dataset.copy).then(function () {
+          button.textContent = "Copied!";
+          setTimeout(function () {
+            button.textContent = "Copy link";
+          }, 2000);
+        });
+      });
+    });
+  </script>
+{% endif %}

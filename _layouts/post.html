@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{% if page.image %}
+  <figure class="post-cover">
+    <img src="{{ page.image | replace: 'https://www.druewilding.com', '' }}" alt="" />
+  </figure>
+{% endif %}
+
+<article class="prose">
+  {% include series-box.html %}
+  {% include post-toc.html %}
+  {{ content }}
+</article>
+<script src="{{ '/assets/js/heading-links.js' | relative_url }}" defer></script>
+
+{% include post-reply.html %}
+
+{% include series-next.html %}
+
+{% assign newer = page.next %}
+{% if next_post and newer and newer.url == next_post.url %}{% assign newer = nil %}{% endif %}
+
+{% if page.previous or newer %}
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}
+      {% include post-card.html post=page.previous label="Older post" %}
+    {% endif %}
+    {% if newer %}
+      {% include post-card.html post=newer label="Newer post" %}
+    {% endif %}
+  </nav>
+{% endif %}
