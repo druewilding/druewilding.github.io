@@ -68,6 +68,8 @@ I wanted them to hang over the edge, like a sticky note someone slapped on:
 
 ![Notes hanging off the corners of the tiles](/assets/images/site-redesign/notes-after.jpg)
 
+Tilting them gave me jagged edges, though. Browsers aren't very good at drawing thin lines at an angle. I didn't need to know _why_; i just said what i was seeing ("the line is a bit jaggedy"), and Claude went off and fixed it. It took a couple of goes, but they're smooth now.
+
 ## A 404 page you can play
 
 If you go somewhere that doesn't exist, you now end up in a tiny text adventure. You can look around, pick up a paint chip in today's colour, and walk through doors back to the rest of the site. If the address you typed looks a bit like one of my posts, a signpost appears and points you to it.
