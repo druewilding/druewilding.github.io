@@ -230,5 +230,3 @@ Thanks to the following people for their help:
 - [Jaydon Peters](https://medium.com/@peters.jaydon) for the post [React Native, Detox, and Cucumber](https://medium.com/@peters.jaydon/react-native-detox-and-cucumber-c2164a6eebd5) which, while now outdated, gave me the hope that this could be done.
 - [Chris Rosendorf](https://github.com/ExoMemphiz) for a lot of help figuring out the `tsx` things and wrangling the Detox internals. This would never have happened without all your help!
 - [ChatGPT, powered by OpenAI](https://openai.com/) for providing helpful suggestions, tips, and guidance throughout the process.
-
-Any questions? Feedback? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)

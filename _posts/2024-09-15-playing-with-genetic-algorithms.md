@@ -121,5 +121,3 @@ I know the outcome is far from perfect, and i know other people have done simila
 You can run your own pictures on your own computer, using the code from my GitHub repo here: [github.com/druewilding/500triangles](https://github.com/druewilding/500triangles)
 
 Let me know if you make any cool pictures with it!
-
-Any questions? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)

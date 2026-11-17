@@ -183,5 +183,3 @@ _This post is part of an ongoing series about making automated testing more acce
 - _[AI analysis for failing Cucumber scenarios](/2025/07/12/ai-analysis-for-failing-cucumber-scenarios.html)_
 - _[Testing React Native apps with Cucumber and Detox](/2025/03/09/testing-react-native-apps-with-cucumber-and-detox.html)_
 - _[Building testing dashboards](/2021/08/15/building-a-raspberry-pi-dashboard.html)_
-
-Any questions? Feedback? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding) or LinkedIn: [Drue Wilding](https://www.linkedin.com/in/druewilding/)

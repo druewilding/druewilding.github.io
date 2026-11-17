@@ -4,6 +4,7 @@ title: I Built an AI Assistant on a Budget
 description: Who needs a Mac Mini when you've got an old MacBook Air and some free API tokens?
 image: https://www.druewilding.com/assets/images/openclaw-on-a-budget/og-image.jpg
 tags: [ai]
+mastodon: https://tech.lgbt/@druewilding/116108090531069935
 ---
 
 _This post assumes you have a Discord account and aren't afraid of the terminal._
@@ -77,10 +78,8 @@ What I didn't expect was that other people would want to join in. A few colleagu
 
 ## Questions?
 
-Are you interested in setting something similar up? I'm happy to answer questions. Reach out on Mastodon or LinkedIn (links below). I'd love to hear what you'd use an assistant for, and I'm curious to see what others build.
+Are you interested in setting something similar up? I'm happy to answer questions. Reply to the Mastodon thread below, or find me on [LinkedIn](https://www.linkedin.com/in/druewilding/). I'd love to hear what you'd use an assistant for, and I'm curious to see what others build.
 
 ---
-
-_You can find me on [Mastodon](https://tech.lgbt/@druewilding) or [LinkedIn](https://www.linkedin.com/in/druewilding/) if you'd like to continue the conversation._
 
 _Thanks to my colleagues who've joined the Discord and made it more fun; you know who you are!_

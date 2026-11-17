@@ -199,9 +199,3 @@ Creating Vivienne Senger (vs@example.com) who lives in Everett and was born 1965
     Given a user called "Mallory Wisoky"  with email address "mw@example.com" who lives in "Boynton Beach" and was born "1927-12-09"
 Creating Mallory Wisoky (mw@example.com) who lives in Boynton Beach and was born 1927-12-09.
 ```
-
-<br>
-
----
-
-Any questions? Find me on Mastodon: [@druewilding@tech.lgbt](https://tech.lgbt/@druewilding)

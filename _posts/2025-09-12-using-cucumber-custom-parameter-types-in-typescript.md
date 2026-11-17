@@ -81,5 +81,3 @@ This approach makes your step definitions easier to read and maintain, and your 
 To find out how to implement Cucumber custom parameter types in other languages, please see the [cucumber-expressions](https://github.com/cucumber/cucumber-expressions) documentation.
 
 Have you used custom parameter types in your Cucumber tests? I'd love to hear about other patterns you've found useful.
-
-_You can find me on [Mastodon](https://tech.lgbt/@druewilding) or [LinkedIn](https://www.linkedin.com/in/druewilding/) if you'd like to continue the conversation._
