@@ -953,23 +953,67 @@ a:hover {
 
 /* ── Footer ───────────────────────────────────────────────────────────── */
 
+/* Today's colour again, mirrored: the gradient runs the other way and the
+   studs gather in the bottom left instead of the top right */
 .site-footer {
-  background: var(--klods-color-surface);
-  border-top: 4px solid var(--drue-hero);
+  position: relative;
+  overflow: hidden;
+  color: var(--drue-on-hero);
+  background: linear-gradient(125deg, var(--drue-hero-2) 0%, var(--drue-hero) 60%, var(--drue-hero) 100%);
   padding-left: var(--gutter);
   padding-right: var(--gutter-r);
-  padding-block: 2.5rem;
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at center, currentColor 0 18%, transparent 19%);
+  background-size: 56px 56px;
+  opacity: 0.07;
+  pointer-events: none;
+  mask-image: linear-gradient(20deg, #000 0%, transparent 70%);
 }
 
 .site-footer__inner {
+  position: relative;
   max-width: var(--page-max);
   margin-inline: auto;
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+/* Signed at the bottom, in my own handwriting */
+.site-footer__signature {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
+/* On wider screens the signature sits on the right, mirroring the
+   "today the site is" pill at the top right of the header */
+@media (min-width: 48rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .site-footer__signature {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    transform: rotate(3deg);
+    transform-origin: right center;
+  }
 }
 
 .site-footer__links {
@@ -984,11 +1028,7 @@ a:hover {
 
 .site-footer__small {
   font-size: 0.875rem;
-  color: var(--klods-color-muted);
-}
-
-.site-footer__small a {
-  color: inherit;
+  opacity: 0.85;
 }
 
 @media (prefers-reduced-motion: reduce) {
