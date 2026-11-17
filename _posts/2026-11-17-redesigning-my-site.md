@@ -103,6 +103,7 @@ Finally, we added the projects that had been missing (klods, Queermoji, KnitThis
 ## What i learnt
 
 - **Start with the idea, not the template.** Once the daily colour was settled, most of the other decisions made themselves.
+- **Use what you've already got.** The colours come from Daily Color, the theme is built on klods, and the notes are written in my own handwriting font. Three side projects that had been sitting on the shelf ended up holding the whole site together.
 - **Build a tool to test the idea.** Seeing every day of the year at once showed the problems with very pale and very dark days long before they reached the real site.
 - **Say when something bothers you, even if it's tiny.** A note stuck inside its box, a link on the wrong words, a full stop at the end of a one-line description. Every one of them was a quick fix once i'd said it out loud.
 - **Keep the fun bits.** Nobody _needs_ a dice button, or a text adventure on the 404 page, but those are the bits that make it feel like mine.
