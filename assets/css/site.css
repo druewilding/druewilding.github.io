@@ -296,11 +296,20 @@ a:hover {
     position: absolute;
     right: 0;
     bottom: 0.5rem;
-    transform: rotate(-4deg);
+    transform: rotate(-4deg) translateZ(0);
+    box-shadow:
+      0 0 0.5px currentColor,
+      inset 0 0 0.5px currentColor;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
   }
 
   .today-pill:hover {
-    transform: rotate(-6deg);
+    transform: rotate(-6deg) translateZ(0);
+  }
+
+  .today-pill:focus-visible {
+    outline: 3px solid currentColor;
   }
 
   /* Keep the title and lede clear of the pill on narrower desktops */
@@ -363,10 +372,14 @@ a:hover {
   background: var(--klods-color-surface);
   border: 1px solid var(--klods-color-border);
   border-radius: var(--klods-radius-lg);
-  overflow: hidden;
   transition:
     transform var(--klods-transition),
     box-shadow var(--klods-transition);
+}
+
+/* Post cards clip to their corners; tiles don't, so notes can hang off */
+.post-card {
+  overflow: hidden;
 }
 
 .post-card:hover,
@@ -493,6 +506,7 @@ a:hover {
   display: block;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: calc(var(--klods-radius-lg) - 1px) calc(var(--klods-radius-lg) - 1px) 0 0;
   background: var(--klods-color-surface-2);
   border-bottom: 1px solid var(--klods-color-border);
 }
@@ -543,18 +557,28 @@ a:hover {
 
 .tile__note {
   position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
-  max-width: 70%;
+  z-index: 1;
+  top: -0.7rem;
+  right: -0.9rem;
+  max-width: 75%;
   padding: 0.15rem 0.6rem;
   font-size: 1.15rem;
   line-height: 1.15;
   text-align: right;
   color: var(--drue-secondary);
   background: var(--klods-color-bg);
+  border: 2px solid currentColor;
   border-radius: var(--klods-radius-md);
-  transform: rotate(3deg);
-  box-shadow: var(--klods-shadow-md);
+  transform: rotate(3deg) translateZ(0);
+  /* A half-pixel blur either side of the border softens the jaggies */
+  box-shadow:
+    0 0 0.5px currentColor,
+    inset 0 0 0.5px currentColor,
+    var(--klods-shadow-md);
+  /* Rotated thin borders look jagged; drawing the note on its own GPU layer
+     and then rotating it smooths the edges */
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
 }
 
 @media (min-width: 40rem) {
@@ -569,6 +593,7 @@ a:hover {
     min-height: 100%;
     border-bottom: 0;
     border-right: 1px solid var(--klods-color-border);
+    border-radius: calc(var(--klods-radius-lg) - 1px) 0 0 calc(var(--klods-radius-lg) - 1px);
   }
 
   .tile--wide .tile__body {
