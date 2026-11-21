@@ -5,6 +5,7 @@ description: How i made klods, a tiny set of HTML and CSS pieces that click toge
 image: https://www.druewilding.com/assets/images/building-with-bricks/og-image.jpg
 tags: [creative-coding]
 toc_depth: 3
+mastodon: https://tech.lgbt/@druewilding/117656038787299888
 ---
 
 I make a lot of small websites. A font made from my handwriting, an emoji generator, chess variants i play with friends and family, a colour for every day of the year. Every time i started a new one, i'd find myself trying to remember how i'd done the layout last time. How did i centre that column? What spacing did i use? Why does the button look different on this site?
