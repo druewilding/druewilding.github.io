@@ -40,8 +40,11 @@ Visit http://localhost:4000
 
     npm run format:check
     npm run lint:check
+    npm test
 
 `npm run format` and `npm run lint` fix what they can. Liquid templates are skipped by Prettier (see `.prettierignore`).
+
+`npm test` builds the site and runs the Playwright tests in `test/` against it, on port 4100 so it doesn't clash with `npm run dev`. The first time, install the browser with `npx playwright install chromium`. They check the home page, the blog, the feed and the 404 page, and that the main pages have no JavaScript errors or broken links. Links to projects in `_data/projects.yml` are skipped, since those live in their own repos.
 
 GitHub Pages builds the site itself, with an older Jekyll (3.10) and only these plugins: jekyll-paginate, jekyll-seo-tag and jekyll-feed. Anything else has to be plain Liquid.
 

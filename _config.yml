@@ -23,3 +23,7 @@ exclude:
   - node_modules
   - Gemfile
   - Gemfile.lock
+  - playwright.config.js
+  - test
+  - test-results
+  - playwright-report

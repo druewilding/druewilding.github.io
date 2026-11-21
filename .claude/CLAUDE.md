@@ -17,7 +17,7 @@ On top of those:
 
 - **Never commit.** Drue makes every commit. When a piece of work is done, suggest a conventional commit message with a capitalised description, e.g. `feat: Add a reply-on-Mastodon box to the end of every post`.
 - **GitHub Pages limits.** The live build uses Jekyll 3.10 (locally it's 4.x) and only jekyll-paginate, jekyll-seo-tag and jekyll-feed. Templates must be plain Liquid; no custom plugins.
-- **Run the checks** before calling something done: `npx prettier --check .` and `npx eslint`. Liquid templates are in `.prettierignore` because Prettier can't parse them.
+- **Run the checks** before calling something done: `npx prettier --check .`, `npx eslint` and `npm test` (Playwright, in `test/`). Liquid templates are in `.prettierignore` because Prettier can't parse them.
 - **Look at it.** Check visual changes in a real browser at a wide, a medium and a phone width (390px), in light and dark mode, and make sure nothing scrolls sideways.
 - **Colours come from tokens.** Use the klods tokens (`--klods-color-*`) and the site's `--drue-*` tokens, never fixed colours, so everything follows the daily colour. Any change to the colour maths in `_includes/daily-theme.js` must keep every day (and random dice colours) at 4.5:1 contrast or better, in both modes; test across at least two years of dates.
 - **The CV's print layout must not change.** Screen-only styles go inside `@media screen`. After touching the CV, compare print renders before and after.
