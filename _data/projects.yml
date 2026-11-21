@@ -35,7 +35,7 @@
   projects:
     - title: klods
       url: /klods/
-      image: klods.png
+      image: klods.jpg
       size: wide
       description: A tiny, themeable component library for HTML, CSS and JavaScript, with a Ruby gem too. It feels like building with lego.
       note: this site is built with it!
