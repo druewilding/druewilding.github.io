@@ -10,6 +10,8 @@ A Jekyll site on GitHub Pages, with its own theme built on [klods-css](https://w
 
 ### Setup
 
+`.ruby-version` and `.ruby-gemset` tell RVM to switch to Ruby 3.1.2 with the `blog` gemset when you `cd` into the folder. The first time, create the gemset and install the gems:
+
     rvm use ruby-3.1.2@blog --create
     bundle install
 
@@ -30,7 +32,6 @@ Then try again
 
 ### Run the Jekyll server
 
-    rvm use ruby-3.1.2@blog
     npm run dev
 
 Visit http://localhost:4000
