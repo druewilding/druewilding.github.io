@@ -108,7 +108,7 @@ Fenced code blocks get syntax highlighting in today's colours. Name the language
 
 ## The daily colour
 
-`_includes/daily-theme.js` runs in the `<head>` of every page. It works out today's colour, then builds a full light and dark colour scheme from it, so every bit of text stays readable (WCAG 4.5:1 contrast). It writes the scheme as CSS custom properties before the page appears, so there's no flash of the wrong colours. The rest of the styling is in `assets/css/site.css`.
+`_includes/daily-theme.js` runs in the `<head>` of every page. It gets today's colour from the [daily-color](https://www.npmjs.com/package/daily-color) package (version 3.0.0, loaded from jsDelivr just before it), then builds a full light and dark colour scheme from it, so every bit of text stays readable (WCAG 4.5:1 contrast). The colour maths (OKLCH, contrast, making a colour readable on a background) comes from the package too; the theme script only has the recipe for the site's colours. It writes the scheme as CSS custom properties before the page appears, so there's no flash of the wrong colours. The rest of the styling is in `assets/css/site.css`.
 
 - **A year in colour** at `/colours/` (`colours.html` and `assets/js/colour-calendar.js`) shows every day as a coloured square. The "today the site is…" pill links to it.
 - **See another day:** add `?date=2026-12-25` to any address. Like a dice roll, the chosen day sticks while you browse, until "back to today".
