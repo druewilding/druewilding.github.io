@@ -17,6 +17,7 @@
   },
   "type": "module",
   "scripts": {
+    "dev": "bundle exec jekyll serve --livereload",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --fix",

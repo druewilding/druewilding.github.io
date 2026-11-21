@@ -309,7 +309,7 @@
       ":root{" +
       light +
       "}" +
-      "@media (prefers-color-scheme: dark){:root:not([data-theme=light]){" +
+      "@media screen and (prefers-color-scheme: dark){:root:not([data-theme=light]){" +
       dark +
       "}}" +
       ":root[data-theme=dark]{" +

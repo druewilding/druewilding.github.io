@@ -41,24 +41,6 @@
   }
 }
 
-/* Code colours: GitHub light / dark, following the visitor's mode. Only a
-   fallback: the daily theme script replaces them with today's colours. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --klods-code-bg: #161b22;
-    --klods-code-fg: #e6edf3;
-    --klods-code-keyword: #ff7b72;
-    --klods-code-string: #a5d6ff;
-    --klods-code-comment: #8b949e;
-    --klods-code-number: #79c0ff;
-    --klods-code-type: #ffa657;
-    --klods-code-attr: #7ee787;
-    --klods-code-tag: #7ee787;
-    --klods-code-title: #d2a8ff;
-  }
-}
-
 /* ── Base ─────────────────────────────────────────────────────────────── */
 
 body {
@@ -883,85 +865,16 @@ kbd {
   border: 1px solid var(--klods-color-border);
 }
 
-/* Rouge (Jekyll's highlighter) → klods code tokens */
-.highlight .c,
-.highlight .c1,
-.highlight .cm,
-.highlight .cs,
-.highlight .cp {
-  color: var(--klods-code-comment);
-  font-style: italic;
-}
-
-.highlight .k,
-.highlight .kd,
-.highlight .kn,
-.highlight .kp,
-.highlight .kr,
-.highlight .o,
-.highlight .ow {
-  color: var(--klods-code-keyword);
-}
-
-.highlight .kc,
-.highlight .m,
-.highlight .mi,
-.highlight .mf,
-.highlight .mh,
-.highlight .il,
+/* klods colours Rouge's token classes. Ruby :symbols look better as numbers
+   than strings here. */
 .highlight .ss {
   color: var(--klods-code-number);
-}
-
-.highlight .s,
-.highlight .s1,
-.highlight .s2,
-.highlight .sb,
-.highlight .sd,
-.highlight .se,
-.highlight .sh,
-.highlight .si,
-.highlight .sr,
-.highlight .sx,
-.highlight .dl {
-  color: var(--klods-code-string);
-}
-
-.highlight .nv {
-  color: var(--klods-code-attr);
-}
-
-.highlight .kt,
-.highlight .nc,
-.highlight .no,
-.highlight .nb,
-.highlight .bp {
-  color: var(--klods-code-type);
-}
-
-.highlight .na,
-.highlight .nt {
-  color: var(--klods-code-tag);
-}
-
-.highlight .nf,
-.highlight .fm,
-.highlight .nd {
-  color: var(--klods-code-title);
 }
 
 /* Given / When / Then are the stars of a Cucumber post: today's colour */
 .language-gherkin .highlight .nf,
 .language-cucumber .highlight .nf {
   color: var(--klods-code-keyword);
-}
-
-.highlight .gd {
-  color: var(--klods-code-keyword);
-}
-
-.highlight .gi {
-  color: var(--klods-code-attr);
 }
 
 /* ── A year in colour (/colours/) ─────────────────────────────────────── */
