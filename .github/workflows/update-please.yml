@@ -24,10 +24,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js Environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
 
       - name: Install npm-check-updates
         run: npm install -g npm-check-updates
@@ -65,7 +65,7 @@ jobs:
         run: npm audit fix ${{ github.event.inputs.target == 'latest' && '--force' || ''}}
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.UPDATE_PLEASE_TOKEN }}
           commit-message: ${{ steps.format-summary.outputs.pr_title }}
