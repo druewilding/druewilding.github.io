@@ -35,9 +35,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Reads .ruby-version and caches the gems
+      # The runner only has the newest patch of each Ruby series, so CI uses the
+      # latest 3.3.x rather than the exact version in .ruby-version
       - uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Use Node.js

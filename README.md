@@ -10,9 +10,9 @@ A Jekyll site on GitHub Pages, with its own theme built on [klods-css](https://w
 
 ### Setup
 
-`.ruby-version` and `.ruby-gemset` tell RVM to switch to Ruby 3.1.2 with the `blog` gemset when you `cd` into the folder. The first time, create the gemset and install the gems:
+`.ruby-version` and `.ruby-gemset` tell RVM to switch to Ruby 3.3.10 with the `blog` gemset when you `cd` into the folder. The first time, create the gemset and install the gems:
 
-    rvm use ruby-3.1.2@blog --create
+    rvm use ruby-3.3.10@blog --create
     bundle install
 
 If you experience `fatal error: 'openssl/ssl.h' file not found`
@@ -26,7 +26,7 @@ If you then experience `rubymain.cpp:220:3: warning: 'rb_rescue' is deprecated: 
 
 If you experience `Error running '__rvm_make -j10'`
 
-    rvm install ruby-3.1.2 --with-openssl-dir=$(brew --prefix openssl@3)
+    rvm install ruby-3.3.10 --with-openssl-dir=$(brew --prefix openssl@3)
 
 Then try again
 
