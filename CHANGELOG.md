@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/druewilding/druewilding.github.io/compare/v1.17.1...v1.18.0) (2026-11-21)
+
+
+### Features
+
+* Update to klods-css 2.0.0 ([#77](https://github.com/druewilding/druewilding.github.io/issues/77)) ([38620fa](https://github.com/druewilding/druewilding.github.io/commit/38620fa2600608f02b0ad32e69133d04d9f658ed))
+
 ## [1.17.1](https://github.com/druewilding/druewilding.github.io/compare/v1.17.0...v1.17.1) (2026-11-17)
 
 
