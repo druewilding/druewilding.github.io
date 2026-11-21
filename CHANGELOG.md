@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.20.0](https://github.com/druewilding/druewilding.github.io/compare/v1.19.0...v1.20.0) (2026-11-21)
+
+
+### Features
+
+* Add a blog post about building klods, my own CSS component library ([#88](https://github.com/druewilding/druewilding.github.io/issues/88)) ([f77420b](https://github.com/druewilding/druewilding.github.io/commit/f77420bf46907905e50d41b3f79f16de6a6763a6))
+
+
+### Documentation
+
+* Link the klods post to its Mastodon thread ([#90](https://github.com/druewilding/druewilding.github.io/issues/90)) ([2603762](https://github.com/druewilding/druewilding.github.io/commit/26037629a5180e178bcf96d514f6fc66411afa0e))
+
 ## [1.19.0](https://github.com/druewilding/druewilding.github.io/compare/v1.18.0...v1.19.0) (2026-11-21)
 
 
