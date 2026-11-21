@@ -31,7 +31,7 @@ Then try again
 ### Run the Jekyll server
 
     rvm use ruby-3.1.2@blog
-    npm run start
+    npm run dev
 
 Visit http://localhost:4000
 
