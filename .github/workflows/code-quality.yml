@@ -27,3 +27,32 @@ jobs:
 
       - name: Check formatting
         run: npm run format:check
+
+  test:
+    name: Test the site
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # The runner only has the newest patch of each Ruby series, so CI uses the
+      # latest 3.3.x rather than the exact version in .ruby-version
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: node
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run tests
+        run: npm test

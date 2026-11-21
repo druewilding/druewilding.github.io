@@ -10,9 +10,9 @@ A Jekyll site on GitHub Pages, with its own theme built on [klods-css](https://w
 
 ### Setup
 
-`.ruby-version` and `.ruby-gemset` tell RVM to switch to Ruby 3.1.2 with the `blog` gemset when you `cd` into the folder. The first time, create the gemset and install the gems:
+`.ruby-version` and `.ruby-gemset` tell RVM to switch to Ruby 3.3.10 with the `blog` gemset when you `cd` into the folder. The first time, create the gemset and install the gems:
 
-    rvm use ruby-3.1.2@blog --create
+    rvm use ruby-3.3.10@blog --create
     bundle install
 
 If you experience `fatal error: 'openssl/ssl.h' file not found`
@@ -26,7 +26,7 @@ If you then experience `rubymain.cpp:220:3: warning: 'rb_rescue' is deprecated: 
 
 If you experience `Error running '__rvm_make -j10'`
 
-    rvm install ruby-3.1.2 --with-openssl-dir=$(brew --prefix openssl@3)
+    rvm install ruby-3.3.10 --with-openssl-dir=$(brew --prefix openssl@3)
 
 Then try again
 
@@ -40,8 +40,11 @@ Visit http://localhost:4000
 
     npm run format:check
     npm run lint:check
+    npm test
 
 `npm run format` and `npm run lint` fix what they can. Liquid templates are skipped by Prettier (see `.prettierignore`).
+
+`npm test` builds the site and runs the Playwright tests in `test/` against it, on port 4100 so it doesn't clash with `npm run dev`. The first time, install the browser with `npx playwright install chromium`. They check the home page, the blog, the feed and the 404 page, and that the main pages have no JavaScript errors or broken links. Links to projects in `_data/projects.yml` are skipped, since those live in their own repos.
 
 GitHub Pages builds the site itself, with an older Jekyll (3.10) and only these plugins: jekyll-paginate, jekyll-seo-tag and jekyll-feed. Anything else has to be plain Liquid.
 
