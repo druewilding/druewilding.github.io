@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/druewilding/druewilding.github.io/compare/v1.18.0...v1.19.0) (2026-11-21)
+
+
+### Features
+
+* Update the chess and klods screenshots in the portfolio ([#85](https://github.com/druewilding/druewilding.github.io/issues/85)) ([c39967f](https://github.com/druewilding/druewilding.github.io/commit/c39967fa96fb8839c0a0bd7a95d490b77ca0e4b0))
+
 ## [1.18.0](https://github.com/druewilding/druewilding.github.io/compare/v1.17.1...v1.18.0) (2026-11-21)
 
 
